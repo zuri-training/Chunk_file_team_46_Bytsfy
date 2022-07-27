@@ -1,2 +1,2 @@
 Section for backend
-anmes of active members
+names of active members
