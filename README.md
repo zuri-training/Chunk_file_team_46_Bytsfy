@@ -3,14 +3,14 @@ A webapp that chunks big csv and json files on users specified size
 
 <h1>How does it work?</h1>
 <ul style="text-align: center ,">
-<li>log/signup on our website </li>
+<li>Login/signup on our website </li>
 <li>Upload a file</li>
 <li>Specify the chunk size</li>
 <li>Click on the chunk button</li>
 <li>The file will be chunked and saved in the same directory as the original file as a zip file</li>
 </ul>
 
-<h2>if you want to run locally:</h2>
+<h2>Or you want to run locally:</h2>
 
 Clone the project
 
