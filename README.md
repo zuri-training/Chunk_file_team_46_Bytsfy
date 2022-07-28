@@ -78,4 +78,9 @@ python manage.py runserver
 
 ```
 
-```
+<h2>Built with:</h2>
+<div class="container" style="width:50%; align-items: center;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
+          
+</div>
+
