@@ -7,7 +7,7 @@ A webapp that chunks big csv and json files on users specified size
 <li>Upload a file</li>
 <li>Specify the chunk size</li>
 <li>Specify Number of files</li>
-<li>Click on the chunk button</li>
+<li>Click on the button</li>
 <li>The file will be chunked and saved as .zip, ready for download</li>
 </ul>
 
