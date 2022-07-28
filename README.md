@@ -81,7 +81,7 @@ python manage.py runserver
 <h2>Built with:</h2>
 
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" alt="django width="60" height="60"/>
+ <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" title="Django" alt="Django" width="60" height="60"/>
           
 
 
