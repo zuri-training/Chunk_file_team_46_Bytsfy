@@ -17,11 +17,14 @@ Clone the project
 
 ```
   git clone https://github.com/zuri-training/Chunk_file_team_46_Bytsfy
+```
 
 Go to the project directory
 ```
 
 cd Chunk_file_team_46_Bytsfy
+
+```
 
 Create a Virtual Environment
 ```
