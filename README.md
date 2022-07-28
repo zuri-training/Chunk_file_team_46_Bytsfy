@@ -21,6 +21,7 @@ Clone the project
 ```
 
 Go to the project directory
+
 ```
 
 cd Chunk_file_team_46_Bytsfy
@@ -84,7 +85,8 @@ python manage.py runserver
 ```
 
 <h2>Built with:</h2>
-
- <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" title="Django" alt="Django" width="90" height="90"/>
- <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain.svg" title="Django" alt="Django" width="90" height="90"/>
- <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg" title="Django" alt="Django" width="90" height="90"/>
+<div style="align: center;">
+  <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" title="Django" alt="Django" width="90" height="90"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain.svg" title="Django" alt="Django" width="90" height="90"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg" title="Django" alt="Django" width="90" height="90"/>
+</div>
