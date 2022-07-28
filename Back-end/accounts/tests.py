@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
-
+"""tests arent working yet will fix tmorrow"""
 # Create your tests here.
 class UserManagerTests(TestCase):
 
