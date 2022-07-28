@@ -23,10 +23,6 @@ Go to the project directory
 
 cd Chunk_file_team_46_Bytsfy
 
-```
-  npm install
-```
-
 Create a Virtual Environment
 ```
 
