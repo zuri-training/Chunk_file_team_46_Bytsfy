@@ -11,20 +11,21 @@ import pandas as pd
 
 # Json Chunking
 
+def chunk_jsonfile():
 
-# Opening JSON file 
-with open(sys.argv[1],'r') as infile: # instead of f = open('data.json',)
+    # Opening JSON file 
+    with open(sys.argv[1],'r') as uploadedfile: # instead of f = open('data.json',)
 
-    # returns JSON object as a dictionary
-    jsonFile = json.load(infile) 
+        # returns JSON object as a dictionary
+        jsonFile = json.load(uploadedfile)
 
-    # Set Chunk size per file
-    chunkSize = 1400
+        # Set Chunk size per file
+        chunkSize = 1400
 
-    # Iterating through the json list
-    for i in range(0, len(jsonFile), chunkSize): # xrange is obsolete
-        with open(sys.argv[1] + '_' + str(i//chunkSize) + '.json', 'w') as outfile:
-            json.dump(jsonFile[i:i+chunkSize], outfile)
+        # Iterating through the json list
+        for i in range(0, len(jsonFile), chunkSize): # xrange is obsolete
+            with open(sys.argv[1] + '_' + str(i//chunkSize) + '.json', 'w') as outfile:
+                json.dump(jsonFile[i:i+chunkSize], outfile)
 
 
 # Converting Json to CSV
@@ -38,22 +39,23 @@ df.to_csv (r'../chunked/jsonoutput.csv', index = None)
 
 # Solution 2 without pandas
 
+def chunking_pdf():
 
-with open('..\input\data.json') as json_file:
-	jsondata = json.load(json_file)
+    with open('..\input\data.json') as json_file:
+        jsondata = json.load(json_file)
 
-data_file = open('..\chunked\jsonoutput.csv', 'w', newline='')
-csv_writer = csv.writer(data_file)
+    data_file = open('..\chunked\jsonoutput.csv', 'w', newline='')
+    csv_writer = csv.writer(data_file)
 
-count = 0
-for data in jsondata:
-	if count == 0:
-		header = data.keys()
-		csv_writer.writerow(header)
-		count += 1
-	csv_writer.writerow(data.values())
+    count = 0
+    for data in jsondata:
+        if count == 0:
+            header = data.keys()
+            csv_writer.writerow(header)
+            count += 1
+        csv_writer.writerow(data.values())
 
-data_file.close()
+    data_file.close()
 
 
 
