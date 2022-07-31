@@ -34,7 +34,7 @@ def chunk_jsonfile():
 
 # df = pd.read_json (r'../input/data.json')
 df = pd.read_json (sys.argv[1],'r')
-df.to_csv (r'../chunked/jsonoutput.csv', index = None)
+df.to_csv (r'../jsontocsv/jsonoutput.csv', index = None)
 
 
 
@@ -45,7 +45,7 @@ def chunking_pdf():
     with open(sys.argv[1],'r') as json_file:
         jsondata = json.load(json_file)
 
-    data_file = open('..\chunked\jsonoutput.csv', 'w', newline='')
+    data_file = open('..\jsontocsv\jsonoutput.csv', 'w', newline='')
     csv_writer = csv.writer(data_file)
 
     count = 0
