@@ -32,17 +32,17 @@ with open(sys.argv[1],'r') as infile: # instead of f = open('data.json',)
 # Solution 1 using pandas library
 
 df = pd.read_json (r'../input/data.json')
-df.to_csv (r'Path where the new CSV file will be stored\New File Name.csv', index = None)
+df.to_csv (r'../chunked/jsonoutput.csv', index = None)
 
 
 
 # Solution 2 without pandas
 
 
-with open('C:\Spindles\data.json') as json_file:
+with open('..\input\data.json') as json_file:
 	jsondata = json.load(json_file)
 
-data_file = open('C:\Spindles\jsonoutput.csv', 'w', newline='')
+data_file = open('..\chunked\jsonoutput.csv', 'w', newline='')
 csv_writer = csv.writer(data_file)
 
 count = 0
