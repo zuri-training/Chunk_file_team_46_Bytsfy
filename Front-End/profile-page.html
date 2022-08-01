@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish&display=swap" rel="stylesheet">
+    <link  href="css/bootstrap.css"  rel="stylesheet"  />
+    <script src="https://kit.fontawesome.com/98419d1ec4.js" crossorigin="anonymous"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+/>
+</head>
+<body>
+    <header>
+        <nav
+          class="navbar fixed-top navbar-expand-lg navbar-dark"
+          style="
+            height: auto;
+            padding: (18px, 80px, 18px, 80px);
+            background: linear-gradient(
+              279.5deg,
+              #091540 10.12%,
+              #008fff 322.8%,
+              #091540
+            );
+          "
+        >
+          <div class="container-md">
+            <button
+              class="navbar-toggler navbar-left"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offCanvaslinks"
+              aria-controls="offCanvaslinks"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"><i class="fa-solid fa-bars" style="color:#fff;"></i></i></span>
+            </button>
+            <a class="navbar-brand" href="#"
+              ><img src="/assets/Bytsfylogo.svg" alt="Bytsfy logo" width="80px" height="25px"/></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"><i class="fa-solid fa-ellipsis-vertical" style="color:#fff;"></i></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="navbar_links">
+                <ul class="navbar-nav navbar-nav-scroll justify-items-distribute">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                      Home</a>
+                    
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      About<i class="fa-solid fa-chevron-down fa-3xs px-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">FAQ</a>
+                      <a class="dropdown-item" href="#">Testimonials</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">Resources<i class="fa-solid fa-chevron-down fa-3xs px-1"></i></a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Tools<i class="fa-solid fa-chevron-down fa-3xs px-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">API</a>
+                      <a class="dropdown-item" href="#">Documentation</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Blog</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav navbar-nav navbar-right">
+                <div class="dropdown" >
+                      <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                      <span class=" nav-link navbar_userlink navbar-toggler-icon2" ><i class="fa-regular fa-circle px-2" > </i>Shawn L.   <i class="fa-solid fa-chevron-down fa-2xs px-2"></i></span></a>    
+                 <div class=" row dropdown-menu user_dropdownmenu">
+                       <span class="navbar-toggler-icon2 mx-4"><i class="fa-regular fa-circle-user"></i></span>
+                       <p class="navbar_userlink mx-4" >Shawn L</p>
+                       <p class="navbar_userlink mx-4">{email}</p>
+                       <a href="#" class="small navbar_userlink mx-4">My Account</a>
+                        <button href="#" class=" btn btn-primary m-4">
+                        Logout</button>
+                  </div>                   
+                </div>
+              </div>
+            </div>
+  </nav>
+</div>
+</header>
+<main>  
+    <div class="container-md pt-5">
+             <div class="row w-auto">
+             <div class="col-3 offcanvas-lg offcanvas-start bg-info text-white text-start"  data-bs-scroll="true" tabindex="-1" id="offCanvaslinks" aria-labelledby="offCanvaslinksLabel">
+                 <div class="  mx-2 mt-5 pt-2">
+                     <h4 class="offcanvas-title  pt-2 pb-7"   id="offCanvaslinksLabel">YOUR ACCOUNT</h4>
+                                      
+                     <div class=""><a href="#" class=" nav-link text-white">Dashboard</a></div>
+                     <div class="dropdown d-block">
+                      <a class="dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="sidebardropdown">
+                         My Account<i class="fa-solid fa-chevron-down fa-3xs px-1"></i>
+                       </a>
+                       <div class="dropdown-menu-dark" aria-labelledby="sidebardropdown">
+                         <a class="dropdown-item" href="#">My Profile</a>
+                         <a class="dropdown-item" href="#">My Security</a>
+                       </div>
+                       </div>
+                     <div>
+                     <a href="#" class="nav-link text-white">Logout</a></div>
+                   </div>
+             </div>
+             <div class="col-9">
+                 <div class="row" >
+                     <h2 class="mx-5 formtext" >My Profile</h2>
+                     <div class="col-9">
+                      <div class="card">                      
+                             <h3 class="card-title formtext mx-3 pt-3">Update form</h3>
+                             <div class="row g-0">
+                                 <div class="col-12 col-lg-4 d-grid gap-2 d-flex justify-content-center">
+                                     <span class="useravatar mx-5"><i class="fa-solid fa-circle fa-6x"></i></span>
+                                 </div>
+                                 <div class="col-12 col-lg-8">
+                                     <div class="card-body">
+                                         <div>
+                                         <label for="firstname" class="formtext my-2 w-75">First Name</label>
+                                         <input type="text" id="firstname" class="formcontrol w-100">
+                                       </div>
+                                       <div>
+                                         <label for="lastname" class="formtext my-2 w-75">Last Name</label>
+                                         <input type="text" id="lastname" class="formcontrol w-100">
+                                       </div>
+                                       <div class="d-grid gap-2 d-flex justify-content-end">
+                                                                            
+                                     <button  type="submit" class="btn btn-primary  my-2 text-end w-auto">Update</button>
+                                 </div>
+                                 </div>
+                             </div>
+                         </div>
+                         
+                     </div>               
+                         
+                     </div>
+ 
+                     </div>
+                     <div class="col-9">
+                         <div class="card">
+                             <div class="card-body">
+                                 <form action="" class="">
+                                    <div>
+                                 <h3 class="card-title formtext">You are currently signed into:</h3><br>
+                                  <a hef="#">name@email.com</a>
+                                    </div>
+                                    <div>
+                                 <div class="formtext"><h3>Update Email Address</h3></div>
+                                 <div class="">
+                                     <label for="emailaddress" class="formtext w-75">Email Address</label>
+                                     <input type="email" id="emailaddress" class="formcontrol  w-auto">
+                                     <div class=" d-inline  justify-content-lg-end "
+                                     ><button  type="submit" class="btn btn-primary   justify-content-lg-end my-2 w-auto">Update</button></div>                                       
+                                 </div>
+                             </div>
+ 
+                         </form>
+                     </div>
+                 </div>
+                         
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ 
+ </main>
+ 
+ <script src="js/bootstrap.bundle.min.js"></script>
+ </body>
+ </html>
+ 
