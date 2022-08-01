@@ -892,7 +892,7 @@ progress {
   --bs-gutter-y: 3rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 280px) {
   .col-sm {
     flex: 1 0 0%;
   }
@@ -3967,6 +3967,15 @@ color:#FFC700;
   }
   .navbar-expand-sm .navbar-toggler {
     display: none;
+  }
+  .outeroffcanvasdiv{
+    position:relative;
+  }
+
+   .inneroffcanvasdiv{
+    position: absolute;
+    bottom:10px
+    
   }
   .navbar-expand-sm .offcanvas {
     position: static;
@@ -8453,7 +8462,7 @@ color:#FFC700;
   visibility: hidden !important;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 280px) {
   .float-sm-start {
     float: left !important;
   }
@@ -8778,7 +8787,7 @@ color:#FFC700;
     margin-left: 1.5rem !important;
   }
   .ms-sm-5 {
-    margin-left: 3rem !important;
+    margin-left: 4.5rem !important;
   }
   .ms-sm-auto {
     margin-left: auto !important;
