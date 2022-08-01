@@ -186,24 +186,23 @@
                                        <div class="d-grid gap-2 d-flex justify-content-end">
                                                                            
                                      <button  type="submit" class="btn btn-primary  my-2 text-end w-auto" id="liveAlertBtn">Update</button>
-                                     
                                      <script>
-                                         var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-                                         var alertTrigger = document.getElementById('liveAlertBtn')
-                                         
-                                         function alert(message, type) {
-                                           var wrapper = document.createElement('div')
-                                           wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible fade show" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-                                         
-                                           alertPlaceholder.append(wrapper)
-                                         }
-                                         
-                                         if (alertTrigger) {
-                                           alertTrigger.addEventListener('click', function () {
-                                             alert('<span><i class="fa-solid fa-circle-check"></i></span>Yes! Your information has been updated', 'success')
-                                           })
-                                         }</script>
-                                 </div>
+                                        var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+                                        var alertTrigger = document.getElementById('liveAlertBtn')
+                                        
+                                        function alert(message, type) {
+                                          var wrapper = document.createElement('div')
+                                          wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible fade show" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+                                        
+                                          alertPlaceholder.append(wrapper)
+                                        }
+                                        
+                                        if (alertTrigger) {
+                                          alertTrigger.addEventListener('click', function () {
+                                            alert('<span><i class="fa-solid fa-circle-check"></i></span> Yes! Your information has been updated', 'success')
+                                          })
+                                        }</script>
+                                    </div>
                                  </div>
                              </div>
                          </div>
@@ -227,7 +226,24 @@
                                      <label for="emailaddress" class="formtext w-75">Email Address</label>
                                      <input type="email" id="emailaddress" class="formcontrol  w-75">
                                      <div class=" d-inline  justify-content-lg-end "
-                                     ><button  type="submit" class="btn btn-primary   justify-content-lg-end my-2 w-auto">Update</button></div>                                       
+                                     ><button  type="submit" class="btn btn-primary   justify-content-lg-end my-2 w-auto" id="liveAlertBtn2">Update</button>
+                                     <script>
+                                         var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+                                         var alertTrigger = document.getElementById('liveAlertBtn2')
+                                         
+                                         function alert(message, type) {
+                                           var wrapper = document.createElement('div')
+                                           wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible fade show" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+                                         
+                                           alertPlaceholder.append(wrapper)
+                                         }
+                                         
+                                         if (alertTrigger) {
+                                           alertTrigger.addEventListener('click', function () {
+                                             alert('<span><i class="fa-solid fa-circle-check"></i></span> Yes! Your information has been updated', 'success')
+                                           })
+                                         }</script>
+                                     </div>                                       
                                  </div>
                              </div>
  
