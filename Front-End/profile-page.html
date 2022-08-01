@@ -137,31 +137,37 @@
 </div>
 </header>
 <main>  
-    <div class="container-md pt-5">
-             <div class="row w-auto">
-             <div class="col-3 offcanvas-lg offcanvas-start bg-info text-white text-start"  data-bs-scroll="true" tabindex="-1" id="offCanvaslinks" aria-labelledby="offCanvaslinksLabel">
-                 <div class="  mx-2 mt-5 pt-2">
-                     <h4 class="offcanvas-title  pt-2 pb-7"   id="offCanvaslinksLabel">YOUR ACCOUNT</h4>
-                                      
-                     <div class=""><a href="#" class=" nav-link text-white">Dashboard</a></div>
+
+    <div class="container-md">
+             <div class="row mt-5">
+             <div  class="col-3 offcanvas-lg offcanvas-start text-black outeroffcanvasdiv"  data-bs-scroll="true" tabindex="-1" id="offCanvaslinks" aria-labelledby="offCanvaslinksLabel">
+                 <div class="wrapperoffcanvasdiv  mx-2 mt-5 pt-2">
+                        <h4 class="offcanvas-title  pt-2 pb-7 d-inline"   id="offCanvaslinksLabel">YOUR ACCOUNT</h4>
+                        <button type="button" class="btn-close containersm text-reset"  data-bs-dismiss="offcanvas"></button>
+                        
+                     <div class=""><a href="#" class=" nav-link text-black mt-5 mb-5">Dashboard</a></div>
                      <div class="dropdown d-block">
-                      <a class="dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="sidebardropdown">
+                      <a class="dropdown-toggle text-black pt-5 mt-5 mb-5" style="text-decoration:none !important;" href="#" role="button" data-bs-toggle="dropdown"  id="sidebardropdown">
                          My Account<i class="fa-solid fa-chevron-down fa-3xs px-1"></i>
                        </a>
-                       <div class="dropdown-menu-dark" aria-labelledby="sidebardropdown">
-                         <a class="dropdown-item" href="#">My Profile</a>
-                         <a class="dropdown-item" href="#">My Security</a>
+                           <div class="dropdown-menu" aria-labelledby="sidebardropdown">
+                              <a class="dropdown-item" href="#">My Profile</a>
+                              <a class="dropdown-item" href="#">My Security</a>
+                           </div>
                        </div>
-                       </div>
-                     <div>
-                     <a href="#" class="nav-link text-white">Logout</a></div>
+                     <div class="inneroffcanvasdiv" >
+                     <a href="#" class="nav-link text-black mt-5">Logout</a></div>
                    </div>
              </div>
              <div class="col-9">
-                 <div class="row" >
-                     <h2 class="mx-5 formtext" >My Profile</h2>
-                     <div class="col-9">
-                      <div class="card">                      
+                 <div class="row mt-5" >
+                    <div><h2 class="pb-2 mt-3 ms-sm-5 formtext" >My Profile</h2></div>
+                     
+                     <div class="offset-sm-3 offset-lg-1 justify-content-start w-75"  id="liveAlertPlaceholder"></div>
+                        
+                      
+                     <div class="col-9 offset-sm-3 offset-lg-1">
+                      <div class="card mt-3 mb-3">                      
                              <h3 class="card-title formtext mx-3 pt-3">Update form</h3>
                              <div class="row g-0">
                                  <div class="col-12 col-lg-4 d-grid gap-2 d-flex justify-content-center">
@@ -178,8 +184,25 @@
                                          <input type="text" id="lastname" class="formcontrol w-100">
                                        </div>
                                        <div class="d-grid gap-2 d-flex justify-content-end">
-                                                                            
-                                     <button  type="submit" class="btn btn-primary  my-2 text-end w-auto">Update</button>
+                                                                           
+                                     <button  type="submit" class="btn btn-primary  my-2 text-end w-auto" id="liveAlertBtn">Update</button>
+                                     
+                                     <script>
+                                         var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+                                         var alertTrigger = document.getElementById('liveAlertBtn')
+                                         
+                                         function alert(message, type) {
+                                           var wrapper = document.createElement('div')
+                                           wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible fade show" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+                                         
+                                           alertPlaceholder.append(wrapper)
+                                         }
+                                         
+                                         if (alertTrigger) {
+                                           alertTrigger.addEventListener('click', function () {
+                                             alert('<span><i class="fa-solid fa-circle-check"></i></span>Yes! Your information has been updated', 'success')
+                                           })
+                                         }</script>
                                  </div>
                                  </div>
                              </div>
@@ -189,9 +212,9 @@
                          
                      </div>
  
-                     </div>
-                     <div class="col-9">
-                         <div class="card">
+                     
+                     <div class="col-9 offset-sm-3 offset-lg-1">
+                         <div class="card mt-3">
                              <div class="card-body">
                                  <form action="" class="">
                                     <div>
@@ -202,7 +225,7 @@
                                  <div class="formtext"><h3>Update Email Address</h3></div>
                                  <div class="">
                                      <label for="emailaddress" class="formtext w-75">Email Address</label>
-                                     <input type="email" id="emailaddress" class="formcontrol  w-auto">
+                                     <input type="email" id="emailaddress" class="formcontrol  w-75">
                                      <div class=" d-inline  justify-content-lg-end "
                                      ><button  type="submit" class="btn btn-primary   justify-content-lg-end my-2 w-auto">Update</button></div>                                       
                                  </div>
@@ -213,6 +236,8 @@
                  </div>
                          
                      </div>
+                    </div>
+                    </div>
                  </div>
              </div>
          </div>
