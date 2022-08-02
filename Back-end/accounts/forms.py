@@ -1,6 +1,6 @@
 from django import forms
-from django.contrib.auth.forms import UserChangeForm, UserCreationForm, AuthenticationForm, ProfileChangeForm
-from .models import CustomUser
+from django.contrib.auth.forms import UserChangeForm, UserCreationForm, AuthenticationForm
+from .models import User
 from django.utils.translation import gettext_lazy as _
 
 
@@ -17,7 +17,7 @@ class LoginForm(AuthenticationForm):
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
-        model = CustomUser
+        model = User
         fields = ["first_name", "last_name", "email", "username", ]
 
     def __init__(self, *args, **kwargs):
@@ -34,12 +34,12 @@ class CustomUserCreationForm(UserCreationForm):
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
-        model = CustomUser
+        model = User
         fields = ["first_name", "last_name", "email", "username", "profile_pic"]
 
 
 class CustomUserProfilePic(UserCreationForm):
-    model = CustomUser
+    model = User
     fields = ["profile_pic"]
 
     def __init__(self, *args, **kwargs):
