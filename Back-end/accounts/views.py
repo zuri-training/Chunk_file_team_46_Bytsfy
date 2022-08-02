@@ -6,6 +6,8 @@ from django.contrib.auth import views as auth_views
 from .forms import LoginForm
 
 # Create your views here.
+# render image
+
 
 class LoginView(auth_views.LoginView):
     form_class = LoginForm
@@ -13,7 +15,7 @@ class LoginView(auth_views.LoginView):
    
 
 def signUp(request):
-    #Prevent logged in user from accessing signup page
+    # Prevent logged in user from accessing signup page
     if request.user.is_authenticated:
         return redirect("home")
 
