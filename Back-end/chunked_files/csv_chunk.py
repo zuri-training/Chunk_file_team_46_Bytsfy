@@ -6,15 +6,15 @@ from pathlib import Path
 import pandas as pd
 import subprocess as sub
 
-#TODO 1: bytify start first
-#TODO 2: create split by line method
-#TODO 2: create split by size method
+
+# TODO 1: bytify start first
+# TODO 2: create split by line method
+# TODO 2: create split by size method
 
 def file_ext_name(file_path):
     """get extension name """
     file_name, ext = os.path.splitext(file_path)
     return (file_name, ext)
-
 
 
 def user_spec_size():
@@ -30,8 +30,9 @@ and csv files and into bits by bytes or lines by user specification
 class Bytfy_csv:
     # The Base Url file
     BASE_DIR = Path(__file__).resolve().parent.parent
-    def __init__(self, uploaded_file, user_sepecif_size:int=None, per_lines:int=None, output_ext=".csv"):
-        self.__accepted_fmt = (".csv", ".json") #added to chheck befor instance is created
+
+    def __init__(self, uploaded_file, user_sepecif_size: int = None, per_lines: int = None, output_ext=".csv"):
+        self.__accepted_fmt = (".csv", ".json")  # added to chheck befor instance is created
         self.__file = uploaded_file
         self.file_name, self.file_ext = file_ext_name(self.file)
         self.file_size = os.path.getsize(uploaded_file)
@@ -42,7 +43,7 @@ class Bytfy_csv:
         self.user_specified_ext = output_ext
 
     @property
-    def accepted_fmt(self):# will be at the backend
+    def accepted_fmt(self):  # will be at the backend
         return self.__accepted_fmt
 
     @property
@@ -53,11 +54,11 @@ class Bytfy_csv:
         return "You have uploaded {} with a {} extension".format(self.file, self.file_ext)
 
     def mkdir(self, filename):
-            os.mkdir(f"{filename}")
+        os.mkdir(f"{filename}")
 
-    def remove_dir(self,):
+    def remove_dir(self, ):
         shutil.make_archive(self.file_name, "zip", self.file_name)
-        shutil.rmtree(self.file_name) # path to the created dir
+        shutil.rmtree(self.file_name)  # path to the created dir
 
     def to_json(self, *args):
         args[0].to_json(f"{args[1]}-{args[2]}.json")
@@ -67,7 +68,7 @@ class Bytfy_csv:
         print(os.path.getsize(f"{self.file_name}\{self.file_name}-{num}.csv"))
         print(type(f"{self.file_name}\{self.file_name}-{num}.csv"))
 
-    def split_in_lines(self,to_json=False):
+    def split_in_lines(self, to_json=False):
         # ext = self.file_name.split(".")[1]
         """"create a directory"""
         self.mkdir(self.file_name)
@@ -79,7 +80,7 @@ class Bytfy_csv:
             elif to_json:
                 self.to_json(each_file, self.file_name, num)
             num += 1
-                # each_file.to_json(f"customer_csv{k + 1}.json")
+            # each_file.to_json(f"customer_csv{k + 1}.json")
         self.remove_dir()
         return
 
@@ -107,7 +108,7 @@ class Bytfy_csv:
                 self.to_json(each_file, self.file_name, num)
             num += 1
             """"remove directory and zip directory"""
-        self.remove_dir() # add path to the directory
+        self.remove_dir()  # add path to the directory
         return
 
     def bytfy_start(self):
@@ -117,7 +118,6 @@ class Bytfy_csv:
         """
 
         """check if if the user wants to chunk by size or by rows per file"""
-
 
         if self.user_specified_ext == ".csv" and not isinstance(self.rows_per_file, int):
             self.csv_split()
