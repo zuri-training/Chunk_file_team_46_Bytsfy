@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>REGISTER</h1>
-    <form action="" method="post">
+    <form action="GET" method="post">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">REGISTER</button>
