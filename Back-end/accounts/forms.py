@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm, AuthenticationForm
-from .models import User
+from .models import CustomUser
 from django.utils.translation import gettext_lazy as _
 
 
@@ -14,28 +14,25 @@ class LoginForm(AuthenticationForm):
         'inactive': _("This account is inactive."),
     }
 
+
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
-        model = User
-        fields = ["first_name", "last_name", "email", "username"]
+        model = CustomUser
+        fields = ["first_name", "last_name", "email", "username", 'profile_pic']
 
-
-   
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
 
         # To remove auto-focus in username input
         self.fields['username'].widget.attrs.update({'autofocus': False})
 
-         # To remove help-text in the form
+        # To remove help-text in the form
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
-
-    
+        # To add image field to the form
+        self.fields['profile_pic'].widget = forms.FileInput()
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
-        model = User
-        fields = ["first_name", "last_name", "email", "username"]
-
-
+        model = CustomUser
+        fields = ["first_name", "last_name", "email", "username", "profile_pic"]
