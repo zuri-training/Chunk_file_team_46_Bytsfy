@@ -19,18 +19,7 @@
 <body>
     <header>
         <nav
-          class="navbar fixed-top navbar-expand-lg navbar-dark"
-          style="
-            height: auto;
-            padding: (18px, 80px, 18px, 80px);
-            background: linear-gradient(
-              279.5deg,
-              #091540 10.12%,
-              #008fff 322.8%,
-              #091540
-            );
-          "
-        >
+          class="navbar fixed-top navbar-expand-lg navbar-dark">
           <div class="container-md">
             <button
               class="navbar-toggler navbar-left"
@@ -87,26 +76,45 @@
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false">Resources<i class="fa-solid fa-chevron-down fa-3xs px-1"></i></a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      Tools<i class="fa-solid fa-chevron-down fa-3xs px-1"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">API</a>
-                      <a class="dropdown-item" href="#">Documentation</a>
-                    </div>
-                  </li>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">API</a>
+                        <a class="dropdown-item" href="#">Blog</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Tools<i class="fa-solid fa-chevron-down fa-3xs px-1"></i>
+                      </a>
+                      <div class="dropdown-menu">
+                        <div class="row">
+                          <div class="col">
+                            <h5 class="text-center"><strong>Split Files</strong></h5>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Split by line</a>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Split by size</a>
+                            </div>
+                          <div class="col">
+                            <h5 class="text-center"><strong>Convert Files</strong></h5>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Convert CSV to JSON</a>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Convert JSON to CSV</a>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Convert CSV to Others</a>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Convert JSON to Others</a>
+                            
+                          </div>
+                          <div class="col">
+                            <h5 class="text-center"><strong>Compress Files</strong></h5>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                            <a class="btn btn-light dropdown-item text-center" href="#">Compress by size</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#"
                       >Blog</a
@@ -140,8 +148,9 @@
 
     <div class="container-md">
           <div class="row mt-5">
-             <div  class="col-3 offcanvas-lg offcanvas-start text-black outeroffcanvasdiv"  data-bs-scroll="true" tabindex="-1" id="offCanvaslinks" aria-labelledby="offCanvaslinksLabel">
-                 <div class="wrapperoffcanvasdiv  mx-2 mt-5 pt-2">
+            <div class="sidebar-position">
+             <div  class="col-3 offcanvas-md offcanvas-start text-black outeroffcanvasdiv bg-secondary1 "  data-bs-scroll="true" tabindex="-1" id="offCanvaslinks" aria-labelledby="offCanvaslinksLabel">
+                 <div class="wrapperoffcanvasdiv  mx-5  pt-2 w-100">
                         <h4 class="offcanvas-title  pt-2 pb-7 d-inline"   id="offCanvaslinksLabel">YOUR ACCOUNT</h4>
                         <button type="button" class="btn-close containersm text-reset"  data-bs-dismiss="offcanvas"></button>
                         
@@ -159,6 +168,7 @@
                      <a href="#" class="nav-link text-black mt-5">Logout</a></div>
                  </div>
              </div>
+            </div>
              <div class="col-9">
                  <div class="row mt-5" >
                     <div><h2 class="pb-2 mt-3 ms-sm-5 formtext" >Password</h2></div>
