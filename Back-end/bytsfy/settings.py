@@ -137,6 +137,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -159,7 +165,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/chunked_files'
+MEDIA_URL = '/chunked_files/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'chunked_files')
 #Redirect url that will be configured when we have the templates, views and urls
 LOGIN_REDIRECT_URL = 'home'
