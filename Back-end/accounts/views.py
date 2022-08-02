@@ -9,11 +9,6 @@ from .forms import LoginForm
 # render image
 
 
-class ImageView(generic.View):
-    def render_image(self):
-        return render(self, 'accounts/profile_pics/img.png')
-
-
 class LoginView(auth_views.LoginView):
     form_class = LoginForm
     template_name = 'registration/login.html'
