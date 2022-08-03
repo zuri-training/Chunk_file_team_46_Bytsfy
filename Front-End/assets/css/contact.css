@@ -25,7 +25,11 @@ html {
     background-color: #0E103D;
     color: #fff;
     font-weight: bold;
+
     border-radius: 8px;
+
+    border-radius: 5px;
+
     padding: 10px 14px;
 }
 
@@ -217,6 +221,10 @@ html {
     .choose_file label {
         display: block;
         width: calc(100% - 50px);
+
+
+        /* margin: auto; */
+
         text-align: center;
         cursor: pointer;
         background-color: #fff;
