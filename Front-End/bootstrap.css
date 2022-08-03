@@ -88,6 +88,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   position: absolute;
         top: 25px;
         bottom: 0px;
@@ -674,11 +675,11 @@ progress {
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  display: flex;
+  display:flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  margin-right: 0;
+  margin-left: 0;
 }
 .row > * {
   flex-shrink: 0;
@@ -3987,19 +3988,10 @@ color:#FFC700;
 
    .inneroffcanvasdiv{
     position: absolute;
-    bottom:10px
+    bottom:50px
     
   }
-  .sidebar-position{
-    position:absolute;
-    width: 297px;
-    top:50px;
-    left:0px;
-    bottom:0px;
-    padding: 0px;
-    background-color: #CED0D9;
-    
-  }
+  
   .navbar-expand-sm .offcanvas {
     position: static;
     z-index: auto;
@@ -6469,7 +6461,7 @@ color:#FFC700;
   .offcanvas-lg {
     --bs-offcanvas-height: auto;
     --bs-offcanvas-border-width: 0;
-    background-color: transparent !important;
+    background-color: var(--bs-offcanvas-bg) !important;
   }
   .offcanvas-lg .offcanvas-header {
     display: none;
@@ -8319,6 +8311,19 @@ color:#FFC700;
 .bg-secondary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-secondary1{
+  background-color:var(--bs-gray);
+}
+
+.page-footer{
+  position:relative;
+  bottom:0;
+  background-color: #008fff;
+  width:100%;
+  justify-content: space-around;
+  padding-top: 20px;
 }
 
 .bg-success {
