@@ -6,73 +6,77 @@
 
 footer {
   background-color: #072f69;
-  width: 100%;
- 
+
   font-size: 20px;
   color: white;
 }
 
-.first {
-  display: flex;
-  flex-direction: row;
-  padding: 40px;
-  height: 150%;
-  gap: 50px;
- 
+#first {
+  background-color: #072f69;
+  padding: 30px;
+
+  gap: 40px;
 }
-#f1{
-    margin-right: 40px;
-    margin-left: 20px;
+.f1 {
+  margin-right: 40px;
+  margin-left: 20px;
 }
-#f1,
-#f2,
-#f3,
-#f4 {
-   
+.f1,
+.f2,
+.f3,
+.f4 {
   margin-top: 70px;
-  margin-bottom: 40px;
-  
-  padding-bottom: 80px;
+
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 50px;
-  
-  width: 100%;
-  
 }
+
 .social {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
+.fa-brands {
+  color: aqua;
+}
+.fa-solid,
+span {
+  color: #ffc700;
+}
+.fa-people-group {
+  color: white;
+}
 button {
- 
-   margin-left: 65%; 
-
-  width: 25%;
+  background-color: #072f69;
+width: 90%;
   border-radius: 20px 20px 0px 0px;
   border: solid 2px #ffc700;
 
-  padding: 20px;
+  padding: 30px;
   font-size: 18px;
   border-bottom: none;
-  background-color: #072f69;
+
   color: white;
+}
+#btn {
+  background-color: #072f69;
+ 
 }
 
 .logo {
   width: 50%;
 
-  height: 1.5cm;
- 
+  
 }
-.second {
+#second {
+  background-color: #008bfa;
   display: flex;
   flex-direction: row;
 
-
   gap: 25%;
-  padding: 60px;
+  padding: 50px;
   border-top: 5px solid #ffc700;
 }
 a {
@@ -81,71 +85,4 @@ a {
 }
 #c {
   padding-left: 4%;
-}
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 1440px) {
-  .first {
-   
-    width: 100%;
-    padding: 0px;
-    gap: 5px;
-    
-  }
-  .second{
-    width: 100%;
-    
-    padding: 60px;
- margin-right: 0px;
-    gap: 100px;
-    
-  }
-  
-  #f1,
-  #f2,
-  #f3,
-  #f4 {
-    padding: 0px;
-    margin-top: 20px;
-    margin-left: 1px;
-    
-  }
-  #f1 {
-    margin-top: 1px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px;
-  }
-  footer {
-    width: 100%;
-  }
-  .logo {
-    padding: 0px;
-    height: 2cm;
-    width: 50%;
-  }
-  #f4 {
-    margin-right: 30px;
-  }
-  button {
-    width: 30%;
-   position: relative;
-    left: 0%;
-   
-    margin-top: 50px;
-  
-
-  }
-  
-  .social {
-    margin-left: 1px;
-    padding: 0px;
-    gap: 5px;
-  }
 }
