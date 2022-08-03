@@ -1,151 +1,88 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+footer {
+  background-color: #072f69;
 
-footer{
-    background-color: #072F69;
-    width: 100%;
-   /* margin: 50px auto;*/
-    font-size: 20px;
-    color: white;
-
+  font-size: 20px;
+  color: white;
 }
 
-.first{
-    display: flex;
-    flex-direction: row;
-    padding: 40px;
-    height: 150%;
-    
+#first {
+  background-color: #072f69;
+  padding: 30px;
+
+  gap: 40px;
+}
+.f1 {
+  margin-right: 40px;
+  margin-left: 20px;
+}
+.f1,
+.f2,
+.f3,
+.f4 {
+  margin-top: 70px;
+
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
-#f1{
-    width: 45%;
-    padding: 60px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    margin-top: 0px;
-    padding-top: 10px;
-    
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
-#f2, #f3, #f4{
-    margin-top: 0px;
-    padding: 60px;
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    
-    
-    
+.fa-brands {
+  color: aqua;
 }
-.social{
-     display: flex;
-     flex-direction: row;
-   gap: 20px;
-   
-    
+.fa-solid,
+span {
+  color: #ffc700;
 }
-button{
-    position: relative;
-    
-    top: 62%;
-    left: 70%;
-    width: 20%;
-    border-radius: 20px 20px 0px 0px;
-    border: solid 2px #FFC700;
-  /* text-align: center;
-   padding: auto;*/
-   
-   padding-bottom: 20px;
-   font-size: 18px;
-   border-bottom: none;
-   background-color: #072F69;
-   color: white;
+.fa-people-group {
+  color: white;
+}
+button {
+  background-color: #072f69;
+width: 90%;
+  border-radius: 20px 20px 0px 0px;
+  border: solid 2px #ffc700;
 
-}
-.agents{
-    width: 20%;
-}
-.logo{
-    width: 60%;
-   
-    height: 4cm;
-    
-}
-.second{
-    
-display: flex;
-gap: 25%;
-padding: 50px;
-border-top:  5px solid #FFC700;
+  padding: 30px;
+  font-size: 18px;
+  border-bottom: none;
 
+  color: white;
 }
-a{
-    text-decoration: none;
-    color: white;
-}
-#c{
-    padding-left: 4%;
-}
-#f1 ,.first, #f2, #f3, #f4, .agents, footer, button{
-    background-image: linear-gradient(to right,  #06316C
-    );
-
+#btn {
+  background-color: #072f69;
+ 
 }
 
-@media only screen and (max-width: 1440px) {
+.logo {
+  width: 50%;
 
-    .first{
-        width: 100%;
-     padding: 5px;   
-     gap: 40px;
-    }
-    #f1, #f2, #f3, #f4{
-        padding: 2px;
-        margin-top: 100px;
-        margin-left: 1px;
-
-    }
-     #f1{
-        margin-top: 1px;
-        margin-left: 50px;
-        padding: 0px;
-        
-     }
-    footer{
-        width: 100%;
-    }
-    .logo{
-       
-        padding: 0px;
-        height: 5cm;
-        width: 80%;
-        
-        
-    }
-    #f4{
-        margin-right: 30px;
-    }
-    button{
-        width: 30%;
-       position: relative;
-        left: 60%;
-        margin-top: 50px;
-    
-        
-    }
-    .second{
-        gap: 180px;
-    }
-    .social{
-        margin-left: 1px;
-        padding: 0px;
-    }
-
-
+  
 }
+#second {
+  background-color: #008bfa;
+  display: flex;
+  flex-direction: row;
 
+  gap: 25%;
+  padding: 50px;
+  border-top: 5px solid #ffc700;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+#c {
+  padding-left: 4%;
+}
