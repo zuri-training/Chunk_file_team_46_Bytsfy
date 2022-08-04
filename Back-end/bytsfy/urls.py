@@ -25,5 +25,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     # social logins
     path('social-auth/', include('social_django.urls', namespace='social')),
-    path("", TemplateView.as_view(template_name="home.html"), name="home")
+    path("", TemplateView.as_view(template_name="home.html"), name="home"),
+    # test chunk
+    path("chunk/", include('chunked_files.urls'))
 ]
