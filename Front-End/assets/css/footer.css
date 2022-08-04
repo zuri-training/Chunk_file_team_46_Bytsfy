@@ -11,42 +11,33 @@ footer {
   color: white;
 }
 
-#first {
-  background-color: #072f69;
-  padding: 30px;
 
-  gap: 40px;
-}
-.f1 {
-  margin-right: 40px;
-  margin-left: 20px;
-}
 .f1,
 .f2,
 .f3,
 .f4 {
-  margin-top: 70px;
-
+ background-color: #072f69;
+  
+ margin-top: 70px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
-
 .social {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
-.fa-brands {
-  color: aqua;
-}
-.fa-solid,
-span {
-  color: #ffc700;
-}
-.fa-people-group {
-  color: white;
+#second {
+  
+  background-color: #008bfa;
+  display: flex;
+  flex-direction: row;
+
+  gap: 25%;
+  padding: 50px;
+  border-top: 5px solid #ffc700;
 }
 button {
   background-color: #072f69;
@@ -62,27 +53,34 @@ width: 90%;
 }
 #btn {
   background-color: #072f69;
+  margin-top: 60px;
  
 }
+.f1{
+  gap: 70px;
+}
 
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.fa-brands {
+  color: aqua;
+}
+.fa-solid,
+span {
+  color: #ffc700;
+}
+.fa-people-group {
+  color: white;
+}
 .logo {
   width: 50%;
 
   
 }
-#second {
-  background-color: #008bfa;
-  display: flex;
-  flex-direction: row;
-
-  gap: 25%;
-  padding: 50px;
-  border-top: 5px solid #ffc700;
-}
 a {
   text-decoration: none;
   color: white;
-}
-#c {
-  padding-left: 4%;
 }
