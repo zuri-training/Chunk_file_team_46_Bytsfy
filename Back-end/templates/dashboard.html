@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChunkIT</title>
+</head>
+
+<body>
+    <div class="container">
+                {% for form in chunk.forms %}
+                    {{ form.render() }}
+                {% endfor %}
+    </div>
+</body>
+</html>
