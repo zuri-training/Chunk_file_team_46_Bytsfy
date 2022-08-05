@@ -26,10 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY = 'django-insecure-%-_^k22l=sjuo-=s%)s0u@hc51$z00-r*(dxv7)eeak329zd&m'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ["DEBUG"]
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -50,7 +51,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites', # new
 
-    #3rd party 
+    #apps created
+    # 'accounts',
+
+    'django_extensions',
+
     'social_django', #new
     'allauth', # new
     'allauth.account', # new
@@ -64,11 +69,11 @@ ACCOUNT_SESSION_REMEMBER = True # new
 ACCOUNT_EMAIL_VERIFICATION = 'none' # verification email not being sent
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.github.GithubOAuth2', #github auth
-    'social_core.backends.google.GoogleOAuth2', #google auth
-    
-    'django.contrib.auth.backends.ModelBackend', #new
-    'allauth.account.auth_backends.AuthenticationBackend', #new for user authentication
+    'social_core.backends.github.GithubOAuth2',  #github auth
+    'social_core.backends.google.GoogleOAuth2',  #google auth
+
+    'django.contrib.auth.backends.ModelBackend',  # new
+    'allauth.account.auth_backends.AuthenticationBackend',
 )
 
 MIDDLEWARE = [
@@ -123,6 +128,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -140,6 +146,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
 
 
 
@@ -191,8 +202,8 @@ LOGOUT_URL = 'logout'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-SOCIAL_AUTH_GITHUB_KEY = os.environ["SOCIAL_AUTH_GITHUB_KEY"]
-SOCIAL_AUTH_GITHUB_SECRET = os.environ["SOCIAL_AUTH_GITHUB_SECRET"]
+SOCIAL_AUTH_GITHUB_KEY = 'ac018a6ab6d1dd0dbaac'
+SOCIAL_AUTH_GITHUB_SECRET = 'caf15e516ed2bd5bf7abba55852dd4ea1456e70d'
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ["SOCIAL_AUTH_GOOGLE_OAUTH2_KEY"]
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ["SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET"]
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '157324487255-vgb6geka0t8bbsqghagmo8eujsb6cgdm.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
