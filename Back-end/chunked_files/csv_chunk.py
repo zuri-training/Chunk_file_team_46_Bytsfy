@@ -44,7 +44,6 @@ class Bytfy_csv:
         self.file_size = os.path.getsize(uploaded_file)
         self.rows_per_file = per_lines
         self.chunk_limit = (20 * self.file_size) / 100
-        # self.chunk_size = chunk_size
         self.user_specified_size = user_sepecif_size
         self.user_specified_ext = output_ext
         self.doc_name = doc_name
@@ -137,3 +136,7 @@ class Bytfy_csv:
             self.split_in_lines(to_json=True)
         else:
             raise LookupError("sorry an error occured, kindly check your file or contact us")
+
+
+ # def to_json(self, *args):
+        # args[0].to_json(f"{self.file_name}\{args[1]}-{args[2]}.json")
