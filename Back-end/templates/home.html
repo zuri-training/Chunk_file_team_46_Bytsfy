@@ -10,6 +10,11 @@
     {% if user.is_authenticated %}
     <h1>Hello, {{user.email}}</h1>
         <img src="{{user.profile_pic.url }}" alt="">
+    <form action="" method="post" encType="multipart/form-data" >
+        {% csrf_token %}
+
+        <input type="file" name="file">
+    <input type="submit">
     <p><a href="{% url 'account_logout' %}">logout</a></p>
     <p><a href="{% url 'account_set_password' %}">change password</a></p>
     {% else %}
