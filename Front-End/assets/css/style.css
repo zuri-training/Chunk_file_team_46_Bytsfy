@@ -25,11 +25,8 @@ html {
     background-color: #0E103D;
     color: #fff;
     font-weight: bold;
-
     border-radius: 8px;
-
     border-radius: 5px;
-
     padding: 10px 14px;
 }
 
@@ -191,6 +188,191 @@ html {
     font-size: 14px;
 }
 
+
+/*----------------------Profile Page----------------------------*/
+
+.Profile {
+    background-color: #D1EAFE;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 12px #D1EAFE;
+    /* margin-left: 16px; */
+}
+
+#profile-btn {
+    background-color: #0E103D;
+    color: #fff;
+    font-weight: 600;
+    width: 12%;
+    height: 8vh;
+    border: 1px solid #0E103D;
+    border-radius: 5px;
+}
+
+
+/*--------Personal info Section---------*/
+
+.profile-hero {
+    display: flex;
+    flex-direction: row;
+}
+
+.dummy-profile {
+    width: 150px;
+    height: 150px;
+    padding-right: 15px;
+}
+
+.Profile-name {
+    color: #0E103D;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.Profile-email {
+    color: #1698FF;
+}
+
+.Profile-heading {
+    color: #0E103D;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+/*--------contact info Section---------*/
+
+
+/*--------Security info Section---------*/
+
+.change-paasword {
+    color: #0E103D;
+    font-weight: 500;
+}
+
+
+/*------------------------Home Page------------------------------*/
+
+
+/*--------Navbar Section---------*/
+
+.nav-ul {
+    margin-left: 20%;
+    color: #0E103D;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-ul li a #home {
+    color: #0E103D;
+}
+
+.nav-ul li a:hover {
+    color: #74C0FC;
+    font-weight: 700;
+}
+
+#home {
+    color: #0E103D;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#home:hover {
+    color: #74C0FC;
+    font-weight: 700;
+}
+
+.nav-items {
+    padding: 0 20px;
+    color: #0E103D;
+}
+
+.dropdown1 {
+    background-color: #D1EAFE;
+    color: #0E103D;
+}
+
+.dropdown-items:hover {
+    background-color: #fff;
+    color: #0E103D;
+}
+
+#nav-btn {
+    background-color: #0E103D;
+    color: #fff;
+    font-weight: 600;
+    width: 8vw;
+    height: 6vh;
+}
+
+#nav-btn1 {
+    color: #0E103D;
+    font-weight: 600;
+}
+
+#nav-btn1:hover {
+    color: #0E103D;
+    font-weight: 600;
+    border: 1px solid #0E103D;
+    width: 8vw;
+    height: 6vh;
+}
+
+
+/*--------Footer Section---------*/
+
+#footer {
+    background: url("../img/Footer-Bg-Desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+#copyright {
+    background: url("../img/CopyrightBG-Desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+    padding: 1px;
+}
+
+ul a:hover {
+    color: #ffC700;
+}
+
+.fa-brands,
+.fa-solid {
+    font-size: 20px;
+}
+
+.footer-header {
+    padding-top: 48px;
+}
+
+.footer-header:hover {
+    color: #ffC700;
+}
+
+.termspolicy {
+    display: flex;
+    flex-direction: row;
+}
+
 @media (max-width: 650px) {
     /*------------------------contact Page------------------------------*/
     .contact-paragraph {
@@ -221,10 +403,7 @@ html {
     .choose_file label {
         display: block;
         width: calc(100% - 50px);
-
-
         /* margin: auto; */
-
         text-align: center;
         cursor: pointer;
         background-color: #fff;
@@ -245,5 +424,41 @@ html {
     .tools-nav {
         display: flex;
         flex-direction: column;
+    }
+    /*--------footer Section--------------*/
+    .termspolicy {
+        margin: auto;
+    }
+    .footer-header {
+        padding-top: 16px;
+    }
+    /*--------navbar Section--------------*/
+    #nav-btn {
+        width: 28vw;
+        height: 8vh;
+    }
+    #nav-btn1 {
+        color: #0E103D;
+        font-weight: 600;
+    }
+    #nav-btn1:hover {
+        width: 28vw;
+        height: 8vh;
+    }
+    .nav-ul {
+        margin-left: -2%;
+    }
+    /*------------------------profile Page------------------------------*/
+    .middle-form {
+        margin-top: 1.5em;
+    }
+    #profile-btn {
+        background-color: #0E103D;
+        color: #fff;
+        font-weight: 600;
+        width: 100%;
+        height: 8vh;
+        border: 1px solid #0E103D;
+        border-radius: 5px;
     }
 }
