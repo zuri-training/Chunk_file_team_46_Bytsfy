@@ -29,7 +29,8 @@ urlpatterns = [
     # social logins
     path('social-auth/', include('social_django.urls', namespace='social')),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
-    path("", TemplateView.as_view(template_name="dashboard.html"), name="dashboard")
+    path("", TemplateView.as_view(template_name="dashboard.html"), name="dashboard"),
+    path("chunk/", include('chunked_files.urls')),
 ]
 
 if settings.DEBUG:

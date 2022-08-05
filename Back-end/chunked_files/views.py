@@ -15,14 +15,11 @@ def chunk(request):
         user_upload.save()
         name_of_file = user_upload.uploaded_file.name.split("/")#split
         newfile_path = os.path.join(base_dir, fr"chunked_files\{name_of_file[0]}\{name_of_file[1]}")
-        # print(base_dir)
-        print("----------------")
         doc_name = name_of_file[-1].split(".")[0]
-        print(name_of_file[-1].split(".")[0])
-        print("----------------")
         # print(csv_chunk.file_ext_name(newfile_path))
         bytes =csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=100, output_ext=".csv", doc_name=doc_name)
         bytes.bytfy_start()
         user_upload.delete()
+        return render(request, "upload.html)
+#     return render(request, "dashboard")
 
-    return render(request, "dashboard")
