@@ -90,7 +90,7 @@ class Bytfy_csv:
         self.remove_dir()
         return
 
-    def csv_split(self, to_jsons=False):
+    def csv_split(self, to_jsons=True):
         """check size if it is less than 5% of the total size"""
         if self.user_specified_size < self.chunk_limit:
             raise ValueError("please increase the size per file you want to chunk")
