@@ -12,7 +12,7 @@
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">REGISTER</button>
-        <p><a href="{% url 'login' %}">already a user?</a></p>
+        <p><a href="{% url 'account_login' %}">already a user?</a></p>
     </form>
     <div>
         <p><a href="{% url 'social:begin' 'github' %}">with github </a></p>
