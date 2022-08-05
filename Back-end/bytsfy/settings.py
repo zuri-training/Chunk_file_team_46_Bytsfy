@@ -26,17 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ["DEBUG"]
-=======
-SECRET_KEY = os.environ.get("Bytsfy_secret_key")
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
->>>>>>> 50cd58b7785d69c16f815967c8d05fb5b90db3a1
 
 ALLOWED_HOSTS = []
 
@@ -47,6 +40,7 @@ INSTALLED_APPS = [
 
     #local apps
     'accounts.apps.AccountsConfig',
+    'chunked_files.apps.ChunkedFilesConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -54,23 +48,27 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    #apps created
-    # 'accounts',
-    'chunked_files',
+    'django.contrib.sites', # new
 
     #3rd party 
     'social_django', #new
+    'allauth', # new
+    'allauth.account', # new
+    'widget_tweaks',    # new
 ]
 
 AUTH_USER_MODEL='accounts.User' #use our customuser 
 
+SITE_ID = 1 # new
+ACCOUNT_SESSION_REMEMBER = True # new
+ACCOUNT_EMAIL_VERIFICATION = 'none' # verification email not being sent
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2', #github auth
     'social_core.backends.google.GoogleOAuth2', #google auth
     
-    'accounts.backends.EmailBackend' # Allow email or username log in
+    'django.contrib.auth.backends.ModelBackend', #new
+    'allauth.account.auth_backends.AuthenticationBackend', #new for user authentication
 )
 
 MIDDLEWARE = [
@@ -163,33 +161,38 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/chunked_files/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'chunked_files')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 #Redirect url that will be configured when we have the templates, views and urls
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False # new make password input on sign up one
+
+# config for email registration and login
+ACCOUNT_USERNAME_REQUIRED = False # new
+ACCOUNT_AUTHENTICATION_METHOD = 'email' # new
+ACCOUNT_EMAIL_REQUIRED = True # new
+ACCOUNT_UNIQUE_EMAIL = True # new
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-<<<<<<< HEAD
 SOCIAL_AUTH_GITHUB_KEY = os.environ["SOCIAL_AUTH_GITHUB_KEY"]
 SOCIAL_AUTH_GITHUB_SECRET = os.environ["SOCIAL_AUTH_GITHUB_SECRET"]
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ["SOCIAL_AUTH_GOOGLE_OAUTH2_KEY"]
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ["SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET"]
-=======
-SOCIAL_AUTH_GITHUB_KEY = os.environ.get("SOCIAL_AUTH_GITHUB_KEY")
-SOCIAL_AUTH_GITHUB_SECRET = os.environ.get("SOCIAL_AUTH_GITHUB_SECRET")
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
->>>>>>> 50cd58b7785d69c16f815967c8d05fb5b90db3a1

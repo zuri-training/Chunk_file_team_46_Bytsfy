@@ -8,13 +8,13 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-    <h1>Hello, {{user.username}}</h1>
+    <h1>Hello, {{user.email}}</h1>
         <img src="{{user.profile_pic.url }}" alt="">
-    <p><a href="{% url 'logout' %}">logout</a></p>
-    <p><a href="{% url 'password_change' %}">change password</a></p>
+    <p><a href="{% url 'account_logout' %}">logout</a></p>
+    <p><a href="{% url 'account_set_password' %}">change password</a></p>
     {% else %}
-    <p><a href="{% url 'login' %}">login</a></p>
-    <p><a href="{% url 'signup' %}">register</a></p>
+    <p><a href="{% url 'account_login' %}">login</a></p>
+    <p><a href="{% url 'account_signup' %}">register</a></p>
     {% endif %}
 </body>
 </html>
