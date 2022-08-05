@@ -17,7 +17,7 @@ def chunk(request):
         newfile_path = os.path.join(base_dir, fr"chunked_files\{name_of_file[0]}\{name_of_file[1]}")
         # print(base_dir)
         print("----------------")
-        doc_name = name_of_file[-1].split(".")[0]
+        doc_name = name_of_file[-1].split(".")[0] # pure document name
         print(name_of_file[-1].split(".")[0])
         print("----------------")
         # print(csv_chunk.file_ext_name(newfile_path))

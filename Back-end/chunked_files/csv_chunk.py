@@ -44,7 +44,6 @@ class Bytfy_csv:
         self.file_size = os.path.getsize(uploaded_file)
         self.rows_per_file = per_lines
         self.chunk_limit = (20 * self.file_size) / 100
-        # self.chunk_size = chunk_size
         self.user_specified_size = user_sepecif_size
         self.user_specified_ext = output_ext
         self.doc_name = doc_name
@@ -91,7 +90,7 @@ class Bytfy_csv:
         self.remove_dir()
         return
 
-    def csv_split(self, to_jsons=True):
+    def csv_split(self, to_jsons=False):
         """check size if it is less than 5% of the total size"""
         if self.user_specified_size < self.chunk_limit:
             raise ValueError("please increase the size per file you want to chunk")
