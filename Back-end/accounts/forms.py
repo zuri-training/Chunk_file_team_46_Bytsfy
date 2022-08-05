@@ -29,7 +29,7 @@ class CustomUserCreationForm(UserCreationForm):
         # To remove help-text in the form
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
-        # To add image field to the form
+        
 
 
 class CustomUserChangeForm(UserChangeForm):
