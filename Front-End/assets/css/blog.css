@@ -5,15 +5,41 @@
     padding-right: 62px;
     padding-left:83px;
 }
+@media  (max-width: 500px){
+    .first-section-bg{
+    background-color: rgba(9, 21, 64, 0.1);
+    padding-top: 12px;
+    padding-bottom: 13px;
+    padding-right: 12px;
+    padding-left:13px;}
+
+   card{
+    width:100%;
+   }
+}
+.blog-post{
+    background-color: rgba(9, 21, 64, 0.1);
+
+}
+h4{
+    font-size: 40px;
+}
 
 h3{
     font-size: 40px;
     color: #091540;
-    text-align: justify;
-    text-justify: auto;
     Line-height:58.51px;
     
 }
+.blogh3{
+
+        font-size: 40px;
+        color: #091540;
+        text-align: left;
+        text-justify: auto;
+        Line-height:58.51px;
+        
+    }
 h5{
     font-size:20px;
     color: #000000;
