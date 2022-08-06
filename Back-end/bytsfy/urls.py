@@ -34,6 +34,7 @@ urlpatterns = [
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
     path("", TemplateView.as_view(template_name="dashboard.html"), name="dashboard"),
     path("chunk/", include('chunked_files.urls')),
+    path('contact_us/',include('contact_us.urls')),
 ]
 
 if settings.DEBUG:

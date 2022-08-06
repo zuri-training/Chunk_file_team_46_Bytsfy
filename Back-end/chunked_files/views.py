@@ -20,6 +20,6 @@ def chunk(request):
         bytes =csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=100, output_ext=".csv", doc_name=doc_name)
         bytes.bytfy_start()
         user_upload.delete()
-        return render(request, "upload.html)
+        return render(request, "upload.html")
 #     return render(request, "dashboard")
 
