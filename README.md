@@ -84,9 +84,15 @@ python manage.py runserver
 
 ```
 
+
 <h2>Built with:</h2>
 <div style="align: center;">
+  Python
+  <img src="https://img.shields.io/badge/python-3.7-brightgreen.svg" alt="python" />
+  Django
   <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" title="Django" alt="Django" width="90" height="90"/>
+  Bootstrap
   <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain.svg" title="Django" alt="Django" width="90" height="90"/>
+   HTML5
   <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg" title="Django" alt="Django" width="90" height="90"/>
 </div>
