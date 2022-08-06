@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Survey on JSON Data Modelling</title>
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Fontawesome CDN--->
+    <script src="https://kit.fontawesome.com/168fb1c8fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+<!------------------------------Blog Header------------>
+<div class="container-fluid">
+    <div class="row blog-post">
+        <h4>
+            Bytsfy Blog
+        </h4>
+    </div>
+</div>
+    
+    <!---------------------------First  Section---------------->
+    <div class="container-fluid">
+        <div class="row mx-3  my-3">
+            <div class="col-12">
+                <img src="/assets/img/blog-image 10.png"  alt="man working" class=" img-fluid w-100 rounded"></img>
+            </div>
+                <div class="col-12">
+                    <div class="w-75">
+                        <h3 class="w-100">
+                            Survey on JSON Data Modelling
+                        </h3>
+                        <h5>What is JSON?</h5>
+                        <p>JSON (JavaScript Object Notation) [1-3] is a popular lightweight semi-structured data format based on the data types of programming language JavaScript. It has become the main data exchange format over the World Wide Web in the past few years. JSON has also gained popularity in database community research. As a semi-structured data format, JSON not only can be integrated in traditional database systems, but also widely used in NoSQL database systems[4-5]. Some query languages for JOSN such as JSONiq [6,7] and SQL++[8] are already proposed to support JSON data querying. Data model describes the basic data structures and semantics of the underlying data, so it is the fundamental and key aspects for any data format including JSON data. As data model is also the key and foundation for other data management technologies, such as data indexing, data querying, data searching, data mapping, data integrating, and data mining, how to design an efficient and powerful model for JSON data is necessary and important to other related research topics, such as data integration, data search and query, data quality and evaluation, etc. Now researchers proposed some approaches to modelling JSON documents mainly based on tree models [9-11]. The rest of the paper is organized as follows. A JOSN document is a set of objects, and each JOSN object is a set of key-vlaue pairs. We first discussed JSON object and tree models in Section 2. For arrays in JSON documents, there are two approaches namely ordered approach and unordered approach, which are given in Section 3. As an object can be again its own sub-objects in JOSN data,recursions must be considered in JSON model, which are given in Section 4. JOSN schema definition and their related schema definitions are also discussed in Section 4. We conclude the paper and point out the future directions of the topic in Section 5.
+                            </p>
+                            <h5>2. Objects and JSON Trees</h5>
+                            
+                            <p>As each JSON object in a JSON document is a set of key-vlaue pairs, a JOSN document can be aturally represented as a data tree structure called JSON tree. A value can be an atomic value such as a string, an integer, a number, an array, or null. To capture the compositional structure of JSON data,each value can again be a set of JSON objects. We first give the definition of a JOSN document as following:
+                            </p>
+                            <p>Definition 1 (JSON document). A JOSN document D is defined as</p>
+                            
+                                                                                       <p class="text-center">  D::={Object[,Object, …]},</p>
+                            
+                            where
+                            
+                                                                         Object ::= {Key:{Value} [, Key:{Value}, …]},
+                            
+                                                                                                   Key ::= String,
+                            
+                                                                      Value ::= String|Interger|Number|Array|Null|Object.
+                            
+                            For example, consider the following JSON document D1:
+                            
+                            {
+                            
+                                     “name”: {
+                            
+                                           “FirstName”: “Bill”,
+                            
+                                                    “LastName”: “Bush”
+                            
+                                                     -},
+                            
+                                         “age”: 30
+                            
+                            }
+                            
+                            JSON document D1 contains 2 objects O1 and O2 as following:
+                            
+                            O1::= {
+                            
+                                           “name”: {
+                            
+                                                  “FirstName”: “Bill”,
+                            
+                                                           “LastName”: “Bush”
+                            
+                                                             },
+                            
+                                    }
+                            
+                            with key “name” and
+                            
+                            O2::={
+                            
+                                              “age”: 30
+                            
+                                    }
+                            
+                            with key “age” and an atomic integer value “30”.
+                            
+                            The value of key of O1 again contains 2 objects O11 and O12 as following:
+                            
+                            O11::= {
+                            
+                                              “FirstName”: “Bill”,
+                            
+                                         }
+                            
+                            with key “FirstName” and an atomic string value “Bill” and
+                            
+                            O12::= {
+                            
+                                              “LastName”: “Bush”
+                            
+                                           }
+                            
+                            with key “LastName” and an atomic string value “Bush”.
+                            
+                            Of course, a value may contain nothing, which can be represented by type “Null”. For type “Array”
+                            
+                            and “Number”, we will explained in Section 3.
+                            
+                            
+                            3. Arrays and Numbers
+                            Suppose we have the following 2 children O3 and O4 of “Bill Bush” in JSON document D1:
+                            
+                            O3::={
+                            
+                                             “name”: {
+                                                                              “FirstName”: “John”,
+                            
+                                                                                       “LastName”: “Bush”
+                            
+                                                                                         },
+                            
+                                           “age”: 10
+                            
+                                        }
+                            
+                            and
+                            
+                            O4::={
+                            
+                                          “name”: {
+                            
+                                                           “FirstName”: “Mary”,
+                            
+                                                                         “LastName”: “Bush”
+                            
+                                                                            },
+                            
+                                            “age”: 12
+                            
+                                           }
+                            
+                            To combine O3 and O4 in JSON document D1, we add a new key “children” in D1 and arrange O3 and O4 as an array [O3,O4] and numbered by numbers “1” and “2” sequentially as {1:O3, 2:O4}:
+                            
+                            {
+                            
+                                            “name”: {
+                            
+                                                  “FirstName”: “Bill”,
+                            
+                                                            “LastName”: “Bush”
+                            
+                                                              },
+                            
+                                                     “age”: 30,
+                            
+                                                     “children”:{1:O3, 2: O4}
+                            
+                            }
+                            
+                            For the problem of whether an array is ordered or unordered, there are two different treatments.
+                            Ref.[10] treated an array to be unordered based on the following two reasons: First, as JSON
+                            Navigation instructions use random access to access elements in arrays; treating arrays as ordered lists will naturally suggest that the navigation instructions support different access methods to access elements of the array. Second, no system actually supports the navigation from one element to another element in an array. Ref.[11] also mainly concentrated on unordered arrays, but proposed a total order on atomic keys which can model ordered arrays. We think that arrays to be ordered will add feasibility and flexibility in JSON navigation in the future, which can provide more access functionalities such as accessing the first, accessing the last, accessing the previous, and accessing the next element from a given element or position in an array, etc.
+                            
+                            4. Recursions
+                            
+                            Back to object O3 and O4. From the definition of D1, we can see that the structures of O3 and O4 are identical to the structure of D1. Suppose that we want to represent a family tree such that children O3 and O4 will have children several years later, we can use recursion to achieve this goal. We apply a JSON Schema to specify what a JSON document must look like, the ways to extract information from it, and how to interact with it. We first give the schema definition S0 based on Ref.[9] as following:
+                            
+                            {
+                            
+                                          “definitions”: {
+                            
+                                                “type”: “Object”,
+                            
+                                                                “properties”:{
+                            
+                                                                   “Name”: {“type”: “Object”,
+                            
+                                                                         “properties”:{
+                            
+                                                                               “FirstName”: {“type”: “String”},
+                            
+                                                                                       “LastName”: {“type”: “String”}
+                            
+                                                                           },
+                            
+                                                                    “type”: “Object”,
+                            
+                                                                      “properties”:{
+                            
+                                                                          “age”: {“type”: “Integer”}
+                            
+                                                                            },
+                            
+                                                    “type”: “Object”,
+                            
+                                                    “properties”:{
+                            
+                                                      “children”: {“type”: “Array”,
+                            
+                                                                                           “minItems”: 0,
+                            
+                                                                                           “maxItems”: unlimited,
+                            
+                                                                             “items”: [
+                            
+                                                                                                               {“$ref”: “#/definitions/S0”},
+                            
+                                                                                                               {“$ref”: “#/definitions/S0”}
+                            
+                                                                                            ]
+                            
+                                                                          }
+                            
+                                                          }
+                            
+                                             }
+                            
+                            }
+                            
+                            Schema S0 defines an object which has sub-objects “Name”, “age”, and “children”, respectively.
+                            For sub-object “Name”, there are two sub-objects “FirstName” and “LastName”, which are both
+                            String types. For sub-object “age”, it is an Integer type (atomic type). For sub-object “children”, it is an Array type (atomic type), which again contains 0-unlimited numbers of object of type S0. Now we give the recursion schema definition of JSON document D1 as the following schema S1:
+                            
+                            {
+                            
+                                                  “$ref”: “#/definitions/S0”
+                            
+                            }
+                            
+                             which is obviously a recursion definition of S0.
+                            Ref.[12] provides detailed JSON Schema definition and formal grammar specification for the
+                            JSON Schema documents. Other schema specification and proposals related to JSON are proposed, which are either formal specification standards, or are accepted only for specific use cases, or applied in a specific application. For example, JSON Schema[13] defines the media type application/schema+json", a JSON-based format for describing the structure of JSON data. The "application/schema-instance+json" media type provides additional feature-rich integration with "application/schema+json" beyond what can be offered for "application/json" documents. Swagger[14] is a framework of API developer tools for the OpenAPI Specification(OAS), enabling developmentacross the entire API lifecycle, from design to test and deployment based on JSON. RAML(RESTful API Modeling Language) [15] makes it easy to manage the whole API lifecycle from design to sharing based on JSON. You only write what you need to define, which can be reused later. It is a machine readable API design that is also human friendly. JSON-LD[16] is a JSON-based format to serialize Linked Data. It is designed to easily integrate into deployed systems that already use JSON, and
+                             provides a smooth upgrade path from JSON to JSON-LD. One of its primary goals is to store Linked Data in JSON-based storage engines.
+                            
+                            5. Conclusions
+                            
+                            This paper presents a survey study of different kinds of models of uncertain data in relational
+                             , XML data, and graph data. We mainly discuss and review probabilistic uncertain data models as they not only are widely used in many applications and areas nowadays, but also have better tradeoffs between simplicity and expressive power.
+                            The open problems of modelling JSON data include both semantic and computation aspects. For semantic aspect, there is no accepted unified model by all community for JOSN data. In real
+                            applications, such semantic problems may dependent on specific applications. It is difficult to give a general guideline to design good JSON document and model. For computational aspect, one major problem of recursions in JSON document and schema definition is that processing JOSN document and schema efficiently is a challenge. Algorithms of non-recursions are difficult to deal with the recursions in JOSN data, which are usually exponential scale. One possible approach is use parallel algorithms to deal with recursions, such as the popular Map Reduce framework. Another open problem is to propose some criteria for modelling JOSN data, such as expressive power, 
+                            
+                        </p>
+                            <ol>
+                                <li>
+                                    {
+                                </li>
+                                <li>
+                                       "Actors": [
+                                </li>
+                                <li>
+                                        {
+                                </li>
+                                <li>
+                                           "id": "1",
+                                </li>
+                                <li>
+                                            "firstName": "Tom",
+                                </li>
+                                <li>
+                                    "lastName": "Cruise"
+                                </li>
+                                <li>
+                                },
+                                </li>
+                                <li>
+                                    {
+                                </li>
+                                <li>
+                                    "id": "2",
+                                </li>
+                                <li>
+                                    "firstName": "James",
+                                </li>
+                                <li>
+                                    "lastName": "Bond"
+                                </li>
+                                <li>
+                                }
+                                </li>
+                                <li>
+                                    ]
+                                </li>
+                                <li>
+                                    ]
+                                </li>
+                                
+                            </ol> 
+                     <p>This example shows the Actors' data and has two actors. It's easy to understand along with that it takes less space to store in memory than XML.</p>
+                     <p>Above JSON data consists of an array of Actors and each actor is value in JSON Array. Looks complicated?
+                        Let's understand all the data type JSON has, to represent the data.</p>
+                     <p>JSON Data Types</p>
+                     <ul>
+                        <li>
+                            Number
+                        </li>
+                        <li>
+                            String
+                        </li>
+                        <li>
+                            Boolean
+                        </li>
+                        <li>
+                            Array
+                        </li>
+                        <li>
+                            Object
+                        </li>
+                        <li>
+                            Null
+                        </li>
+                     </ul>
+                     <p>
+                        This example uses all the JSON data types.
+                     </p>
+                     <ol>
+                        <li>
+                            {
+                        </li>
+                        <li>
+                            "id": 1,
+                        </li>
+                        <li>
+                            "age": 30,
+                        </li>
+                        <li>
+                            "Name": "James Bond",
+                        </li>
+                        <li>
+                            "Address" :[
+                        </li>
+                        <li>
+                            {
+                        </li>
+                        <li>
+                            "city":"Los Angels",
+                        </li>
+                        <li>
+                            "country": "USA"
+                        </li>
+                        <li>
+                        },
+                        </li>
+                        <li>
+                            {
+                        </li>
+                        <li>
+                            "city":"London",
+                        </li>
+                        <li>
+                            "country": "UK"
+                        </li>
+                        <li>
+                        }
+                        </li>
+                        <li>
+                            ],
+                        </li>
+                        <li>
+                            "wife":null,
+                        </li>
+                        <li>
+                            "ishavingmobile":true,
+                        </li>
+                        <li>
+                            "firstmovie" :{
+                        </li>
+                        <li>
+                            "name":"Dr. No",
+                        </li>
+                        <li>
+                            "releaseyear":1962
+                        </li>
+                        <li>
+                        }
+                        </li>
+                        <li>
+                        }
+                        </li>
+                     </ol>
+          
+                     <p>I hope you are having an understanding of JSON now. Let me know if you have any questions about JSON in the
+                        comment sections, I am happy to help. You can also play with JSON data at https://jsonformatter.org</p>
+
+
+                     <h5>
+    Other JSON related articles.
+                     </h5>
+                        <a href="">
+                           Validate JSON using Javascript
+                        </a><br>
+                        <a href="">
+                           JSON Examples with all Data Types
+
+                        </a>
+                    </div>
+                </div>
+         </div>
+     </div>
+
+ <!---------------------------Subscription Section---------------------------->
+
+ <div class="container-fluid Subscription mt-5 ">
+    <div class="text-center pt-5 pb-3">
+        <h2 class="contact-header">Subscribe to Our NewsLetter</h2>
+        <p class="contact-paragraph pt-2 pb-4">We constantly work towards serving you better. subscribing to our news letter means getting the latest update about our product and services</p>
+    </div>
+    <div class="container text-center pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+                <div class="col-sm-auto col-lg-6 mb-3">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="background-color: #0E103D;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        </div>
+                        <input type="text " class="form-control " id="inlineFormInputGroupUsername2 " placeholder="enter email">
+                    </div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <button type="button" class="btn-subscribe text-center">Subscribe</button>
+            <a href="index.html">
+                <button type="button" class="btn-subscribe1 text-center"> Contact Us</button>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct " crossorigin="anonymous "></script>
+
+
+</body>
