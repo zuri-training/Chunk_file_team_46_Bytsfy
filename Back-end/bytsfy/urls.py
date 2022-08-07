@@ -23,13 +23,25 @@ from django.conf import settings
 urlpatterns = [
     path("admin/", admin.site.urls),
     # user authentication
+<<<<<<< HEAD
     path("accounts/", include("accounts.urls")),
     path("accounts/", include("allauth.urls")),  # new
+=======
+    path('accounts/', include('accounts.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
+
+    path('accounts/', include('allauth.urls')), # new
+>>>>>>> 26fe03046c8059a84b8472f2521b1353f0e09558
     # social logins
     path("social-auth/", include("social_django.urls", namespace="social")),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
     path("", TemplateView.as_view(template_name="dashboard.html"), name="dashboard"),
+<<<<<<< HEAD
     path("chunked_files/", include("chunked_files.urls")),
+=======
+
+    path("", include('chunked_files.urls')),
+>>>>>>> 26fe03046c8059a84b8472f2521b1353f0e09558
 ]
 
 if settings.DEBUG:

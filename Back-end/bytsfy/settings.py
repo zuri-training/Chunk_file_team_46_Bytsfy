@@ -26,7 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = config("SECRET_KEY")
+=======
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
+>>>>>>> 26fe03046c8059a84b8472f2521b1353f0e09558
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -50,11 +55,22 @@ INSTALLED_APPS = [
     "django.contrib.sites",  # new
     # apps created
     # 'accounts',
+<<<<<<< HEAD
     "django_extensions",
     "social_django",  # new
     "allauth",  # new
     "allauth.account",  # new
     "widget_tweaks",  # new
+=======
+
+    'django_extensions',
+
+    'social_django', #new
+    'allauth', # new
+    'allauth.account', # new
+    'widget_tweaks',    # new
+    
+>>>>>>> 26fe03046c8059a84b8472f2521b1353f0e09558
 ]
 
 AUTH_USER_MODEL = "accounts.User"  # use our customuser
@@ -141,6 +157,10 @@ GRAPH_MODELS = {
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 26fe03046c8059a84b8472f2521b1353f0e09558
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -151,6 +171,7 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
@@ -185,8 +206,16 @@ LOGOUT_URL = "logout"
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
+<<<<<<< HEAD
 SOCIAL_AUTH_GITHUB_KEY = config("SOCIAL_AUTH_GITHUB_KEY")
 SOCIAL_AUTH_GITHUB_SECRET = config("SOCIAL_AUTH_GITHUB_SECRET")
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
+=======
+SOCIAL_AUTH_GITHUB_KEY = os.environ.get('SOCIAL_AUTH_GITHUB_KEY')
+SOCIAL_AUTH_GITHUB_SECRET = os.environ.get('SOCIAL_AUTH_GITHUB_SECRET')
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_GOOGLE_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('SOCIAL_AUTH_GOOGLE_SECRET')
+>>>>>>> 26fe03046c8059a84b8472f2521b1353f0e09558

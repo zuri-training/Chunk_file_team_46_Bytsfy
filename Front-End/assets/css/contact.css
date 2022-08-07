@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap');
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 html {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Mulish', sans-serif;
@@ -31,7 +25,11 @@ html {
     background-color: #0E103D;
     color: #fff;
     font-weight: bold;
+
+    border-radius: 8px;
+
     border-radius: 5px;
+
     padding: 10px 14px;
 }
 
@@ -223,7 +221,10 @@ html {
     .choose_file label {
         display: block;
         width: calc(100% - 50px);
+
+
         /* margin: auto; */
+
         text-align: center;
         cursor: pointer;
         background-color: #fff;
