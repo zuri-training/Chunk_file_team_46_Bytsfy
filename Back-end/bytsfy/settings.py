@@ -26,8 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 # SECRET_KEY =    config('SECRET_KEY')
 SECRET_KEY = 'django-insecure-%-_^k22l=sjuo-=s%)s0u@hc51$z00-r*(dxv7)eeak329zd&m'
+=======
+SECRET_KEY = os.environ.get('SECRET_KEY')
+>>>>>>> dfc8e944a2747a0cfeb477bed2ec74f5b75668fc
 
 
 
@@ -205,6 +209,7 @@ LOGOUT_URL = 'logout'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+<<<<<<< HEAD
 # SOCIAL_AUTH_GITHUB_KEY = config('SOCIAL_AUTH_GITHUB_KEY')
 # SOCIAL_AUTH_GITHUB_SECRET = config('SOCIAL_AUTH_GITHUB_SECRET')
 
@@ -215,3 +220,10 @@ SOCIAL_AUTH_GITHUB_SECRET = 'caf15e516ed2bd5bf7abba55852dd4ea1456e70d'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '157324487255-vgb6geka0t8bbsqghagmo8eujsb6cgdm.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+=======
+SOCIAL_AUTH_GITHUB_KEY = os.environ.get('SOCIAL_AUTH_GITHUB_KEY')
+SOCIAL_AUTH_GITHUB_SECRET = os.environ.get('SOCIAL_AUTH_GITHUB_SECRET')
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_GOOGLE_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('SOCIAL_AUTH_GOOGLE_SECRET')
+>>>>>>> dfc8e944a2747a0cfeb477bed2ec74f5b75668fc

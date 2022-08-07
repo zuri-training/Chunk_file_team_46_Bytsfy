@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Working with CSV and JSON files for Data solutions.</title>
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Fontawesome CDN--->
+    <script src="https://kit.fontawesome.com/168fb1c8fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+<!-------------------------------------------------------------------------------------Blog Header---------------------------------->
+<div class="container-fluid">
+    <div class="row blog-post">
+        <h4>
+            Bytsfy Blog
+        </h4>
+    </div>
+</div>
+    
+    <!-------------------------------------------------------------------------------Blog Article  Section----------------------------->
+    <div class="container-fluid">
+        <div class="row mx-3 ">
+
+             <!----------------Blog Image----------------->
+            <div class="col-12 mt-5 mb-3">
+                <img src="/assets/img/blog-image 13.png"  alt="computer screen with code" class=" img-fluid w-100  rounded"></img>
+            </div>
+
+            <!------------------Blog Article ----------------->
+            
+                <div class="col-12">
+
+                    <div class="w-100">
+                        <h3 class="w-100 mb-1">
+                            Working with CSV and JSON files for Data solutions.
+                        </h3>
+                        <p mb-3>by Floyd Miles</p>
+                        <p>
+                            Modern industries today are flooded with data and as a result , there is great value in processing and analyzing the data to derive insights from it. Discovering actionable insights can birth great value in any business by stimulating creative ideas.Modern industries today are flooded with data and as a result , there is great value in processing and analyzing the data to derive insights from it. Discovering actionable insights can birth great value in any business by stimulating creative ideas.
+                        </p><br>
+                        <h6>Choosing Different formats</h6><br>
+                        <p>
+                            The data used in a model can be collected from different (external or internal) sources and saved in different file formats for processing. Your choice of data
+format can greatly affect the space requirements, cost, and performance of project. There are several factors that need to be taken into account when trying to decide which data format to be used. In this article, our focus will be on the two most popular text-based file formats:CSV and JSON.
+                        </p>
+                        <h6>
+                            What is a CSV format?
+                        </h6>
+                        <p>
+                            A CSV (comma separated value) file is a matrix of data. Each row is an array
+that represents a record, and each column represents a specific field within
+that record. Each field (or element) is separated by a comma.
+CSV files store data in a simple and easy to read manner. These can be opened
+using pretty much any piece of software, even plain text editors like the Notepad.
+                        </p>
+                        <h6>
+                            What is a JSON format?
+                        </h6>
+                        <p>
+                            JSON (Java Script Object Notation) files store data based on JavaScript object index. Each object can have multiple keys/value pairs or other objects within it. Data can be saved in various data types including strings, arrays, integers, e.t.c
+<br>
+                        Unlike CSV, JSON allows for creating hierarchical structure of data. It is used for transmitting data in web/mobile applications projects as it is easy to integrate with APIs
+                        </p>
+                        <h6>
+                            When to use each format.
+                        </h6>
+                        <p>
+                            When deciding upon which format to use, consider asking the following questions:<br>
+                            <strong>Use case:</strong>Who is going to use the data? Or how is it going to be used?  Some file formats are meant for general use, while others are for more specific use cases.<br>
+                            <strong>Your system specifications:</strong>What ETL processes are you working with? What tools are you going to use for analyzing your data? Are you constrained on storage or memory?<br>
+                            <strong>Your data characteristics:</strong>What is the type of your data? How large or small is it? How complex is your data? Is it structured or unstructured? How many columns are relevant to your use case, if not all?
+                            Is your data evolving over time?<br>
+                            
+                        </p>
+                        <p>Now let`s compare CSV and JSON formats on the consideratios mentioned above.</p>
+
+
+                        <h5 class="text-center"> CSV vs JSON</h5>
+                        <h6>Project type</h6>
+                        <p>JSON is a highly efficient data exchange format. In application projects,  JSON is used in the interaction between server and client (HTTP requests). It is lightweight and hence, does not burden the network. Due to its low memory demand, it can transfer great amounts of data pretty quickly.
+</p>
+                        <p>CSV files on the other hand are convenient for storing and analyzing problems
+involving small datasets but are nowhere near a good option when your data is huge and complex.
+</p>
+                        <h6>Format type</h6>
+                        <p>Both CSV and JSON are text-based formats, hence are easier to use. They can be read by the end-user who can also modify the file content.
+These formats are usually compressed to reduce their storage footprints, but their performance is subpar to binary file formats.</p>
+                            <h6>Storage</h6>
+                            <p>CSV file format is so widely used because of its ability to store data in a simple tabular manner. However, CSVs are slow to query and difficult to store efficiently. But, they also have an excellent compression ratio.
+</p>
+<p>JSON files are like a mini database for textual data JSON is a partially structured format and can be used to efficiently store tons of data that you may need to use within your project
+</p>
+<h6>Parsing</h6>
+<p>CSVs are simple in nature, hence simple to parse and split (just break on comma to
+convert to column). Although there is a significant potential for data loss or data corruption if the application receiving CSV input isn't the same application that created it. A key point to take note of is that CSV is not a standardized format. This means that a file may be in the C SV format. This means that a file may be in CSV format, but not necessarily will be read by the CSV parser used in your project.
+</p>
+<p>A JSON file is larger by default and more flexible. So, it is more technical to parse and split. JSON is loaded and parsed into memory and hence depending on the size, can take up a lot of disk space.
+CSV is easier to parse than JSON and is therefore potentially faster to write.</p>
+<h6>Schema Evolution</h6>
+<p>Schema evolution deals with the need to retain current data when your database structure changes with time. Unless your data is guaranteed to never change or is immutable in nature, your database design must involve handling schema updates.
+</p>
+<p>You can choose CSV to create your tables if your schema evolution requires only
+renaming of the columns but not reordering them. CSV does not support removing columns. Nor does it allow adding columns at the beginning or in the middle of the table. For such operations, you can use other formats, preferably columnar.
+</p>
+<h5 class="text-center">Takeaways</h5>
+<p>If you want to retrieve simple data as lists or a table with rows and some columns, CSVs are a good option. However, you need to remember that you lose type when exporting
+data to CSV.</p>
+<p>Use JSON format for communication. Although JSON is referred to as comparatively
+better than CSV when dealing with huge data sets and in terms of scalability of files
+for applications, you should avoid this format when working with big data. There are more efficient alternatives.
+</p>
+<p>More optimized data formats can be utilized to meet the needs of your data science project in terms of splitability, compression, support, and the ability to support complex data structures. But for easy readability and faster read/write time, JSON and CSV are hands down preferable choices.
+</p>
+<p>The biggest of business achievements in recent times have had data-driven approach in some way or the other. Hence, it is important that you choose the right data storage format for your business needs.
+</p>                          
+                    </div>
+                </div>
+         </div>
+     </div>
+
+ <!---------------------------Subscription Section---------------------------->
+
+ <div class="container-fluid Subscription mt-5 ">
+    <div class="text-center pt-5 pb-3">
+        <h2 class="contact-header">Subscribe to Our NewsLetter</h2>
+        <p class="contact-paragraph pt-2 pb-4">We constantly work towards serving you better. subscribing to our news letter means getting the latest update about our product and services</p>
+    </div>
+    <div class="container text-center pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+                <div class="col-sm-auto col-lg-6 mb-3">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="background-color: #0E103D;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        </div>
+                        <input type="text " class="form-control " id="inlineFormInputGroupUsername2 " placeholder="enter email">
+                    </div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <button type="button" class="btn-subscribe text-center">Subscribe</button>
+            <a href="index.html">
+                <button type="button" class="btn-subscribe1 text-center"> Contact Us</button>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct " crossorigin="anonymous "></script>
+
+
+</body>
