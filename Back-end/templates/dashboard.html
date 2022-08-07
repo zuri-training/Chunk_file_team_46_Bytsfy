@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ChunkIT</title>
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<title>ChunkIT</title>
+	</head>
 
-<body>
-    <div class="container">
-                {% for form in chunk.forms %}
-                    {{ form.render() }}
-                {% endfor %}
-    </div>
-</body>
+	<body>
+		<div class="container">
+			{% csrf_token %}
+			<input type="file" name="file" /><br />
+			<input type="checkbox" /><br />
+
+			<button type="submit">chunk</button>
+		</div>
+	</body>
 </html>
