@@ -1,8 +1,9 @@
 import os.path
 from django.shortcuts import render
 from . import csv_chunk
-from .forms import Uploaded_file
+from .forms import UploadFileForm
 from pathlib import Path
+from .models import Uploaded_file
 
 # Create your views here.
 
@@ -20,6 +21,8 @@ def chunk(request):
         bytes =csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=100, output_ext=".csv", doc_name=doc_name)
         bytes.bytfy_start()
         user_upload.delete()
-        return render(request, "upload.html)
+        return render(request, "upload.html")
+
+    return render(request, "upload.html")
 #     return render(request, "dashboard")
 
