@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     'allauth', # new
     'allauth.account', # new
     'widget_tweaks',    # new
-    'contact_us',  ##new added eric 
+    
 ]
 
 AUTH_USER_MODEL='accounts.User' #use our customuser 
@@ -153,8 +153,6 @@ GRAPH_MODELS = {
   'all_applications': True,
   'group_models': True,
 }
-
-
 
 
 
