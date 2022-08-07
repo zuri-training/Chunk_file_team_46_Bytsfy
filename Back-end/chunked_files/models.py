@@ -9,5 +9,6 @@ class Chunked(models.Model):
     zipped_file = models.FileField(upload_to="chunked_folder", blank= True)
 
 
-class Uploaded_file(models.Model):
+class UploadedFile(models.Model):
     uploaded_file = models.FileField(upload_to="uploaded")
+
