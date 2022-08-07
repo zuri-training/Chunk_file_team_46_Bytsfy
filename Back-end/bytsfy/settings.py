@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     'allauth', # new
     'allauth.account', # new
     'widget_tweaks',    # new
-    'contact_us',  ##new added eric 
+    
 ]
 
 AUTH_USER_MODEL='accounts.User' #use our customuser 
@@ -156,8 +156,6 @@ GRAPH_MODELS = {
 
 
 
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -168,6 +166,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
