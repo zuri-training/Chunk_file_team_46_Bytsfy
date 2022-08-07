@@ -23,10 +23,12 @@ def chunk(request):
         newfile_path = os.path.join(base_dir, f"media\{name_of_file[0]}\{name_of_file[1]}")
 
         doc_name = name_of_file[-1].split(".")[0]
+
         if name_of_file[-1].split(".")[1] == "csv":
             bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=100, output_ext=".csv", doc_name=doc_name)
             bytfy.bytfy_start()
         # user_upload.delete()
     return render(request, "upload.html")
+
 #     return render(request, "dashboard")
 
