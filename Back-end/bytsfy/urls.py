@@ -25,11 +25,13 @@ urlpatterns = [
 
     # user authentication
     path('accounts/', include('accounts.urls')),
+
     path('accounts/', include('allauth.urls')), # new
     # social logins
     path('social-auth/', include('social_django.urls', namespace='social')),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
     path("", TemplateView.as_view(template_name="dashboard.html"), name="dashboard"),
+
     path("", include('chunked_files.urls')),
 ]
 
