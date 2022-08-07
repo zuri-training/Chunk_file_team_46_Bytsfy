@@ -29,6 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -60,6 +61,7 @@ INSTALLED_APPS = [
     'allauth', # new
     'allauth.account', # new
     'widget_tweaks',    # new
+    'contact_us',  ##new added eric 
 ]
 
 AUTH_USER_MODEL='accounts.User' #use our customuser 
