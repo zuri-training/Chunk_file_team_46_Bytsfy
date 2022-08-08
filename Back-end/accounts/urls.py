@@ -1,17 +1,10 @@
 from django.urls import path
-from .views import signUp, LoginView
+from .views import CustomPasswordChangeView
+from django.views.generic import TemplateView
+from . import views
 
 urlpatterns = [
-    path("signup/", signUp, name="signup"),
-    path("login/", LoginView.as_view(redirect_authenticated_user=True), name="login"),
+    path("password/change/", CustomPasswordChangeView.as_view(), name="account_password_change"), #new
+    path("password/change/done", TemplateView.as_view(template_name="account/password_change_done.html"), name="password_change_done"),
+    path("signup", views.signup)
 ]
-
-
-# accounts/login/ [name='login']
-# accounts/logout/ [name='logout']
-# accounts/password_change/ [name='password_change']
-# accounts/password_change/done/ [name='password_change_done']
-# accounts/password_reset/ [name='password_reset']
-# accounts/password_reset/done/ [name='password_reset_done']
-# accounts/reset/<uidb64>/<token>/ [name='password_reset_confirm']
-# accounts/reset/done/ [name='password_reset_complete']
