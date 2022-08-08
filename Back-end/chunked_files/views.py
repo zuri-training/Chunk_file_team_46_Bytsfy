@@ -1,14 +1,11 @@
 import os.path
 from django.shortcuts import render
 from . import csv_chunk
-from .models import UploadedFile, Contact ,Subscribers
+from .models import UploadedFile, Contact, Subscribers
 from django.contrib import messages
 from pathlib import Path
-<<<<<<< HEAD
-from . import json_chunk as jsc
-=======
 from django.http import HttpResponseRedirect
->>>>>>> 16884fbf5193d5955aedf61696c8f2f293f68a5d
+
 
 # Create your views here.
 
@@ -30,11 +27,13 @@ def chunk(request):
         doc_name = name_of_file[-1].split(".")[0]
 
         if name_of_file[-1].split(".")[1] == "csv":
-            bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=100, output_ext=".csv", doc_name=doc_name, file_size=file_size)
+            bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=2855780, output_ext=".csv", doc_name=doc_name, file_size=file_size)
             bytfy.bytfy_start() 
 
         else:
-            jsnify=jsc.Bytfy_json(newfile_path,file_size )
+            
+            jsnify=csv_chunk.Bytsfy_json(user_specify_size=20, file_path=newfile_path, doc_name=doc_name )
+            jsnify.json_chunk()
         # user_upload.delete()
     return render(request, "upload.html")
 
