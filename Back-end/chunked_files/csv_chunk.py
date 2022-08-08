@@ -3,6 +3,7 @@ import math
 import os
 import shutil
 from pathlib import Path
+from textwrap import indent
 import pandas as pd
 
 
@@ -13,7 +14,7 @@ def file_ext_name(file_path):
     return (file_name, ext)
 
 def mkdir( filename):
-            os.mkdir(f"{filename}")
+    os.mkdir(f"{filename}")
 """""
 Project bytfy: Bytsfy class that chunks bi json 
 and csv files and into bits by bytes or lines by user specification
@@ -57,7 +58,7 @@ class Bytfy_csv:
         shutil.rmtree(self.file_name) # path to the created dir
 
     def to_json(self, each_file, num):
-        each_file.to_json(f"{self.file_name}\{self.doc_name}-{num}.json")
+         each_file.to_json(f"{self.file_name}\{self.doc_name}-{num}.json", indent=4)
         # args[0].to_json(f"{self.file_name}\{args[1]}-{args[2]}.json")
 
     def to_csv(self, each_file, num):
@@ -65,7 +66,7 @@ class Bytfy_csv:
         # print(os.path.getsize(f"{self.file_name}-{num}.csv"))
         # print(type(f"{self.file_name}\{self.file_name}-{num}.csv"))
 
-    def split_in_lines(self, to_json=False):
+    def split_in_lines(self, to_json=True):
         # ext = self.file_name.split(".")[1]
         """"create a directory"""
         mkdir(self.file_name)
@@ -81,7 +82,7 @@ class Bytfy_csv:
         self.remove_dir()
         return
 
-    def csv_split(self, to_jsons=False):
+    def csv_split(self, to_jsons=True):
         """check size if it is less than 5% of the total size"""
         if self.user_specified_size < self.chunk_limit:
             raise ValueError("please increase the size per file you want to chunk")
@@ -127,3 +128,6 @@ class Bytfy_csv:
             self.split_in_lines(to_json=True)
         else:
             raise LookupError("sorry an error occured, kindly check your file or contact us")
+
+
+
