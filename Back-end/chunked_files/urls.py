@@ -1,15 +1,11 @@
-from string import Template
 from django.urls import path
 from .views import chunk
-from django.views.generic import TemplateView
+from . import views
+
 
 # app_name = "chunked_files"
 urlpatterns = [
-<<<<<<< HEAD
-    path("", chunk, name="chunk"),
-    
-]
-=======
     path("chunk/", chunk, name="chunk"),
+    path("contact/", views.contact, name ="contact"),
+    path("thank-you/", views.thank_you),
 ]
->>>>>>> 26fe03046c8059a84b8472f2521b1353f0e09558

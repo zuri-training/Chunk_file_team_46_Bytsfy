@@ -1,37 +1,14 @@
 import os.path
 from django.shortcuts import render
 from . import csv_chunk
-from .models import UploadedFile
+from .models import UploadedFile, Contact, Subscribers
 from django.contrib import messages
 from pathlib import Path
+from django.http import HttpResponseRedirect
+
 
 # Create your views here.
 
-
-<<<<<<< HEAD
-def dashboard(request):
-    return render(request, "dashboard.html")
-
-
-def chunk(request):
-    if request.method == "POST":
-        # Path(__file__).parent.parent
-        base_dir = os.getcwd()
-        user_upload = Uploaded_file(uploaded_file=request.FILES["file"])
-        user_upload.save()
-        name_of_file = user_upload.uploaded_file.name.split("/")  # split
-        newfile_path = os.path.join(
-            base_dir, rf"chunked_files\{name_of_file[0]}\{name_of_file[1]}"
-        )
-        doc_name = name_of_file[-1].split(".")[0]
-        # print(csv_chunk.file_ext_name(newfile_path))
-        bytes = csv_chunk.Bytfy_csv(
-            newfile_path, user_sepecif_size=100, output_ext=".csv", doc_name=doc_name
-        )
-        bytes.bytfy_start()
-        user_upload.delete()
-        return render(request, "home.html")
-=======
 
 def chunk(request):
     if request.method == 'POST':
@@ -45,15 +22,77 @@ def chunk(request):
         user_upload.save()
         name_of_file = user_upload.uploaded_file.name.split("/")#split
         newfile_path = os.path.join(base_dir, f"media\{name_of_file[0]}\{name_of_file[1]}")
+        file_size = os.path.getsize(newfile_path)
 
         doc_name = name_of_file[-1].split(".")[0]
 
         if name_of_file[-1].split(".")[1] == "csv":
-            bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=100, output_ext=".csv", doc_name=doc_name)
-            bytfy.bytfy_start()
+            bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=2855780, output_ext=".csv", doc_name=doc_name, file_size=file_size)
+            bytfy.bytfy_start() 
+
+        else:
+            
+            jsnify=csv_chunk.Bytsfy_json(user_specify_size=20, file_path=newfile_path, doc_name=doc_name )
+            jsnify.json_chunk()
         # user_upload.delete()
     return render(request, "upload.html")
 
+# def save(request, pk):
+#     file = File.objects.get(id=pk)
+#     file.saved_file = file.zip_file
+#     file.save()
+#     return HttpResponse("File saved successsfully")
+
+# def delete(request, pk):
+#     file = File.objects.get(id=pk)
+#     file.delete()
+#     return HttpResponse("File deleted successsfully")
+
 #     return render(request, "dashboard")
 
->>>>>>> 26fe03046c8059a84b8472f2521b1353f0e09558
+
+def contact(request):
+    if request.method == 'POST':
+        entered_email = request.POST['contact_email']
+        chosen_subject = request.POST['subject']
+        entered_message=request.POST['message']
+
+
+        new_contact = Contact(email = entered_email,
+        subject = chosen_subject,
+        message = entered_message
+        )
+
+        new_contact.save() 
+    
+   
+        print(entered_email)
+        print(chosen_subject)
+        print(entered_message)
+
+        return HttpResponseRedirect("/thank-you")
+    
+    return render(request, "chunked_files/contact.html")
+
+
+def Subscriber(request):
+    if request.method == 'POST':
+        entered_subscriber_email = request.POST['subscribe_email']
+  
+        new_subscriber = Subscribers(subscribers_email = entered_subscriber_email)
+
+        new_subscriber.save() 
+    
+      
+
+        print(entered_subscriber_email)
+  
+
+        return HttpResponseRedirect("/thank-you")
+
+    return render(request, "chunked_files/contact.html")
+
+
+def thank_you(request):
+
+    return render(request, "chunked_files/thankyou.html")    
