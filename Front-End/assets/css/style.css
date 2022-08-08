@@ -140,8 +140,9 @@ html {
 
 .blogh5 {
     font-size: 20px;
+    text-align: left;
 
-    padding-left:83px;
+    
 }
 @media  (max-width: 500px){
     .first-section-bg{
