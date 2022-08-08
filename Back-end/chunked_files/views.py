@@ -47,10 +47,10 @@ def contact(request):
 
         new_contact.save() 
     
-        # # user_contact.save()
-        # print(entered_email)
-        # print(chosen_subject)
-        # print(entered_message)
+   
+        print(entered_email)
+        print(chosen_subject)
+        print(entered_message)
 
         return HttpResponseRedirect("/thank-you")
     
@@ -65,10 +65,10 @@ def Subscriber(request):
 
         new_subscriber.save() 
     
-        # # user_contact.save()
-        # print(entered_email)
-        # print(chosen_subject)
-        # print(entered_message)
+      
+
+        print(entered_subscriber_email)
+  
 
         return HttpResponseRedirect("/thank-you")
 
