@@ -1,12 +1,12 @@
 import os.path
 from django.shortcuts import render
 from . import csv_chunk
-from .models import UploadedFile
+from .models import UploadedFile, Contact ,Subscribers
 from django.contrib import messages
 from pathlib import Path
+from django.http import HttpResponseRedirect
 
 # Create your views here.
-
 
 
 def chunk(request):
@@ -32,3 +32,49 @@ def chunk(request):
 
 #     return render(request, "dashboard")
 
+
+def contact(request):
+    if request.method == 'POST':
+        entered_email = request.POST['contact_email']
+        chosen_subject = request.POST['subject']
+        entered_message=request.POST['message']
+
+
+        new_contact = Contact(email = entered_email,
+        subject = chosen_subject,
+        message = entered_message
+        )
+
+        new_contact.save() 
+    
+        # # user_contact.save()
+        # print(entered_email)
+        # print(chosen_subject)
+        # print(entered_message)
+
+        return HttpResponseRedirect("/thank-you")
+    
+    return render(request, "chunked_files/contact.html")
+
+
+def Subscriber(request):
+    if request.method == 'POST':
+        entered_subscriber_email = request.POST['subscribe_email']
+  
+        new_subscriber = Subscribers(subscribers_email = entered_subscriber_email)
+
+        new_subscriber.save() 
+    
+        # # user_contact.save()
+        # print(entered_email)
+        # print(chosen_subject)
+        # print(entered_message)
+
+        return HttpResponseRedirect("/thank-you")
+
+    return render(request, "chunked_files/contact.html")
+
+
+def thank_you(request):
+
+    return render(request, "chunked_files/thankyou.html")    
