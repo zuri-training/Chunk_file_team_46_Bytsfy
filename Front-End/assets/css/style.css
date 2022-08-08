@@ -121,6 +121,11 @@ html {
     padding-left: 83px;
 }
 
+.blogHeader{
+    text-decoration: none;
+    color: #323C60;
+}
+
 .blog-post {
     background-color: rgba(9, 21, 64, 0.1);
 }
