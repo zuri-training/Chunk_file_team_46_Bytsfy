@@ -9,3 +9,5 @@ class CustomPasswordChangeView(PasswordChangeView):
     success_url = reverse_lazy("password_change_done") 
 
 
+def signup(request):
+    return render(request,"account/Signup.html")
