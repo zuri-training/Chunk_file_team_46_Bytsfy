@@ -1,47 +1,38 @@
 *{
     margin: 0px;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-}
+
 main{
     
-    width: 100%;
-    margin: 140px auto;
-
+   
     text-align: center;
-    display: flex;
-    flex-direction: column;
-   gap: 10px;
-   font-size: 20px;
-   position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 20px;
+
+  margin-top: 70px;
 }
 .codecontainer{
   
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0 2px 0;
+    
     
  }
  .code {
-
-    border-radius: 5px;
-    font-size: 30px;
-    height: 40px;
+    background-color: #e3f2fe;
+    font-size: 40px;
+    height: 60px;
     width: 70px;
-   border: none;
-    border-bottom: 2px solid gray;
-   outline-width: 0;
-     margin: 0%;
-text-align: center;
+    border: none;
+    border-bottom: 3px solid #091540;
+    outline-width: 0;
+  
+    text-align: center;
     font-weight: 200;
-   
+  
     margin-left: 10px;
   }
    /*Code for removing the inner counters in the box*/
@@ -53,20 +44,24 @@ text-align: center;
     
 a{
     text-decoration: none;
-    color: black;
+    color: #091540;
 }
-a:hover{
-    color: blue;
-}
-.btn{
-    font-weight: bolder;
-    font-size: 15px;
-    background-color: #676767;
+
+.pro{
+    text-align: center;
+    background-color: #091540;
     border: none;
-    width: 20%;
-    height: 35px;
-    border-radius: 10px;
-}
+      font-weight: bolder;
+     
+      background-color: #091540;
+      
+      width: 20%;
+      height: 35px;
+      
+      border-radius: 10px;
+      color: white;
+     
+  }
 
 
     @media only screen and (max-width: 600px) {

@@ -19,9 +19,10 @@ main{
 }
 
 .btn{
+    color: white;
     font-weight: bolder;
     font-size: 15px;
-    background-color: #676767;
+    background-color: #091540;
     border: none;
     width: 20%;
     height: 35px;

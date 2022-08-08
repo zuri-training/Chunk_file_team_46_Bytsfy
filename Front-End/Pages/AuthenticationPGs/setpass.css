@@ -14,18 +14,15 @@ main{
     flex-direction: column;
    gap: 10px;
    font-size: 20px;
-   position: fixed;
+  
 }
-label{
-    background-color: aqua;
-    
-}
+
 form{
     display: flex;
     flex-direction: column;
     
     margin-top: 10px;
-    display: flex;
+   
     align-items: center;
     justify-content: center;
     gap: 5px;
@@ -33,21 +30,22 @@ form{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #091540;
 }
 a:hover{
     color: #072F69;
 }
 .btn{
+    color: white;
     font-weight: bolder;
     font-size: 15px;
-    background-color: #676767;
+    background-color: #091540;
     border: none;
     height: 30px;
     width: 20%;
 }
 .btn:hover{
-    background-color: #072F69;
+    background-color: gray;
 }
 input{
     border-radius: 5px;
