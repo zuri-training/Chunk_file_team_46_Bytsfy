@@ -107,7 +107,6 @@ html {
 
 /*-----------------Blog Page--------------*/
 
-.first-section-bg {
 
 
 /*-----------------Blog Page--------------*/
@@ -426,6 +425,8 @@ html {
     background: #FBFBFB;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+}
+
 .dash-header{
     background-color: #F8F8F8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -496,6 +497,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .wide-nav {
     min-width: max-content;
+}
 
 .wide-nav{
     min-width:max-content;
@@ -627,6 +629,7 @@ ul a:hover {
 .footer-header {
     padding-top: 48px;
     font-size: 20px;
+}
 
 .fa-brands,
 .fa-solid {
