@@ -1,27 +1,51 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap");
 html {
   font-family: "Montserrat", sans-serif;
   font-family: "Mulish", sans-serif;
 }
 /* *{
-     margin: 0;
+     margin: 0; 
 } */
 main {
-  width: 70%;
+  width: 80%;
+}
+.whole_section {
+  display: flex;
+  flex-direction: row;
+}
+.hellosection {
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+.signin_image img,
+.signup_image img {
+  width: 90%;
+  height: auto;
+}
+.signin_image {
+  width: 50%;
+}
+.signin {
+  width: 50%;
+  box-sizing: border-box;
+  box-shadow: 2px 1px 4px #000000;
   /* background-color: bisque; */
+  border-radius: 4px;
+  padding-bottom: 30px;
 }
-.hsectncol1 {
-  width: 60%;
+.singinsectn,
+.singupsectn {
+  width: 76%;
 }
-.hsectncol2 {
+/* .singinsectn {
   background-color: #f4faff;
-}
-img {
-  width: 450px;
+} */
+.signinup_logo {
+  width: 150px;
 }
 h1 {
   font-family: "Montserrat", sans-serif;
+  color: #091540;
 }
 .container_getStrtd {
   text-align: center;
@@ -29,18 +53,18 @@ h1 {
 p {
   font-family: "Mulish", sans-serif;
   font-weight: 600;
-}
-.hsectncol1 p {
-  font-size: large;
+  color: #091540;
 }
 .google,
-.facebook {
+.github {
   border: 1px solid #cccccc;
   font-family: "Mulish", sans-serif;
-}
-.fa-google,
-.fa-facebook {
   border-radius: 3px;
+}
+.google img {
+  padding-right: 10px;
+  padding-bottom: 5px;
+  width: 30px;
 }
 hr {
   width: 130px;
@@ -64,86 +88,78 @@ label {
   font-size: 13px;
   color: #091540;
 }
-.signup_btn,
-.signin_btn {
+form .btn {
   background-color: #091540;
-  /* font-size: small; */
-}
-.last_paragraphP{
-  font-size: 13px;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap");
-html {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Mulish", sans-serif;
-}
-/* *{
-     margin: 0;
-} */
-main {
-  width: 70%;
-  /* background-color: bisque; */
-}
-.hsectncol1 {
-  width: 60%;
-}
-.hsectncol2 {
-  background-color: #f4faff;
-}
-img {
-  width: 450px;
-}
-h1 {
-  font-family: "Montserrat", sans-serif;
-}
-.container_getStrtd {
-  text-align: center;
-}
-p {
-  font-family: "Mulish", sans-serif;
-  font-weight: 600;
-}
-.hsectncol1 p {
-  font-size: large;
-}
-.google,
-.facebook {
-  border: 1px solid #cccccc;
-  font-family: "Mulish", sans-serif;
-}
-.fa-google,
-.fa-facebook {
-  border-radius: 3px;
-}
-hr {
-  width: 130px;
-}
-::placeholder,
-label {
   font-size: small;
+  color: #ffffff;
   font-family: "Mulish", sans-serif;
 }
-label {
-  font-weight: 700;
-}
-.last_paragraph {
-  color: #091540;
-}
-.forgotpwd,
-.terms_os,
-.privacy_p,
-.sign_in,
-.sign_up {
-  font-size: 13px;
-  color: #091540;
-}
-.signup_btn,
-.signin_btn {
-  background-color: #091540;
-  /* font-size: small; */
-}
-.last_paragraphP{
+.last_paragraphP {
   font-size: 13px;
 }
 
+@media screen and (max-width: 700px) and (min-width: 200px) {
+  main {
+    width: 90%;
+  }
+  .logo_section {
+    margin: auto;
+  }
+  .whole_section {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .whole_section .signin_image,
+  .signup_image {
+    align-content: center;
+  } */
+  .signin_image img,
+  .signup_image img {
+    /* width: 60%; */
+    height: auto;
+    padding-left: 70px;
+    /* padding-right: 60px; */
+  }
+  .signin {
+    width: 50%;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 4px;
+    padding-bottom: 30px;
+  }
+  .singinsectn,
+  .singupsectn {
+    width: 85%;
+  }
+  .logo_section {
+    width: 60px;
+    padding-bottom: 40px;
+    align-content: center;
+  }
+  hr {
+    width: 130px;
+  }
+  label {
+    font-weight: 700;
+  }
+  .last_paragraph {
+    color: #091540;
+  }
+  .signin {
+    width: 50%;
+    box-sizing: border-box;
+    /* box-shadow: 2px 1px 4px #000000; */
+  }
+  .forgotpwd,
+  .terms_os,
+  .privacy_p,
+  .sign_in,
+  .sign_up {
+    font-size: 12px;
+    color: #091540;
+  }
+  .last_paragraphP {
+    font-size: 12px;
+    padding-top: 20px;
+  }
+}
