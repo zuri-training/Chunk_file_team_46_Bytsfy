@@ -447,24 +447,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
-.dash-table-row{
-    max-width:100%;
-}
-
-.dash-table{
-border-collapse: separate;
-        border-spacing: 0 15px;
-        width:100%;
-       /*--- word-break: break-word;---*/
-        
-}
-
-
-.saved-check{
-    width: 32px;
-height: 32px;
-}
-
 
 /*------------------------Home Page------------------------------*/
 
