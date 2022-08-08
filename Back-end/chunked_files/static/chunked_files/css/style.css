@@ -5,6 +5,35 @@ html {
 }
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /*------------------------Contact Page------------------------------*/
 
 .contact-header {
@@ -78,11 +107,40 @@ html {
 
 /*-----------------Blog Page--------------*/
 
+
+
+/*-----------------Blog Page--------------*/
+
 .first-section-bg{
+
     background-color: rgba(9, 21, 64, 0.1);
     padding-top: 92px;
     padding-bottom: 83px;
     padding-right: 62px;
+
+    padding-left: 83px;
+}
+
+.blog-post {
+    background-color: rgba(9, 21, 64, 0.1);
+}
+
+.blogh4 {
+    font-size: 40px;
+    color: #323C60;
+}
+
+.blogh3 {
+    font-size: 40px;
+    color: #091540;
+    text-align: left;
+    text-justify: auto;
+    Line-height: 58.51px;
+}
+
+.blogh5 {
+    font-size: 20px;
+
     padding-left:83px;
 }
 @media  (max-width: 500px){
@@ -118,14 +176,23 @@ html {
     }
 .blogh5{
     font-size:20px;
+
     color: #000000;
     font-weight: 700;
 }
+
+
+.blog-link-color {
+    color: #091540 !important;
+}
+
+
 
 .blog-link-color{
     color: #091540 !important;
     
 }
+
 
 /*------------------------Tools Page------------------------------*/
 
@@ -152,6 +219,28 @@ html {
     cursor: pointer;
     background-color: #fff;
 }
+
+
+.error-file {
+    display: block;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(220% - 50px);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.error-p {
+    margin: 10em 0 0 0;
+}
+
+.error-img {
+    margin: 6em 0 6em 10em;
+}
+
+
 
 .btn-div {
     position: relative;
@@ -206,7 +295,11 @@ html {
 .Split-text_header {
     font-weight: 700;
     color: #0E103D;
+
+    margin: 25px 0 25px 40px;
+
     margin: 25px 0 25px 50px;
+
 }
 
 .Split-text_item {
@@ -214,7 +307,15 @@ html {
 }
 
 .split-bg_p {
+
+    font-size: small;
+}
+
+.bg_p {
+    font-size: smaller;
+
     margin: 25px 0 25px 50px;
+
 }
 
 
@@ -304,6 +405,28 @@ html {
 
 
 /*--------------------Saved Files Section------*/
+
+
+.dash-header {
+    background-color: #F8F8F8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    padding-left: 26px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.dash-box {
+    background: #F8F8F8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dash-row {
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
 .dash-header{
     background-color: #F8F8F8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -321,6 +444,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .dash-row{
     background: #FBFBFB;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 
@@ -361,13 +485,32 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #0E103D;
 }
 
+
+.navbar-toggler {
+    color: #74C0FC;
+}
+
+.nav-icon {
+    color: #74C0FC;
+    font-size: 28px;
+}
+
+.wide-nav {
+    min-width: max-content;
+}
+
 .wide-nav{
     min-width:max-content;
+
 }
 
 .navbar-toggler-icon2 {
     display: inline-block;
+
+    width: 20%;
+
     width:auto;
+
     height: 31px;
     flex: none;
     order: 0;
@@ -377,22 +520,37 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-position: center;
     background-size: 100%;
     color: #091540;
+
+}
+
+.nav-link2 {
+    color: #091540;
+    text-decoration: none;
+
     
   }
   .nav-link2{
     color: #091540;
     text-decoration:none;
+
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     width: auto;
+
+}
+
+.dropdown1 {
+    background-color: #D1EAFE;
+
     
   }
 
 .dropdown1 {
     background-color: #D1EAFE;
     color: #0E103D;
+
 }
 
 .dropdown-items:hover {
@@ -424,6 +582,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
 
+
+
 /*--------Footer Section---------*/
 
 #footer {
@@ -431,8 +591,14 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* position: relative; */
+    color: #fff;
+    background-color: #FFC700;
+
     position: relative;
     color: #fff;
+
 }
 
 #copyright {
@@ -459,6 +625,12 @@ ul a:hover {
     color: #ffC700;
 }
 
+
+.footer-header {
+    padding-top: 48px;
+    font-size: 20px;
+}
+
 .fa-brands,
 .fa-solid {
     font-size: 20px;
@@ -466,6 +638,7 @@ ul a:hover {
 
 .footer-header {
     padding-top: 48px;
+
 }
 
 .footer-header:hover {
@@ -476,6 +649,47 @@ ul a:hover {
     display: flex;
     flex-direction: row;
 }
+
+
+.copy-span {
+    color: #ffC700;
+    font-weight: 600;
+}
+
+.chatimg {
+    width: 60px;
+}
+
+.chattext {
+    padding-left: 20px;
+}
+
+.footer-chat {
+    border: 1px solid #FFC700;
+    padding: 25px 0px 15px 40px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.footer-line {
+    border: 1px solid #FFC700;
+    margin: auto;
+}
+
+@media (max-width: 500px) {
+    .first-section-bg {
+        background-color: rgba(9, 21, 64, 0.1);
+        padding-top: 12px;
+        padding-bottom: 13px;
+        padding-right: 12px;
+        padding-left: 13px;
+    }
+    card {
+        width: 100%;
+    }
+}
+
+
 
 @media (max-width: 650px) {
     /*------------------------contact Page------------------------------*/
@@ -503,6 +717,15 @@ ul a:hover {
         margin-left: 25%;
         margin-bottom: 3%;
     }
+
+    .split-bg_p {
+        font-size: small;
+    }
+    .bg_p {
+        font-size: smaller;
+    }
+
+
     /*--------split Section--------------*/
     .choose_file label {
         display: block;
@@ -513,11 +736,21 @@ ul a:hover {
         background-color: #fff;
     }
     .Split-text_header {
-        margin: 5px 0 25px 15px;
+
+        margin: 5px 0 25px -25px;
+        font-size: 20px;
+    }
+    .Split-text_item {
+        margin: 5px 0 0 -55px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      margin: 5px 0 25px 15px;
         font-size: 20px;
     }
     .Split-text_item {
         margin: 5px 0 0 5px;
+
     }
     .Split-option_header {
         font-size: 20px;
