@@ -1,14 +1,10 @@
 import json
 import math
 import os
-import sys
 import shutil
 from pathlib import Path
 import pandas as pd
 
-#TODO 1: bytify start first
-#TODO 2: create split by line method
-#TODO 2: create split by size method
 
 def file_ext_name(file_path):
     """get extension name """
@@ -16,12 +12,8 @@ def file_ext_name(file_path):
     print(file_name) #check file name
     return (file_name, ext)
 
-
-
-def user_spec_size():
-    pass
-
-
+def mkdir( filename):
+            os.mkdir(f"{filename}")
 """""
 Project bytfy: Bytsfy class that chunks bi json 
 and csv files and into bits by bytes or lines by user specification
@@ -37,11 +29,12 @@ and csv files and into bits by bytes or lines by user specification
 class Bytfy_csv:
     # The Base Url file
     BASE_DIR = Path(__file__).resolve().parent.parent
-    def __init__(self, uploaded_file, user_sepecif_size:int=None, per_lines:int=None, output_ext=".csv", doc_name=""):
+    def __init__(self, uploaded_file, user_sepecif_size:int=None, per_lines:int=None, output_ext=".csv", doc_name="",
+                 file_size=None):
         self.__accepted_fmt = (".csv", ".json") #added to chheck befor instance is created
         self.__file = uploaded_file
         self.file_name, self.file_ext = file_ext_name(self.file)
-        self.file_size = os.path.getsize(uploaded_file)
+        self.file_size = file_size
         self.rows_per_file = per_lines
         self.chunk_limit = (20 * self.file_size) / 100
         self.user_specified_size = user_sepecif_size
@@ -58,8 +51,6 @@ class Bytfy_csv:
     def __str__(self):
         return "You have uploaded {} with a {} extension".format(self.file, self.file_ext)
 
-    def mkdir(self, filename):
-            os.mkdir(f"{filename}")
 
     def remove_dir(self,):
         shutil.make_archive(self.file_name, "zip", self.file_name)
@@ -77,7 +68,7 @@ class Bytfy_csv:
     def split_in_lines(self, to_json=False):
         # ext = self.file_name.split(".")[1]
         """"create a directory"""
-        self.mkdir(self.file_name)
+        mkdir(self.file_name)
         num = 1
         for each_file in pd.read_csv(self.file, chunksize=self.rows_per_file):
             if not to_json:
@@ -104,7 +95,7 @@ class Bytfy_csv:
         print(row_per_file)
         num = 1
         """"create a directory"""
-        self.mkdir(self.file_name)
+        mkdir(self.file_name)
         """"chunk files and move file to directory """
         for each_file in pd.read_csv(self.file, chunksize=row_per_file):
             if to_jsons == False:
@@ -136,7 +127,3 @@ class Bytfy_csv:
             self.split_in_lines(to_json=True)
         else:
             raise LookupError("sorry an error occured, kindly check your file or contact us")
-
-
- # def to_json(self, *args):
-        # args[0].to_json(f"{self.file_name}\{args[1]}-{args[2]}.json")
