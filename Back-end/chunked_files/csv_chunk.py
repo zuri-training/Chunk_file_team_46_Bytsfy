@@ -58,15 +58,17 @@ class Bytfy_csv:
         shutil.rmtree(self.file_name) # path to the created dir
 
     def to_json(self, each_file, num):
-         each_file.to_json(f"{self.file_name}\{self.doc_name}-{num}.json", indent=4)
+        print("chunking to json")
+        each_file.to_json(f"{self.file_name}\{self.doc_name}-{num}.json")
         # args[0].to_json(f"{self.file_name}\{args[1]}-{args[2]}.json")
 
     def to_csv(self, each_file, num):
+        print("chunking to csv")
         each_file.to_csv(f"{self.file_name}\{self.doc_name}-{num}.csv", index=False, index_label=False)
         # print(os.path.getsize(f"{self.file_name}-{num}.csv"))
         # print(type(f"{self.file_name}\{self.file_name}-{num}.csv"))
 
-    def split_in_lines(self, to_json=True):
+    def split_in_lines(self, to_json=False):
         # ext = self.file_name.split(".")[1]
         """"create a directory"""
         mkdir(self.file_name)
@@ -99,11 +101,12 @@ class Bytfy_csv:
         mkdir(self.file_name)
         """"chunk files and move file to directory """
         for each_file in pd.read_csv(self.file, chunksize=row_per_file, low_memory=False,):
-            if to_jsons == False:
-                self.to_csv(each_file, num)
+            if to_jsons:
+                self.to_json(each_file,  num)
                 # print(isinstance(filename, each_file))
             else:
-                self.to_json(each_file,  num)# edited
+                self.to_csv(each_file, num)
+                # edited
             num += 1
             """"remove directory and zip directory"""
         self.remove_dir() # add path to the directory
