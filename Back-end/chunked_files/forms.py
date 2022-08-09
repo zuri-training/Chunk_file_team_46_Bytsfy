@@ -1,5 +1,5 @@
 from django import forms
-from .models import Uploaded_file
+from .models import UploadedFile
 
 
 class ChunkForm(forms.Form):
@@ -11,4 +11,4 @@ class ChunkForm(forms.Form):
 class UploadFileForm(forms.Form):
     # title = forms.CharField(max_length=50)
     class Meta:
-        model = Uploaded_file
+        model = UploadedFile

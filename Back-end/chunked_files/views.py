@@ -26,7 +26,7 @@ def chunk(request):
         doc_name = name_of_file[-1].split(".")[0]
 
         if name_of_file[-1].split(".")[1] == "csv":
-            bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=100, output_ext=".csv", doc_name=doc_name)
+            bytfy = csv_chunk.Bytfy_csv(newfile_path, per_lines=1000, output_ext=".csv", doc_name=doc_name)
             bytfy.bytfy_start()
         # user_upload.delete()
     return render(request, "upload.html")
