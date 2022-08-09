@@ -79,6 +79,17 @@ html {
     font-size: 24px;
 }
 
+.btn-subscribe7 {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFC700;
+    color: #0E103D;
+    font-weight: 800;
+    border-radius: 5px;
+    padding: 10px 16px;
+    border: 1px solid #FFC700;
+    width: 300px;
+}
+
 .btn-subscribe {
     font-family: 'Montserrat', sans-serif;
     background-color: #FFC700;
@@ -107,7 +118,7 @@ html {
     font-weight: 800;
     border-radius: 5px;
     padding: 10px 16px;
-    border: 2px solid #0E103D;
+    border: 1px solid #0E103D;
     width: 150px;
     background-color: #fff;
 }
@@ -118,7 +129,7 @@ html {
     font-weight: 800;
     border-radius: 5px;
     padding: 10px 16px;
-    border: 2px solid#74C0FC;
+    border: 1px solid#74C0FC;
     width: 150px;
     background-color: #74C0FC;
 }
@@ -129,7 +140,7 @@ html {
     font-weight: 800;
     border-radius: 5px;
     padding: 10px 16px;
-    border: 2px solid #74C0FC;
+    border: 1px solid #74C0FC;
     width: 150px;
     background-color: #0E103D;
 }
@@ -140,7 +151,7 @@ html {
     font-weight: 800;
     border-radius: 5px;
     padding: 10px 16px;
-    border: 2px solid #0E103D;
+    border: 1px solid #0E103D;
     width: 150px;
     background-color: #0E103D;
 }
@@ -151,7 +162,7 @@ html {
     font-weight: 800;
     border-radius: 5px;
     padding: 10px 16px;
-    border: 2px solid #74C0FC;
+    border: 1px solid #74C0FC;
     width: 150px;
     background-color: #74C0FC;
 }
@@ -162,7 +173,7 @@ html {
     font-weight: 800;
     border-radius: 5px;
     padding: 10px 16px;
-    border: 2px solid #FFf;
+    border: 1px solid #FFf;
     width: 250px;
 }
 
@@ -172,7 +183,7 @@ html {
     font-weight: 800;
     border-radius: 5px;
     padding: 10px 16px;
-    border: 2px solid #0E103D;
+    border: 1px solid #0E103D;
     width: 250px;
     background-color: #0E103D;
 }
@@ -348,18 +359,6 @@ html {
     text-decoration: underline;
 }
 
-
-/* 
-.btn-files {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0E103D;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 8px;
-    padding: 10px 16px;
-    border: 1px solid #0E103D;
-} */
-
 .split-bg {
     background-color: #74C0FC;
 }
@@ -420,7 +419,6 @@ html {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 12px #D1EAFE;
-    /* margin-left: 16px; */
 }
 
 #profile-btn {
@@ -529,7 +527,6 @@ html {
     border-collapse: separate;
     border-spacing: 0 15px;
     width: 100%;
-    /*--- word-break: break-word;---*/
 }
 
 .saved-check {
@@ -582,14 +579,19 @@ html {
     color: #FFC700;
 }
 
+.hero-login {
+    background-color: #D1EAFE;
+    color: #091540;
+}
+
 
 /*----------about section---------------*/
 
 .about-header {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
     color: #0E103D;
-    margin-top: 2.7em;
+    margin-top: .8em;
 }
 
 .heading {
@@ -619,13 +621,127 @@ html {
     margin-left: 35%;
 }
 
+.feature-text {
+    color: #091540;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+/*----------extension section---------------*/
+
+.extension-header {
+    margin-top: 3em;
+    font-size: 40px;
+    font-weight: 600;
+    color: #091540;
+}
+
+
+/*----------team section---------------*/
+
+#team {
+    background: url("../img/teams-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
+.team-header {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffC700;
+}
+
+.team-paragraph {
+    color: #cccccc;
+}
+
+
+/*----------faqs section---------------*/
+
+.q-form {
+    background-color: #0E103D;
+    color: #fff;
+    height: 8vh;
+    border: none;
+    border-radius: 8px;
+    margin-top: 2em;
+    font-size: 20px;
+}
+
+.q-label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.q-content {
+    padding: 2px 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #e5e9ed;
+}
+
+.drop {
+    background-color: #fff;
+    color: #4f4f4f;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.active,
+.drop:hover {
+    color: #0E103D;
+}
+
+.drop:after {
+    content: "\003E";
+    color: #0E103D;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+    color: #0E103D;
+}
+
+.content {
+    padding: 0px 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #e5e9ed;
+}
+
+.faq-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0E103D;
+}
+
 
 /*----------blog section---------------*/
 
 .blog-header {
     font-weight: 700;
-    font-size: 32px;
-    margin: 24px 0;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.card-icon {
+    width: 90%;
+    height: 90%;
 }
 
 
@@ -762,10 +878,6 @@ html {
     background-color: #FFC700;
     position: relative;
     color: #fff;
-}
-
-.footer-p {
-    /* font-size: 14px; */
 }
 
 #copyright {
@@ -937,6 +1049,13 @@ ul a:hover {
         width: 28vw;
         height: 8vh;
     }
+    .h-head {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .p-head {
+        font-size: 12px;
+    }
     #nav-btn1 {
         color: #0E103D;
         font-weight: 600;
@@ -947,6 +1066,57 @@ ul a:hover {
     }
     .nav-ul {
         margin-left: -2%;
+    }
+    .feature-text {
+        display: none;
+    }
+    .head-paragraph {
+        font-size: 14px;
+    }
+    /*----------faqs section---------------*/
+    .drop {
+        font-size: 12px;
+    }
+    .feature-btn {
+        margin-left: 2%;
+    }
+    .card-icon {
+        width: 100%;
+        height: 100%;
+    }
+    .q-form {
+        height: 12vh;
+        border-radius: 1px;
+    }
+    /*----------extension section---------------*/
+    .extension-header {
+        margin-top: -3em;
+        font-size: 24px;
+        font-weight: 600;
+        color: #091540;
+    }
+    .extension-btn {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+    }
+    .btn-subscribe6 {
+        display: none;
+    }
+    .btn-subscribe5 {
+        width: 300px;
+        font-size: 16px;
+        height: 10vh;
+    }
+    .feature-btn,
+    .abt-btn {
+        /* margin-left: 4%; */
+        display: flex;
+        flex-direction: row;
+    }
+    .hero-text {
+        margin-top: -2em;
+        font-size: 32px;
     }
     /*------------------------profile Page------------------------------*/
     .middle-form {
