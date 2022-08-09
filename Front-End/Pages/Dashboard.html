@@ -11,6 +11,9 @@
     <!--Custom CSS--->
     <link rel="stylesheet" href="../assets/css/style.css">
 
+
+    <!--<link rel="stylesheet" href="/assets/css/style.css">-->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <!--Google Fonts--->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
@@ -127,6 +130,48 @@
                     <tr class="dash-row dash-table-row mt-2 mb-5   align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
                         <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
+
+    <script>
+
+        function toggle(boxcontrol, selector) {
+            const combinedSelector = selector + ' .saved-check';
+            //let checkboxes = document.getElementsByTagName('input'); this worked too
+            const checkboxes = document.querySelectorAll(combinedSelector);
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                //  if (checkboxes[i] != boxcontrol && checkboxes[i].className == boxcontrol.className) {
+                if (checkboxes[i] != boxcontrol) {
+                    checkboxes[i].checked = boxcontrol.checked;
+                }
+            }
+        }
+
+    </script>
+
+<div class="container pt-5 pb-5 mb-5">
+   
+   <div class="container table-responsive dash-box p-4 hideContent" id="contentDiv">
+        <table class="dash-table">
+        <thead>
+          <tr class="  my-3 pt-1 pb-1  dash-table-row dash-text align-middle">
+            
+           <th class="dash-text" scope="col">
+            <input class="col-2 m-1 form-check-input saved-check boxcontrol" type="checkbox" onClick="toggle(this, '#contentDiv')" value="" id="flexCheckChecked" ></th>
+            <th class="dash-text" scope="col">File Name</th>
+            <th class="dash-text" scope="col">File Size</th>
+            <th class="dash-text" scope="col">Date Splitted</th>
+            <th class="dash-text" scope="col"></th>
+            <th class="dash-text" scope="col"></th>
+            <th class="dash-text" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="dash-row dash-table-row mt-2 mb-5 align-middle">
+            <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
+            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
                 Shawn's Doc.CSV</td>
             <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
                 500kb
@@ -147,6 +192,13 @@
                     <tr class="dash-row  mt-2 mb-3   align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
                         <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
+          </tr>
+
+          <tr class="dash-row  mt-2 mb-3 align-middle">
+            <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
+            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
                 Shawn's Doc.CSV</td>
             <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
                 200kb
@@ -167,6 +219,13 @@
                     <tr class="dash-row  mt-2 mb-3   align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
                         <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
+          </tr>
+
+          <tr class="dash-row  mt-2 mb-3   align-middle">
+            <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
+            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
                 Shawn's Doc.CSV</td>
             <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
                 700kb
@@ -187,6 +246,56 @@
                     <tr class="dash-row  mt-2 mb-3   align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
                         <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
+          </tr>
+
+          <tr class="dash-row  mt-2 mb-3 align-middle">
+            <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
+            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                Shawn's Doc.CSV</td>
+            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                100kb
+              </label></td>
+                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                05.06.2022
+              </label></td>
+                        <td><label class="form-check-label  dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i></span>
+                <a class="dash-text" href="#" download="">Download</a> 
+             </label></td>
+                        <td><label class="form-check-label  dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i></span>
+                Share
+             </label></td>
+                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                Delete
+             </label></td>
+                    </tr>
+
+
+                    <tr class="dash-row  mt-2 mb-3 align-middle">
+                        <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
+                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                Shawn's Doc.CSV</td>
+            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                100kb
+              </label></td>
+                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                05.06.2022
+              </label></td>
+                        <td><label class="form-check-label  dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i></span>
+                <a class="dash-text" href="#" download="">Download</a> 
+             </label></td>
+                        <td><label class="form-check-label  dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i></span>
+                Share
+             </label></td>
+                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                Delete
+             </label></td>
+                    </tr>
+
+                    <tr class="dash-row  mt-2 mb-3   align-middle">
+                        <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
+                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
                 Shawn's Doc.CSV</td>
             <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
                 100kb
@@ -214,7 +323,39 @@
         </div>
 
 
+        </tr>
+
+        </tbody>
+
+        </table>
+        <div class="text-center dash-text pt-2">
+            <button id="seeMore" class="text-center dash-text">Show more</button>
+        </div>
     </div>
+
+
+
+    </div>
+
+    <script>
+        // Basic See More Button
+
+        let button = document.getElementById('seeMore');
+        let content = document.getElementById('contentDiv');
+
+        button.addEventListener('click', function() {
+
+            if (content.className === 'hideContent') {
+                // content.classList.remove('hideContent');
+                content.className = 'showContent';
+                button.textContent = 'Show less';
+            } else {
+                content.className = 'hideContent';
+                button.textContent = 'Show more';
+            }
+
+        });
+    </script>
 
 
 
@@ -235,6 +376,7 @@
 
     <div class="container pt-5 pb-5 mb-5">
         <div class="container table-responsive dash-box p-4">
+
             <table class=" dash-table">
                 <thead>
                     <tr class="  my-3 pt-1 pb-1  dash-table-row align-middle">
@@ -250,6 +392,23 @@
                     <tr class="dash-row dash-table-row mt-2 mb-5   align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
                         <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
+            <table class=" dash-table" id="file-history-table">
+            <thead>
+              <tr class="  my-3 pt-1 pb-1  dash-table-row align-middle">
+                <th class="dash-text" scope="col"><input class="col-2 m-1 form-check-input saved-check boxcontrol" type="checkbox" onClick="toggle(this, '#file-history-table' )" value="" id="flexCheckChecked" ></th>
+                <th class="dash-text" scope="col">File Name</th>
+                <th class="dash-text" scope="col">File Size</th>
+                <th class="dash-text" scope="col">Date Splitted</th>
+                <th class="dash-text" scope="col">Status</th>
+                <th class="dash-text" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dash-row dash-table-row mt-2 mb-5   align-middle">
+                <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
+                <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+
                     Shawn's Doc.CSV</td>
                 <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
                     500kb
