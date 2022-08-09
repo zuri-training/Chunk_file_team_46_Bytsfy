@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{% url 'home' %}">home</a>
+{% if request.method == "GET" %}
+<div style="padding: 100px;">
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h1>JSON splitter</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="size">Enter size per chunk:</label>
+        <input type="text" name="chunk_size" required>bytes per file<br>
+        <input type="file" name="file" required>
+       
+        <button class="btn btn-lg btn-outline-success " type="submit">split</button>
+    </form>
+{% endif %}
+    {% if request.method == "POST" %}
+    <div style="padding: 100px;">
+        <a href="{% url 'save' file.id %}">save</a>
+        <a href="{{file.zip_file.url}}" download="{{file.zip_file.url}}">download</a>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock content %}
