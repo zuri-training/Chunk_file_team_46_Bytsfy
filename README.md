@@ -88,7 +88,7 @@ python manage.py runserver
 <h2>Built with:</h2>
 <div style="align: center;">
   Python
-  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-plain-wordmark.svg" alt="python" />
+  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-plain-wordmark.svg" alt="python" width="90" height="90" />
   Django
   <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" title="Django" alt="Django" width="90" height="90"/>
   Bootstrap
