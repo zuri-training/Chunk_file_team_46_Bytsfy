@@ -26,3 +26,6 @@ Landing page Issues:  https://github.com/zuri-training/Chunk_file_team_46_Bytsfy
 Sign in and Sign up page issues: https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/19#issue-1323432793
 
 FAQ pages Issues:     https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/137#issue-1333817007
+
+CONTENTS CREATION
+https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/1dd2b0ef97a3aaa3fb012e7364a72a3a3a4d4683/Front-End/Contents%20Created%20for%20Bytsfy.docx
