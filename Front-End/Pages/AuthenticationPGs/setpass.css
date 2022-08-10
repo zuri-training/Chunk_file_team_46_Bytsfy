@@ -14,28 +14,31 @@ main{
     flex-direction: column;
    gap: 10px;
    font-size: 20px;
-  
+
 }
 
 form{
     display: flex;
     flex-direction: column;
-    
+
     margin-top: 10px;
-   
+
     align-items: center;
     justify-content: center;
     gap: 5px;
-  
+
 }
-a{
+
+a {
     text-decoration: none;
     color: #091540;
 }
-a:hover{
+
+a:hover {
     color: #072F69;
 }
-.btn{
+
+.btn {
     color: white;
     font-weight: bolder;
     font-size: 15px;
@@ -44,17 +47,20 @@ a:hover{
     height: 30px;
     width: 20%;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: gray;
 }
-input{
+
+input {
     border-radius: 5px;
     border: 1px solid gray;
     width: 20%;
     height: 30px;
 }
+
 @media only screen and (max-width: 600px) {
-    .btn, input{
+    .btn, input {
         width: 70%;
     }
    

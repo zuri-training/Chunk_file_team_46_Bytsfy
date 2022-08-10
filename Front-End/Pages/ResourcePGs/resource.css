@@ -1,19 +1,20 @@
-html{
+html {
     font-size: 20;
 }
 
-.container{
-    
+.container {
+
     margin-left: 90px;
-   width: 80%;
-   line-height: 2.0;
-   word-spacing: 3px;
- 
-    
+    width: 80%;
+    line-height: 2.0;
+    word-spacing: 3px;
+
+
 }
-ul{
+
+ul {
     list-style: none;
-    
+
 }
 
    

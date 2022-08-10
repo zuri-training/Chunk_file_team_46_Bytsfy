@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{% url 'home' %}">home</a>
+{% if request.method == "GET" %}
+<div style="padding: 100px;">
+    <h1>Convert your csv file to json</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="CSVfile" required>
+        <button class="btn btn-lg btn-outline-success " type="submit">convert</button>
+    </form>
+{% endif %}
+    {% if request.method == "POST" %}
+    <a href="{% url 'save' file.id %}">save</a>
+    <a href="{{file.zip_file.url}}" download="{{file.zip_file.url}}">download</a>
+    {% endif %}
+</div>
+
+{% endblock content %}

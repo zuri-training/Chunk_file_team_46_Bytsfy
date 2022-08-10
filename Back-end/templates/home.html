@@ -4,22 +4,443 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="/static/assets/css/Landing_page.css">
+     <!-- For a felxible design, Bootstrap5 CSS was included-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google fonts CDN -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome 4.7.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>home</title>
 </head>
-<body>
+ <body>
     {% if user.is_authenticated %}
     <h1>Hello, {{user.email}}</h1>
         <img src="{{user.profile_pic.url }}" alt="">
     <form action="" method="post" encType="multipart/form-data" >
         {% csrf_token %}
-
-        <input type="file" name="file">
-    <input type="submit">
+            
+     <a href="{% url 'chunk' %}">Chunk Upload</a>
     <p><a href="{% url 'account_logout' %}">logout</a></p>
     <p><a href="{% url 'account_set_password' %}">change password</a></p>
     {% else %}
+    <main>
+          <div class="flex-container mx-auto fstsection">
+               <div class="container ps-5 fstsection1">
+                    <h1 class="fw-bold">Split Files Between <a href="" class="text-warning json text-decoration-none">JSON and CSV</a></h1>
+                    <p class="mt-3">Break up and convert your files safely and securely with our Bytsfile tool from any web browser of your choice
+                    </p>
+                    <div class="pt-lg-4 pt-md-3 pt-1 fstsection1a">
+                         <a href="{% url 'account_signup' %}" class="btn fw-bold get_s">Get Started</a>
+                         <a href="http://" class="btn fw-bold how_w">How it works?</a>
+                    </div>
+               </div>
+               <div class="container fstsection2">
+                    <img src="/static/assets/img/undraw_designer_girl_re_h54c_2.svg" class="img-fluid rounded-top" alt="undraw_designer_girl_">
+               </div>
+          </div>
+          <div class="container-fluid secsection">
+               <div>
+                    <h1 class="text-center fw-bold p-lg-5 p-md-3 p-sm-3 ps-lg-3 secsection_about">About</h1>
+               </div>
+               <div class="flex-container secsection1">
+                    <div class="container-fluid secsection_col1 p-lg-5">
+
+                         <!-- The Carousel starts here-->
+                         <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                              <!-- The indicator dashes -->
+                              <div class="carousel-indicators">
+                                   <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                                   <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                                   <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                                   <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                                   <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                              </div>
+
+                              <!-- The slideshow of the contents -->
+                              <div class="carousel-inner carousel_pictures">
+                                   <div class="carousel-item active">
+                                        <img src="/static/assets/img/53.jpg" alt="fstimg" class="d-block mx-auto carousel_pix">
+                                   </div>
+                                   <div class="carousel-item">
+                                        <img src="/static/assets/img/88.jpg" alt="secimg" class="d-block mx-auto carousel_pix">
+                                   </div>
+                                   <div class="carousel-item">
+                                        <img src="/static/assets/img/6.jpg" alt="thrdimg" class="d-block mx-auto carousel_pix">
+                                   </div>
+                                   <div class="carousel-item">
+                                        <img src="/static/assets/imag/20.jpg" alt="frtimg" class="d-block mx-auto carousel_pix">
+                                   </div>
+                                   <div class="carousel-item">
+                                        <img src="/static/assets/img/19.jpg" alt="fifimg" class="d-block mx-auto carousel_pix">
+                                   </div>
+                              </div>
+
+                              <!-- Left and right controls/icons -->
+                                   <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                   </button>
+                                   <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                   </button>
+                         </div>
+                    </div>
+                    <div class="container ps-lg-5 secsection_col2">
+                         <h2 class="">Split, Convert, and Compress your Files into Various Forms Using Bytsfy</h2>
+                         <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, Lorem ipsum dolo sit amet, consectetur adipiscing elit ut aliquam, adipiscing elit ut aliquam, Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, -->
+                         </p>
+                         <div class="secsection_btn">
+                              <a href="FAQ.html" class="btn fw-bold text-white read_m">Read more</a>
+
+                              <a href="{% url 'account_signup' %}" class="btn fw-bold ">Get Started</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="container-fluid thrdsection">
+               <div class="thrdsection_feat">
+                    <h1 class="text-center pt-lg-5 pt-md-3 fw-bold">Features</h1>
+                    <p class="text-center fw-bold fs- pt-lg-3 pt-md-3 pt-sm-1">Whatever type of file you need to split, convert or compress online, our product is more just a tool for your seemless spliting and downloads. with our reliable fast cloud database, you are guaranteed of the fastest speed.</p>
+               </div>
+               <div>
+                    <div class="row mx-auto row1">
+                         <div class="col"><a href="" class="text-decoration-none dev">Developers</a></div>
+                         <div class="col"><a href="" class="text-decoration-none data">Data Analyst</a></div>
+                         <div class="col"><a href="" class="text-decoration-none business">Businesses</a></div>
+                         <div class="col"><a href="" class="text-decoration-none ecommerce">E-Commerce</a></div>
+                    </div>
+               </div>
+
+               <div class="container-fluid thrdsection1">
+                    <div class="flex-container mx-auto pt-lg-5 pt-md-3 pt-sm-1 text-white row2">
+                         <div class="col">
+                              <img src="/static/assets/img/Split Icon.svg" alt="" srcset="">
+                              <h2 class="pt-lg-3 pt-sm-1">Split</h2>
+                              <p class="pt-lg-1 pt-sm-1 pe-lg-5">Easy Spliting of files between Json and CSV either in lines or by the file size. </p>
+                         </div>
+                         <div class="col">
+                              <img src="/static/assets/img/compress.svg" alt="" srcset="">
+                              <h2 class="pt-lg-3 pt-sm-1">Compress</h2>
+                              <p class="pt-lg-1 pt-sm-1 pe-lg-5">Reducing your files will come easy with our upcoming feature with your choice of file.</p>
+                         </div>
+                         <div class="col">
+                              <img src="/static/assets/img/convert.svg" alt="" srcset="">
+                              <h2 class="pt-lg-3 pt-sm-1">Convert</h2>
+                              <p class="pt-lg-1 pt-sm-1 pe-lg-5">We promise a very convenient way of converting your files to your choice of file type.</p>
+                         </div>
+                    </div>
+                    <div class="pt-3 pb-5 conversion">
+                         <a href="http://" class="btn json_csv">JSON to CSV</a>
+                         <a href="http://" class="btn csv_json ms-3">CSV to JSON</a>
+                    </div>
+               </div>
+          </div>
+          <div class="container-fluid mx-auto frtsection">
+               <div class="text-center py-lg-5 py-md-3 py-sm-1"><h1 class="fw-bold">Extensions</h1></div>
+               <div class="flex-container pt-3 mx-auto row3">
+                    <div class="col easy_int">
+                         <h2 class="pb-2">Easy Intergration to all Your Software Workflow</h2>
+                         <p class="pb-4">We work endlessly to bring to make your work easy and closer to you, watch out for our upcoming upgrade which will enable you use your favourise tool from your work tools.</p>
+                         <a href="" class="btn text-white dwn_ext">Download Extension</a>
+                         <a href="http://" class="btn API">Read API Documentation</a>
+                    </div>
+                    <div class="col ext_img">
+                         <img src="/static/assets/img/extension.svg" class="" alt="extensions" srcset="">
+                    </div>
+               </div>
+          </div>
+          <div class=" fifsection">
+               <div class="text-center py-lg-5 py-md-3 py-sm-1"><h1 class="">Blogs</h1></div>
+               <div class="flex-container card_row">
+                    <div class="col">
+                         <div class="container-fluid mt-3 ">
+                              <div class="cardone">
+                                   <img class="card-img-top carddetails" src="/static/assets/img/44.jpg" alt="Card image">
+                                   <div class="card-body card_title">
+                                        <h4 class="card-title">JSON to CSV Files</h4>
+                                        <!-- <p class="card-text fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, Lorem ipsum dolo sit amet,</p> -->
+                                        <a href="#" class="btn mt-lg-4 mt-md-3 mt-sm-1">Read Details</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col">
+                         <div class="container-fluid mt-3 ">
+                              <div class="cardone">
+                                   <img class="card-img-top carddetails" src="/static/assets/img/29.jpg" alt="Card image">
+                                   <div class="card-body card_title">
+                                        <h4 class="card-title">JSON and CSV Files in Python</h4>
+                                        <!-- <p class="card-text fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, Lorem ipsum dolo sit amet,</p> -->
+                                        <a href="#" class="btn">Read Details</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col">
+                         <div class="container-fluid mt-3 ">
+                              <div class="cardone">
+                                   <img class="card-img-top carddetails" src="/static/assets/img/28.jpg" alt="Card image">
+                                   <div class="card-body card_title">
+                                        <h4 class="card-title">Learn About JSON Data Structures</h4>
+                                        <!-- <p class="card-text fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, Lorem ipsum dolo sit amet,</p> -->
+                                        <a href="#" class="btn">Read Details</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col">
+                         <div class="container-fluid mt-3 ">
+                              <div class="cardone">
+                                   <img class="card-img-top carddetails" src="/static/assets/img/10.jpg" alt="Card image">
+                                   <div class="card-body card_title">
+                                        <h4 class="card-title">CVS with Excel</h4>
+                                        <!-- <p class="card-text fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, Lorem ipsum dolo sit amet,</p> -->
+                                        <a href="#" class="btn mt-lg-4 mt-md-3 mt-sm-1">Read Details</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="container-fluid sixsection">
+               <div class="sixsection_feat">
+                    <h1 class="text-center pt-lg-5 pt-md-3 pt-sm-1 fw-bold">Team</h1>
+                    <p class="text-center fw-bold fs- pt-lg-3 pt-md-3 pt-sm-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, Lorem ipsum dolo sit amet, consectetur adipiscing elit ut aliquam, adipiscing elit ut aliquam, Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,</p>
+               </div>
+               <div class="container-fluid sixsection1">
+                    <div class="flex-container mx-auto pt-lg-5 pt-md-3 pt-sm-1 text-white row4">
+                         <div class="col">
+                              <img src="/static/assets/imag/4.jpg" class="profile_pix" alt="" srcset="">
+                              <h6 class="pt-lg-3 pt-sm-1 ">John Adekola</h6>
+                              <p class="lead">Lead: Team 46</p>
+                              <p class="pt-lg-1 pt-sm-1 pe-lg-5 team_description">As the teamlead, John worked with the backend to ensure our product goes live.</p>
+                              <div class="row mx-auto team_sml">
+                                   <div class="col"><a href="https://www.linkedin.com/login" class="fa fa-linkedin"></a></div>
+                                   <div class="col"><a href="https://accounts.google.com/b/1/AddMailService" class=""><img src="/static/assets/img/google.svg" class="google" alt=""></a></div>
+                                   <div class="col"><a href="https://github.com/login" class="fa fa-github text-white"></a></div>
+                                   <div class="col"><a href="https://www.figma.com/login" class=""><img src="/static/assets/img/icons8-figma 1.svg" class="figma" alt="" srcset=""></a></div>
+                                   <div class="col"><a href="https://twitter.com/login" class="fa fa-twitter"></a></div>
+                              </div>
+                         </div>
+                         <div class="col">
+                              <img src="/static/assets/img/4.JPG" class="profile_pix" alt="" srcset="">
+                              <h6 class="pt-lg-3 pt-sm-1 ">Mercy Kalu</h6>
+                              <p class="lead">Lead: Product Design</p>
+                              <p class="pt-lg-1 pt-sm-1 pe-lg-5">Mercy designed the landing page and made sure the design screens are ready. </p>
+                              <div class="row mx-auto team_sml">
+                                   <div class="col"><a href="https://www.linkedin.com/login" class="fa fa-linkedin"></a></div>
+                                   <div class="col"><a href="https://accounts.google.com/b/1/AddMailService" class=""><img src="/static/assets/img/google.svg" class="google" alt=""></a></div>
+                                   <div class="col"><a href="https://github.com/login" class=""><img src="/static/assets/img/icons8-behance 1.svg" class="figma" alt="" srcset=""></a></div>
+                                   <div class="col"><a href="https://www.figma.com/login" class=""><img src="/static/assets/img/icons8-figma 1.svg" class="figma" alt="" srcset=""></a></div>
+                                   <div class="col"><a href="https://twitter.com/login" class="fa fa-twitter"></a></div>
+                              </div>
+                         </div>
+                         <div class="col">
+                              <img src="/static/assets/img/4.JPG" alt="" class="profile_pix" srcset="">
+                              <h6 class="pt-lg-3 pt-sm-1 ">Shulamite Ofua</h6>
+                              <p class="lead">Lead: PRO - Team 46</p>
+                              <p class="pt-lg-1 pt-sm-1 pe-lg-5">Shula was , worked on documentation and designed the API page </p>
+                               <div class="row mx-auto team_sml">
+                                   <div class="col"><a href="https://www.linkedin.com/login" class="fa fa-linkedin"></a></div>
+                                   <div class="col"><a href="https://accounts.google.com/b/1/AddMailService" class=""><img src="/static/assets/img/google.svg" class="google" alt=""></a></div>
+                                   <div class="col"><a href="https://github.com/login" class="fa fa-github text-white"></a></div>
+                                   <div class="col"><a href="https://www.figma.com/login" class=""><img src="/static/assets/img/icons8-figma 1.svg" class="figma" alt="" srcset=""></a></div>
+                                   <div class="col"><a href="https://twitter.com/login" class="fa fa-twitter"></a></div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="text-center pt-lg-4 pt-md-3 pt-sm-3 pb-5 conversion">
+                         <a href="http://" class="btn team_memb">Check All Team Members</a>
+                    </div>
+               </div>
+          </div>
+          <div class="sevsection">
+               <div class="sevsection_test">
+                    <h1 class="text-center pt-lg-5 pt-md-3 pt-sm-1 fw-bold">Testimonials</h1>
+                    <p class="text-center fw-bold fs- pt-lg-3 pt-md-3 pt-sm-1">Our large audience have good stories after having the best experience using Bytsfy. The testimonies shows how much our customers interest we have taken great consideration to in buuilding this wonderful product </p>
+               </div>
+               <div></div>
+               <div >
+                   <p class="text-center fs- pt-lg-3 pt-md-3 pt-sm-1">"Bytsfy has help me a lot in converting my file document into smaller files that help improve my productivity and flexibility in the software projects converting my CVS file into JSON and vise versa when needed, it is fast, easy and helpful.”</p>
+                   <div class="sevsection_btn text-center">
+                         <a href="http://" class="btn fw-bold give_review">Give us a Review</a>
+                    </div>
+               </div>
+          </div>
+          <div class="egtsection">
+               <div class="egtsection_test">
+                    <h1 class="text-center pt-lg-5 pt-md-3 pt-sm-1 fw-bold">Frequently Asked Questions</h1>
+                    <p class="text-center fw-bold fs- pt-lg-3 pt-md-3 pt-sm-1">Our customers sometimes get confused about our product usage. These frequently asked questions have helped alot of our users understand our product better, read through and also feel free to contact us.</p>
+               </div>
+
+               <!-- The FAQ questions starts here. -->
+               <div class="flex-container mx-auto egtsection_faq">
+                    <div class="faq_col1">
+                         <div class="container mt-2 faq_row1">
+                              <!-- first column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">Can i share this file from the dashboard if i don't wish to dowload?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             You can share your file directly if you do not wish to download.
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- first column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">What do i need to do to have full access to the platform?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             To have full access, you will need to sign up on the platform in order to have a better user experience.
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="container mt-2">
+                              <!-- first column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">How long will it take to download my split file?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             Depending on the size of the file, you spend few minute to download your file
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- first column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">How do i download my splitted file?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             After using the platform for your desired function, click on download to download the file into your PC or mobile phone
+                                        </div>
+                                   </div>
+                              </div>
+                              </div>
+                              <div class="container">
+                              <!-- fifth row -->
+                              <!-- second column -->
+                              <div class="col frsc">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">What form of file can i download?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             You can download two forms of files, that is a JSON file and CSV file. Other form of file coming soon.
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="faq_col2">
+                         <div class="container mt-2">
+                              <!-- second column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">How do i upload a file for splitting?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             You can click on the “upload file” button and drop your file from your computer.
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- second column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">When can i use the platform as an extension?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             Subscribe to get our email updates as soon as it is released, also the download button will become available to enable users to download the extension.
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- sixth row -->
+                         <div class="container mt-2">
+                              <!-- first column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">Are my files probed by Bytsfy?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             Utterly not. Your files are yours! not in any way would we analyse, check or copy them. Your files are scrictly secured in our servers.
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- second column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">Can bytsfy be accessed through any web browser?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             Bytsfy can be accessed through chrome, Firefox, Explorer +10, UC and Safari. To run our tools smoothly, we recommend that you work with the browsers listed. Our system requirement are basic and if at any point you experience issues, we recommend that you contact us.
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- fifth row -->
+                         <div class="container">
+                              <!-- second column -->
+                              <div class="col">
+                                   <div class="container mt-3">
+                                        <div class="frfc">
+                                             <a href="#demo" class="btn fw-bold faq_row11" data-bs-toggle="collapse">Do i have to suscribe before using the platform?</a>
+                                        </div>
+                                        <div id="demo" class="collapse ans">
+                                             There is no need for a subscription fee before using the platform, it is totally free, however you need to sign up before you can have full access to the platform.
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="ninsection">
+               <h1 class="text-center fw-bold pt-lg-4 pt-md-3 pt-sm-3">Subscribe to our NewsLetter</h1>
+               <p class="text-center">We constantly work towards serving you better. subscribing to our news letter means getting the latest update about our product and services </p>
+               <div class="container pt-3 mx-auto search">
+                    <!-- <div class="col-lg-6 col-md-8 col-sm-9"> -->
+                    <div class="container-fluid ninsection_email">
+                        <form action="" method="post">
+                            <div class="email">
+                              <!-- <a href="#" class="fa-solid fa-envelope"></a> -->
+                              <!-- <button class=" border-0 " type="submit"><i class="fa-solid fa-envelope"></i></button> -->
+                              <button class="fa fa-envelope border-0 email_input" type="submit"></button>
+                              <input type="text" class="border border-0" name="" id="" placeholder="enter email">
+                            </div>
+                         </form>
+                    </div>
+                    <!-- </div> -->
+               </div>
+               <div class="text-center pt-lg-5 pt-md-3 pt-sm-3 pb-5 conversion">
+                    <a href="http://" class="btn subscribe">Subscribe</a>
+                    <a href="http://" class="btn cont_us ms-3">Contact us</a>
+               </div>
+          </div>
+     </main>
     <p><a href="{% url 'account_login' %}">login</a></p>
-    <p><a href="{% url 'account_signup' %}">register</a></p>
     {% endif %}
-</body>
+  </body>
 </html>
