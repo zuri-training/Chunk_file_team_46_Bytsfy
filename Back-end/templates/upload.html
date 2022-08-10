@@ -7,11 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-<form action="" method="post" encType="multipart/form-data" >
+<form action="" method="post" encType="multipart/form-data">
     {% csrf_token %}
-<!--    {{ form }}-->
+    <!--    {{ form }}-->
     <input type="file" name="file"><br>
     <input type="checkbox"><br>
+
+    <input name="spec_size" type="number"
+
+    <!-- <select name="split_type" id="split_t"> -->
+    <!-- <option value="by_line">split_by_line</option>
+    <option value="by_size">Split_by_size</option> -->
+    <!-- </select>  -->
 
     <button type="submit">chunk</button>
 </form>

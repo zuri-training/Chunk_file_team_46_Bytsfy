@@ -1,15 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ChunkIT</title>
-</head>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Saved Files</title>
+		<!--Bootstrap--->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<!--Custom CSS--->
+		<link rel="stylesheet" href="/static/assets/css/style.css" />
 
-<body>
-    <div class="container">
-                {% for form in chunk.forms %}
-                    {{ form.render() }}
-                {% endfor %}
-    </div>
-</body>
+		<!--Google Fonts--->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!--Fontawesome CDN--->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+		/>
+	</head>
+
+	<body>
+		<!------------------------------Navbar Section------------------------------->
+		<header class="container-fluid">
+			<nav class="navbar navbar-expand-lg bg-light pt-3 mb-1">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#"
+						><img src="/static/assets/img/Bytsfylogo.svg" alt="nav-logo"
+					/></a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+							<li class="nav-item nav-items">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="#"
+									id="home"
+									>Home</a
+								>
+							</li>
+
+							<li class="nav-item dropdown nav-items">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Resources
+								</a>
+								<ul class="dropdown-menu dropdown1">
+									<li>
+										<a class="dropdown-item dropdown-items" href="FAQ.html"
+											>FAQs</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item dropdown-items" href="Blog.html"
+											>Blogs</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item dropdown-items" href="#"
+											>Developers</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown nav-items">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Tools
+								</a>
+								<div class="dropdown-menu dropdown1 wide-nav">
+									<div class="row">
+										<div class="col">
+											<h5 class="text-center"><strong>Split Files</strong></h5>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="upload.html"
+												>Upload Files</a
+											>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Split by line</a
+											>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Split by size</a
+											>
+										</div>
+										<div class="col">
+											<h5 class="text-center">
+												<strong>Convert Files</strong>
+											</h5>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Upload Files</a
+											>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Convert CSV to JSON</a
+											>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Convert JSON to CSV</a
+											>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Convert CSV to Others</a
+											>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Convert JSON to Others</a
+											>
+										</div>
+										<div class="col">
+											<h5 class="text-center">
+												<strong>Compress Files</strong>
+											</h5>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Upload Files</a
+											>
+											<a
+												class="btn btn-light dropdown-item text-center"
+												href="#"
+												>Compress by size</a
+											>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="nav-item nav-items">
+								<a class="nav-link" href="contact.html">Contact</a>
+							</li>
+						</ul>
+						<div class="nav navbar-nav navbar-right">
+							<div class="dropdown align-items-center">
+								<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+									<span class="nav-link navbar_userlink navbar-toggler-icon2"
+										>
+										<div class="dropdown-items align-items-center"  style="font-size: 10px; width:5%;">
+											<img src="{{user.profile_pic.url }}" alt="profileimage" class="fa-regular fa-circle fa-3x px-2" width="10px"> </i>
+										 <h1 class="" style="font-size: 10px;">Hello, {{user.email}}</h1>
+
+										</div>
+									</span
+									></a
+								>
+								<div
+									class="row dropdown-menu user_dropdownmenu dropdown1 wide-nav"
+								>
+									<div class="m-4">
+										<a href="" class="nav-link2">Profile</a>
+									</div>
+									<div class="m-4">
+										<a href="dashboard.html" class="nav-link2">Saved Items</a>
+									</div>
+
+									<div class="">
+										<button href="#" class="btn btn-primary m-4">
+											<span
+												><i class="fa-solid fa-right-from-bracket"></i
+											></span>
+											Logout
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!------------------------------Saved Files Header Section------------------------------->
+		<div class="container-fluid mb-3 mt-5">
+			<div class="container">
+				<h4 class="mb-5">Saved Files</h4>
+				<div class="d-flex text-left dash-header align-items-center mt-2">
+					<img
+						src="/static/assets/img/Split Icon.png"
+						id="split-icon"
+						alt="spliticon "
+					/>
+					<h5 class="ms-3">Splitted Files</h5>
+				</div>
+			</div>
+		</div>
+		<!---------------------------Split Files Tables Section---------------------------->
+
+		<section class="container-fluid pt-5 pb-5 mb-5">
+			<div class="container dash-box p-5">
+				{% if allfile %}
+     				{% for file in allfile %}
+					<div class="row form-check w-100 mx-2 my-2 p-1">
+
+							<input
+								class="col-2 m-1 form-check-input"
+								type="checkbox"
+								value=""
+								id="flexCheckChecked"
+							/>
+
+							<label class="col-3 form-check-label" for="flexCheckChecked">
+								{{file.file_name}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								File Size
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								{{file.saved_on}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{% url 'delete' file.id %}">Delete</a>
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{{file.saved_file.url}}" download="{{file.save_file.url}}">download</a>
+							</label>
+						</div>
+						<div class="row form-check dash-row w-100 mx-2 my-2 p-1">
+							<input
+								class="col-2 m-1 form-check-input"
+								type="checkbox"
+								value=""
+								id="flexCheckChecked"
+							/>
+
+							<label class="col-3 form-check-label" for="flexCheckChecked">
+								{{file.file_name}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								File Size
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								{{file.saved_on}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{% url 'delete' file.id %}">Delete</a>
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{{file.saved_file.url}}" download="{{file.save_file.url}}">download</a>
+							</label>
+						</div>
+						<div class="row form-check dash-row w-100 mx-2 my-2 p-1">
+							<input
+								class="col-2 m-1 form-check-input"
+								type="checkbox"
+								value=""
+								id="flexCheckChecked"
+							/>
+
+							<label class="col-3 form-check-label" for="flexCheckChecked">
+								{{file.file_name}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								File Size
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								{{file.saved_on}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{% url 'delete' file.id %}">Delete</a>
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{{file.saved_file.url}}" download="{{file.save_file.url}}">download</a>
+							</label>
+						</div>
+						<div class="row form-check dash-row w-100 mx-2 my-2 p-1">
+							<input
+								class="col-2 m-1 form-check-input"
+								type="checkbox"
+								value=""
+								id="flexCheckChecked"
+							/>
+
+							<label class="col-3 form-check-label" for="flexCheckChecked">
+								{{file.file_name}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								File Size
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								{{file.saved_on}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{% url 'delete' file.id %}">Delete</a>
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{{file.saved_file.url}}" download="{{file.save_file.url}}">download</a>
+							</label>
+						</div>
+						<div class="row form-check dash-row w-100 mx-2 my-2 p-1">
+							<input
+								class="col-2 m-1 form-check-input"
+								type="checkbox"
+								value=""
+								id="flexCheckChecked"
+							/>
+
+							<label class="col-3 form-check-label" for="flexCheckChecked">
+								{{file.file_name}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								File Size
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								{{file.saved_on}}
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{% url 'delete' file.id %}">Delete</a>
+							</label>
+							<label class="col-2 form-check-label" for="flexCheckChecked">
+								 <a href="{{file.saved_file.url}}" download="{{file.save_file.url}}">download</a>
+							</label>
+					</div>
+
+            	{% endif %}
+            		{% endfor %}
+			</div>
+		</section>
+		<!--------------------------------------------File History----------------------->
+		<section class="">
+			<div class="container-md text-left">
+				<div class="row flex-column flex-lg-row"></div>
+			</div>
+		</section>
+		<!------------------------------------File History Table---------------------->
+
+		<div class="container-fluid mb-3 mt-5">
+			<div class="container">
+				<div class="d-flex text-left dash-header align-items-center mt-2">
+					<img
+						src="/static/assets/img/File history Icon.png"
+						id="split-icon"
+						alt="spliticon "
+					/>
+					<h5 class="ms-3">File History</h5>
+				</div>
+			</div>
+		</div>
+		<!---------------------------File  History Tables Section---------------------------->
+
+		<section class="container-fluid pt-5 pb-5 mb-5">
+			<div class="container dash-box p-5">
+				<div class="row form-check w-100 mx-2 my-2 p-1">
+					<input
+						class="col-2 m-1 form-check-input"
+						type="checkbox"
+						value=""
+						id="flexCheckChecked"
+					/>
+
+					<label class="col-3 form-check-label" for="flexCheckChecked">
+						File Name
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						File Size
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						Date Splitted
+					</label>
+				</div>
+				<div class="row form-check dash-row w-100 mx-2 my-2 p-1">
+					<input
+						class="col-2 m-1 form-check-input"
+						type="checkbox"
+						value=""
+						id="flexCheckChecked"
+					/>
+
+					<label class="col-3 form-check-label" for="flexCheckChecked">
+						File Name
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						File Size
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						Date Splitted
+					</label>
+				</div>
+				<div class="row form-check dash-row w-100 mx-2 my-2 p-1">
+					<input
+						class="col-2 m-1 form-check-input"
+						type="checkbox"
+						value=""
+						id="flexCheckChecked"
+					/>
+
+					<label class="col-3 form-check-label" for="flexCheckChecked">
+						File Name
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						File Size
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						Date Splitted
+					</label>
+				</div>
+				<div class="row form-check dash-row w-100 mx-2 my-2 p-1">
+					<input
+						class="col-2 m-1 form-check-input"
+						type="checkbox"
+						value=""
+						id="flexCheckChecked"
+					/>
+
+					<label class="col-3 form-check-label" for="flexCheckChecked">
+						File Name
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						File Size
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						Date Splitted
+					</label>
+				</div>
+				<div class="row form-check dash-row w-100 mx-2 my-2 p-1">
+					<input
+						class="col-2 m-1 form-check-input"
+						type="checkbox"
+						value=""
+						id="flexCheckChecked"
+					/>
+
+					<label class="col-3 form-check-label" for="flexCheckChecked">
+						File Name
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						File Size
+					</label>
+					<label class="col-2 form-check-label" for="flexCheckChecked">
+						Date Splitted
+					</label>
+				</div>
+			</div>
+		</section>
+
+		<!------------------------------Footer Section------------------------------->
+
+		<section class="footer container-fluid" id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="container text-left">
+							<div class="footer-header">
+								<div class="col-sm footer-logo mb-5">
+									<img
+										src="/static/assets/img/footer-logo.svg "
+										class=""
+										lt="footer-logo "
+									/>
+								</div>
+								<div class="col-sm footer-text mb-5">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+										aliquam, purus sit amet luctus venenatis, lectus magna
+										fringilla urna
+									</p>
+								</div>
+								<div class="col-sm icons mb-4">
+									<i class="fa-brands fa-linkedin-in text-primary pr-2"></i>
+									<i class="fa-brands fa-google p-2 text-white"></i>
+									<i class="fa-brands fa-facebook p-2 text-primary"></i>
+									<i class="fa-brands fa-square-instagram p-2 text-white"></i>
+									<i class="fa-brands fa-twitter p-2 text-primary"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<h4 class="footer-header">Quick Links</h4>
+						<ul class="quicklinks">
+							<a href=" ">
+								<li>Home</li>
+							</a>
+							<a href=" ">
+								<li>Tools</li>
+							</a>
+							<a href="Blog.html">
+								<li>Blogs</li>
+							</a>
+							<a href=" ">
+								<li>Resources</li>
+							</a>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 text-left">
+						<h4 class="footer-header">Quick Action</h4>
+						<ul class="quickActions">
+							<a href=" ">
+								<li>Signup</li>
+							</a>
+							<a href=" ">
+								<li>Login</li>
+							</a>
+							<a href="contact.html">
+								<li>Contact</li>
+							</a>
+							<a href=" ">
+								<li>Testimonial</li>
+							</a>
+						</ul>
+					</div>
+					<div class="col">
+						<h4 class="footer-header">Address</h4>
+						<div class="location d-flex d-sm-flex mt-3">
+							<i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2"></i>
+							<p class="p-2">
+								No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.
+							</p>
+						</div>
+						<div class="number d-flex">
+							<i class="fa-solid fa-phone p-2"></i>
+							<p class="p-2">01-023-257</p>
+						</div>
+						<div class="mail d-flex">
+							<i class="fa-solid fa-envelope p-2"></i>
+							<p class="p-2">hello@managely.work</p>
+						</div>
+					</div>
+				</div>
+				<div class="container row">
+					<div class="col-8"></div>
+					<div class="col-4 footer-chat">
+						<img src="/assets/img/chat-img.svg" alt="chatimg " />
+						<h5>Chat with our Agents</h5>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid copyright pb-2 pt-4" id="copyright">
+			<div class="container">
+				<div class="row flex-column-reverse flex-lg-row">
+					<div class="col text-left">
+						<p>Copyright &copy; 2022 Bytsfy - All rights reserved.</p>
+					</div>
+					<div class="col"></div>
+					<div class="col">
+						<ul class="termspolicy">
+							<li class="">Privacy Policy</li>
+							&nbsp;
+							<li class="">Terms</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+			integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+			integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>

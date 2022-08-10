@@ -6,5 +6,5 @@ from django.urls import reverse_lazy
 
 # creating a password change success view
 class CustomPasswordChangeView(PasswordChangeView):
-    success_url = reverse_lazy("password_change_done") 
+    success_url = reverse_lazy("password_change_done")
 

@@ -21,20 +21,19 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
+    path("admin/", admin.site.urls),
     # user authentication
-    path('accounts/', include('accounts.urls')),
-    # path('accounts/', include('django.contrib.auth.urls')),
 
-    path('accounts/', include('allauth.urls')), # new
+    path("accounts/", include("accounts.urls")),
+    path("accounts/", include("allauth.urls")),
+
     # social logins
-    path('social-auth/', include('social_django.urls', namespace='social')),
+    path("social-auth/", include("social_django.urls", namespace="social")),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
     path("", TemplateView.as_view(template_name="dashboard.html"), name="dashboard"),
+    path("", TemplateView.as_view(template_name="FAQ.html"), name="FAQ"),
+    path("", include('chunker.urls')),
 
-    path("", include('chunked_files.urls')),
 ]
-
 if settings.DEBUG:
-      urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
