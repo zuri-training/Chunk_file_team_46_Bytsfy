@@ -859,7 +859,18 @@ html {
     height: 7vh;
 }
 
-.account {
+.btn-newbtn:hover {
+    background-color: #091540;
+    color: #fff;
+    height: 7vh;
+}
+
+a:hover {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a .account {
     margin-top: 40px;
 }
 
