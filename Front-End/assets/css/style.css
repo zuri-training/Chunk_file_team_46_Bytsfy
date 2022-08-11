@@ -839,6 +839,41 @@ html {
 }
 
 
+/*------------------------Login/Signup Page------------------------------*/
+
+.btn-social {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #0E103D;
+    font-weight: 400;
+    border-radius: 5px;
+    padding: 10px 16px;
+    border: 1px solid #0E103D;
+    width: 485px;
+    height: 7vh;
+}
+
+.btn-newbtn {
+    background-color: #091540;
+    color: #fff;
+    height: 7vh;
+}
+
+.account {
+    margin-top: 40px;
+}
+
+.account-header {
+    margin-top: 4px;
+    color: #091540;
+    font-weight: 700;
+}
+
+.account-p {
+    margin-bottom: 28px;
+}
+
+
 /*------------------------Contact Page------------------------------*/
 
 .contact-header {
@@ -975,6 +1010,16 @@ ul a:hover {
 }
 
 @media (max-width: 650px) {
+    .login-hero {
+        width: 100%;
+        height: 100%;
+    }
+    .btn-social {
+        width: 360px;
+    }
+    .account {
+        margin-top: 20px;
+    }
     /*------------------------contact Page------------------------------*/
     .contact-paragraph {
         font-size: 16px;

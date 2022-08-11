@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bytsfy - Upload Success</title>
-
+    <title>File Download</title>
     <!--Bootstrap--->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -13,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!--Google Fonts--->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
     <!--Fontawesome CDN--->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
@@ -23,14 +23,14 @@
     <header class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
+                <a class="navbar-brand" href="./Home_page.html"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
                 <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
                         <li class="nav-item nav-items">
-                            <a class="nav-link " aria-current="page" href="#">Home</a>
+                            <a class="nav-link " aria-current="page" href="./">Home</a>
                         </li>
 
                         <li class="nav-item dropdown nav-items">
@@ -45,57 +45,63 @@
                         </li>
                         <li class="nav-item dropdown nav-items">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tools
+                              Tools
                             </a>
                             <div class="dropdown-menu dropdown1 wide-nav ">
                                 <div class="row ">
                                     <div class="col-lg-3 col-sm-12 col-md-12 text-sm-center">
                                         <h5 class="text-center"><strong>Split Files</strong></h5>
-                                        <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
-                                        <a class="btn btn-light dropdown-item text-center" href="#">Split by
-                                            line</a>
-                                        <a class="btn btn-light dropdown-item text-center" href="#">Split by
-                                            size</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./splitbyLine.html">Split by
+                                                line</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./splitbySize.html">Split by
+                                                size</a>
                                     </div>
                                     <div class="col-lg-3 col-sm-12 col-md-12 text-sm-center">
                                         <h5 class="text-center"><strong>Convert Files</strong></h5>
                                         <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
                                         <a class="btn btn-light dropdown-item text-center" href="#">Convert CSV to
-                                            JSON</a>
+                                                JSON</a>
                                         <a class="btn btn-light dropdown-item text-center" href="#">Convert JSON to
-                                            CSV</a>
+                                                CSV</a>
                                         <a class="btn btn-light dropdown-item text-center" href="#">Convert CSV to
-                                            Others</a>
+                                                Others</a>
                                         <a class="btn btn-light dropdown-item text-center" href="#">Convert JSON to
-                                            Others</a>
+                                                Others</a>
 
                                     </div>
                                     <div class="col-lg-3 col-sm-12 col-md-12">
                                         <h5 class="text-center"><strong>Compress Files</strong></h5>
                                         <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
                                         <a class="btn btn-light dropdown-item text-center" href="#">Compress by
-                                            size</a>
+                                                size</a>
                                     </div>
                                 </div>
                             </div>
 
                         </li>
                         <li class="nav-item nav-items">
-                            <a href="contact.html" class="nav-link">Contact</a>
+                            <a href="./contact.html" class="nav-link">Contact</a>
                         </li>
                     </ul>
                     <div class="nav navbar-nav navbar-right">
                         <div class="dropdown ">
                             <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
-                                <span class=" nav-link  navbar-toggler-icon2 mb-3"><img
-                                        src="../assets/img/user-profile.svg" alt=""> Shawn L.</span></a>
+                                <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="../assets/img/user-profile.svg" alt=""> Shawn L.</span></a>
                             <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
-                                <div class="m-4"><a href="" class="nav-link2">Profile</a></div>
-                                <div class="m-4"><a href="Dashboard.html" class="nav-link2">Saved Items</a></div>
+                                <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
+                                <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
 
-                                <div class=""><button href="#" class="btn btn-subscribe1 m-3"><span><i
-                                                class="fa-solid fa-right-from-bracket"></i></span>
-                                        Logout</button></div>
+                                <div class="">
+                                    <a href="./Sign_In.html">
+
+                                        <button href="./Sign_In.html" class="btn btn-subscribe1 m-3">
+                                            <span>
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                            </span>
+                                Logout</button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
