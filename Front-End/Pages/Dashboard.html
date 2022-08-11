@@ -7,7 +7,7 @@
     <title>Landing Page</title>
     <!--Bootstrap--->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
     <!--Custom CSS--->
     <link rel="stylesheet" href="../assets/css/style.css">
     <!--Google Fonts--->
@@ -147,107 +147,268 @@
                         <th class="dash-text" scope="col">
                             <input class="col-2 m-1 form-check-input saved-check boxcontrol" type="checkbox" onClick="toggle(this, '#contentDiv')" value="" id="flexCheckChecked"></th>
                         <th class="dash-text" scope="col">File Name</th>
-                        <th class="dash-text" scope="col">File Size</th>
-                        <th class="dash-text" scope="col">Date Splitted</th>
-                        <th class="dash-text" scope="col"></th>
-                        <th class="dash-text" scope="col"></th>
-                        <th class="dash-text" scope="col"></th>
+                        <th class="dash-text text-center" scope="col">File Size</th>
+                        <th class="dash-text text-center" scope="col">Date Splitted</th> 
                     </tr>
                 </thead>
                 <tbody>
 
                     <tr class="dash-row dash-table-row mt-2 mb-5 align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                        <td class="dash-text text-left">
 
                 Shawn's Doc.CSV</td>
-            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+            <td class="dash-text text-center">
                 500kb
-              </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+              </td>  
+              <td class="dash-text text-center">
                 06.08.2022
-              </label></td>
-                        <td><label class="form-check-label dash-text text-center dash-data" for="flexCheckChecked"><span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i></span>
-                <a class="dash-text" href="#" download="">Download</a> 
-             </label></td>
-                        <td><label class="form-check-label dash-text text-center dash-data" for="flexCheckChecked"><span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i></span>
-                Share
-             </label></td>
-                        <td><label class="form-check-label dash-text text-center dash-data" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
-                Delete
-             </label></td>
+              </td>
+              <td class="dash-text text-center">
+                <div class="dash-mobile">
+
+                <p>
+                   
+                    <button class="btn  dash-ellipse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa-solid fa-ellipsis-vertical  fa-2x dash-ellipse"></i>
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="">
+                        <div>
+                            <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                       </span>
+                        <a class="dash-text" href="#" download="">Download</a> 
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                       </span>
+                        <a class="dash-text" href="#" >Share</a> 
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                       </span>
+                        <a class="dash-text" href="#">Delete</a> 
+                        </div>
+                        
+                    </div>
+                  </div>
+                  </div>
+                  <div class="d-flex dash-desktop">
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                   </span>
+                    <a class="dash-text" href="#" download="">Download</a> 
+                    </div>
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                   </span>
+                    <a class="dash-text" href="#">Share</a> 
+                    </div>
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                   </span>
+                    <a class="dash-text" href="#">Delete</a> 
+                    </div>
+                  </div>
+          
+         
                     </tr>
 
 
 
-                    <tr class="dash-row  mt-2 mb-3 align-middle">
+                   
+                    <tr class="dash-row dash-table-row mt-2 mb-5 align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                        <td class="dash-text text-left">
 
                 Shawn's Doc.CSV</td>
-            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                200kb
-              </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                02.07.2022
-              </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i></span>
-                <a class="dash-text" href="#" download="">Download</a> 
-             </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i></span>
-                Share
-             </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
-                Delete
-             </label></td>
+            <td class="dash-text text-center">
+                500kb
+              </td>  
+              <td class="dash-text text-center">
+                06.08.2022
+              </td>
+              <td class="dash-text text-center">
+                <div class="dash-mobile">
+
+                <p>
+                   
+                    <button class="btn dash-ellipse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                        <i class="fa-solid fa-ellipsis-vertical dash-ellipse fa-2x" ></i>
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample1">
+                    <div class="">
+                        <div>
+                            <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                       </span>
+                        <a class="dash-text" href="#" download="">Download</a> 
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                       </span>
+                        <a class="dash-text" href="#">Share</a> 
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                       </span>
+                        <a class="dash-text" href="#">Delete</a> 
+                        </div>
+                        
+                    </div>
+                  </div>
+                  </div>
+                  <div class="d-flex dash-desktop">
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                   </span>
+                    <a class="dash-text" href="#" download="">Download</a> 
+                    </div>
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                   </span>
+                    <a class="dash-text" href="#">Share</a> 
+                    </div>
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                   </span>
+                    <a class="dash-text" href="#">Delete</a> 
+                    </div>
+                  </div>
+          
+         
                     </tr>
 
 
 
 
-                    <tr class="dash-row  mt-2 mb-3   align-middle">
+                    
+                    <tr class="dash-row dash-table-row mt-2 mb-5 align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                        <td class="dash-text text-left">
 
                 Shawn's Doc.CSV</td>
-            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                700kb
-              </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                10.07.2022
-              </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i></span>
-                <a class="dash-text" href="#" download="">Download</a> 
-             </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i></span>
-                Share
-             </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
-                Delete
-             </label></td>
+            <td class="dash-text text-center">
+                500kb
+              </td>  
+              <td class="dash-text text-center">
+                06.08.2022
+              </td>
+              <td class="dash-text text-center">
+                <div class="dash-mobile">
+
+                <p>
+                   
+                    <button class="btn dash-ellipse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                        <i class="fa-solid fa-ellipsis-vertical dash-ellipse fa-2x" ></i>
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample2">
+                    <div class="">
+                        <div>
+                            <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                       </span>
+                        <a class="dash-text" href="#" download="">Download</a> 
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                       </span>
+                        <a class="dash-text" href="#">Share</a> 
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                       </span>
+                        <a class="dash-text" href="#">Delete</a> 
+                        </div>
+                        
+                    </div>
+                  </div>
+                  </div>
+                  <div class="d-flex dash-desktop">
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                   </span>
+                    <a class="dash-text" href="#" download="">Download</a> 
+                    </div>
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                   </span>
+                    <a class="dash-text" href="#">Share</a> 
+                    </div>
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                   </span>
+                    <a class="dash-text" href="#">Delete</a> 
+                    </div>
+                  </div>
+          
+         
                     </tr>
 
 
 
-                    <tr class="dash-row  mt-2 mb-3 align-middle">
+                   
+                    <tr class="dash-row dash-table-row mt-2 mb-5 align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                        <td class="dash-text text-left">
+
                 Shawn's Doc.CSV</td>
-            <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                100kb
-              </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                05.06.2022
-              </label></td>
-                        <td><label class="form-check-label  dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i></span>
-                <a class="dash-text" href="#" download="">Download</a> 
-             </label></td>
-                        <td><label class="form-check-label  dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i></span>
-                Share
-             </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
-                Delete
-             </label></td>
+            <td class="dash-text text-center">
+                500kb
+              </td>  
+              <td class="dash-text text-center">
+                06.08.2022
+              </td>
+              <td class="dash-text text-center">
+                <div class="dash-mobile">
+
+                <p>
+                   
+                    <button class="btn dash-ellipse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                        <i class="fa-solid fa-ellipsis-vertical dash-ellipse fa-2x"></i>
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample3">
+                    <div class="">
+                        <div>
+                            <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                       </span>
+                        <a class="dash-text" href="#" download="">Download</a> 
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                       </span>
+                        <a class="dash-text" href="#">Share</a> 
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                       </span>
+                        <a class="dash-text" href="#" >Delete</a> 
+                        </div>
+                        
+                    </div>
+                  </div>
+                  </div>
+                  <div class="d-flex dash-desktop">
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                   </span>
+                    <a class="dash-text" href="#" download="">Download</a> 
+                    </div>
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                   </span>
+                    <a class="dash-text" href="#" >Share</a> 
+                    </div>
+                    <div class="px-3 dash-desktop">
+                        <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                   </span>
+                    <a class="dash-text" href="#">Delete</a> 
+                    </div>
+                  </div>
+          
+         
                     </tr>
 
 
@@ -265,26 +426,7 @@
 
     </div>
 
-    <script>
-        // Basic See More Button
-
-        let button = document.getElementById('seeMore');
-        let content = document.getElementById('contentDiv');
-
-        button.addEventListener('click', function() {
-
-            if (content.className === 'hideContent') {
-                // content.classList.remove('hideContent');
-                content.className = 'showContent';
-                button.textContent = 'Show less';
-            } else {
-                content.className = 'hideContent';
-                button.textContent = 'Show more';
-            }
-
-        });
-    </script>
-
+    
 
 
 
@@ -307,81 +449,112 @@
 
             <table class=" dash-table" id="file-history-table">
                 <thead>
-                    <tr class="  my-3 pt-1 pb-1  dash-table-row align-middle">
+                    <tr class="  my-3 pt-1 pb-1 dash-table-row align-middle">
                         <th class="dash-text" scope="col">
                             <input class="col-2 m-1 form-check-input saved-check boxcontrol" type="checkbox" onClick="toggle(this, '#file-history-table' )" value="" id="flexCheckChecked"></th>
                         <th class="dash-text" scope="col">File Name</th>
-                        <th class="dash-text" scope="col">File Size</th>
-                        <th class="dash-text" scope="col">Date Splitted</th>
-                        <th class="dash-text" scope="col">Status</th>
+                        <th class="dash-text text-center" scope="col">File Size</th>
+                        <th class="dash-text text-center" scope="col">Date Splitted</th>
+                        <th class="dash-text ps-5" scope="col">Status</th>
                         <th class="dash-text" scope="col"></th>
                     </tr>
                 </thead>
+
                 <tbody>
-                    <tr class="dash-row dash-table-row mt-2 mb-5   align-middle">
+
+                    <tr class="dash-row dash-table-row mt-2 mb-5 ps-3  align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                        <td class="dash-text text-center">
 
                     Shawn's Doc.CSV</td>
-                <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                <td class="dash-text text-center">
                     500kb
-                  </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                  </td>
+                        <td class="dash-text text-center">
                     06.08.2022
-                  </label></td>
-                        <td><button type="button" class="btn btn-success fileHistoryButon">Success</button></td>
-
-                        <td><label class="form-check-label dash-text text-center dash-data" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
-                    Delete
-                 </label></td>
+                  </td>
+                  <td>
+                    <div class="dash-mobile">
+                        <button type="button" class="btn btn-success fileHistoryButon">Success</button>
+                    </div>
+                    <div class="dash-desktop d-flex">
+                        <div class="px-4 dash-desktop"><button type="button" class="btn btn-success fileHistoryButon">Success</button></div>
+                        <div><a class="dash-text text-center dash-data dash-desktop ps-5"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                             Delete</a>
+                       </div>
+                    </div>
+                  
+                 </td>
                     </tr>
+
                     <tr class="dash-row  mt-2 mb-3   align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                        <td class="dash-text text-center">
                     Shawn's Doc.CSV</td>
-                <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                <td class="dash-text text-center">
                     200kb
-                  </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                  </td>
+                        <td class="dash-text text-center">
                     02.07.2022
-                  </label></td>
-                        <td><button type="button" class="btn btn-success fileHistoryButon">Success</button></td>
-
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
-                    Delete
-                 </label></td>
+                  <td>
+                    <div class="dash-mobile">
+                        <button type="button" class="btn btn-success fileHistoryButon">Success</button>
+                    </div>
+                    <div class="dash-desktop d-flex">
+                        <div class="px-4 dash-desktop"><button type="button" class="btn btn-success fileHistoryButon">Success</button></div>
+                        <div><a class="dash-text text-center dash-data dash-desktop ps-5"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                             Delete</a>
+                       </div>
+                    </div>
+                  
+                 </td>
                     </tr>
+
                     <tr class="dash-row  mt-2 mb-3   align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                    Shawn's Doc.CSV</td>
-                <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                    700kb
-                  </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
-                    10.07.2022
-                  </label></td>
-                        <td><button type="button" class="btn btn-danger fileHistoryButon2">Error</button></td>
 
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
-                    Delete
-                 </label></td>
+                        <td class="dash-text text-center">
+                    Shawn's Doc.CSV</td>
+                <td class="dash-text text-center">
+                    700kb
+                  </td>
+                        <td class="dash-text text-center">
+                    10.07.2022
+                  <td>
+                    <div class="dash-mobile">
+                        <button type="button" class="btn btn-success fileHistoryButon">Error</button>
+                    </div>
+                    <div class="dash-desktop d-flex">
+                        <div class="px-4 dash-desktop"><button type="button" class="btn btn-success fileHistoryButon2">Error</button></div>
+                        <div><a class="dash-text dash-desktop text-center dash-data ps-5"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                             Delete</a>
+                       </div>
+                    </div>
+                  
+                 </td>
+
                     </tr>
                     <tr class="dash-row  mt-2 mb-3  align-middle">
                         <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value="" id="flexCheckChecked"></th>
-                        <td><label class="form-check-label  dash-text text-center" for="flexCheckChecked">
+                        <td><p class="form-check-label  dash-text text-center" for="flexCheckChecked">
                     Shawn's Doc.CSV</td>
-                <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                <td class="dash-text text-center">
                     100kb
-                  </label></td>
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked">
+                  </td>
+                        <td class="dash-text text-center">
                     05.06.2022
-                  </label></td>
-                        <td><button type="button" class="btn btn-success fileHistoryButon">Success</button></td>
-
-                        <td><label class="form-check-label dash-text text-center" for="flexCheckChecked"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
-                    Delete
-                 </label></td>
+                  <td>
+                    <div class="dash-mobile">
+                        <button type="button" class="btn btn-success fileHistoryButon">Success</button>
+                    </div>
+                    <div class="dash-desktop d-flex">
+                        <div class="px-4 dash-desktop"><button type="button" class="btn btn-success fileHistoryButon">Success</button></div>
+                        <div><a class="dash-text text-center dash-data dash-desktop ps-5"><span><i class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                             Delete</a>
+                       </div>
+                    </div>
+                  
+                 </td>
                     </tr>
 
                 </tbody>
