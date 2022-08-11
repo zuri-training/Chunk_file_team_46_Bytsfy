@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,24 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="setpass.css">
 </head>
+
 <body>
-<main class="set container">
-    <i class="fa-solid fa-key fa-3x"></i>
+    <main class="set container">
+        <i class="fa-solid fa-key fa-3x"></i>
 
-    <h3>Set new password</h3>
-    <p>Your password must be diffrent from <br>previously used passwords</p>
+        <h3>Set new password</h3>
+        <p>Your password must be diffrent from <br>previously used passwords</p>
 
 
-    <form>
+        <form>
+            <label for="password">Password</label>
+            <input id="pass" type="password" name="pass" placeholder="Enter new password" /><br>
+            <label for="confirm">Confirm password</label>
+            <input id="confirm" type="password" name="password" placeholder="Re-enter new password" /><br>
+            <input type="button" value="Reset password" class="btn">
+        </form>
 
-        <label for="password">Password</label>
-        <input id="pass" type="password" name="pass" placeholder="Enter new password"/>
-        <label for="confirm">Confirm password</label>
-        <input id="confirm" type="password" name="password" placeholder="Re-enter new password"/><br>
-        <input type="button" value="Reset password" class="btn">
-    </form>
+        <b><a href="../Sign_In.html"> ← Back to login</a></b>
+    </main>
 
-    <b><a href="#"> ← Back to login</a></b>
-</main>
 </body>
+
 </html>
