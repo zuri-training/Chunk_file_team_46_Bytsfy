@@ -5,6 +5,7 @@ import shutil
 from pathlib import Path
 from textwrap import indent
 import pandas as pd
+from django.contrib import messages
 
 
 def file_ext_name(file_path):
@@ -60,7 +61,6 @@ class Bytfy_csv:
     def to_json(self, each_file, num):
         print("chunking to json")
         each_file.to_json(f"{self.file_name}\{self.doc_name}-{num}.json")
-        # args[0].to_json(f"{self.file_name}\{args[1]}-{args[2]}.json")
 
     def to_csv(self, each_file, num):
         print("chunking to csv")
@@ -87,7 +87,7 @@ class Bytfy_csv:
     def csv_split(self, to_jsons=False):
         """check size if it is less than 5% of the total size"""
         if self.user_specified_size < self.chunk_limit:
-            raise ValueError("please increase the size per file you want to chunk")
+            messages.error("please increase the size per file you want to chunk")
         # print(self.file_ext)
         """checking if file is an accepted fmt"""
         # if self.file_ext not in self.accepted_fmt:
@@ -131,7 +131,7 @@ class Bytfy_csv:
         elif self.user_specified_ext == ".json" and isinstance(self.rows_per_file, int):
             self.split_in_lines(to_json=True)
         else:
-            raise LookupError("sorry an error occured, kindly check your file or contact us")
+            messages.error("sorry an error occured, kindly check your file or contact us")
 
 
 
