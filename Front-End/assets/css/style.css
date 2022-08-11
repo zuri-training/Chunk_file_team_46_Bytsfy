@@ -1444,3 +1444,150 @@ ul a:hover {
     padding-left: 62px;
   }
 }
+
+
+
+/* -------------------------------Authentication Pages Section--------------------------- */
+
+
+
+main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  
+  margin-top: 90px;
+}
+.forgot{
+  gap: 5px;
+}
+
+.codecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.code {
+  background-color: #e3f2fe;
+  font-size: 40px;
+  height: 60px;
+  width: 70px;
+  border: none;
+  border-bottom: 3px solid #091540;
+  outline-width: 0;
+
+  text-align: center;
+  font-weight: 200;
+
+  margin-left: 10px;
+}
+
+/*Code for removing the inner counters in the box*/
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.proceed,.continue,.pro,.butn,.btn,.ceed {
+  text-align: center;
+  background-color: #091540;
+  border: none;
+  font-weight: bolder;
+
+  background-color: #091540;
+
+  width: 30%;
+  height: 35px;
+
+  border-radius: 10px;
+  color: white;
+
+}
+
+.butn,.ceed{width: 20%; }
+b{margin-bottom: 30px;}
+.continue{
+  margin-bottom: 50px;
+}
+
+.back {
+  text-decoration: none;
+  color: #091540;
+}
+.emaili,.seti{
+  display: flex;
+  flex-direction: column;
+  
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+  gap: 10px;
+
+}
+#mail{
+  border-radius: 5px;
+  height: 30px;
+  width: 20%;
+  border: 1px solid gray;
+}
+a{text-decoration: none; }
+/* Set password*/
+.puts{
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 20%;
+  height: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .proceed {
+      width: 50%;
+      text-align: center;
+  }
+
+  .codecontainer {
+      flex-wrap: wrap;
+  }
+
+  .code {
+      font-size: 40px;
+      height: 50px;
+      max-width: 70px;
+  }
+  .butn, #mail, .btn,input{
+      width: 60%;
+  }
+}
+
+/*------------------Resource Page Section--------------------*/
+.pg1,.pg2,.pg3,.pg4,.pg5,.pg6 {
+  text-align: left;
+  margin-left: 90px;
+  width: 80%;
+  line-height: 2.0;
+  word-spacing: 3px;
+
+
+}
+
+ul {
+  list-style: none;
+
+}
+.card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+ 
+}
+a{
+  color: white;
+}
