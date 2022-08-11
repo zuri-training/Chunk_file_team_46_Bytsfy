@@ -148,7 +148,7 @@ html {
 
 @media (min-width: 320px) and (max-width: 961px) {
   .wide-nav {
-    min-width: fit-content;
+    min-width: min-content;
   }
 }
 
