@@ -150,10 +150,6 @@ html {
   min-width: max-content;
 }
 
-.wide-nav {
-  min-width: max-content;
-}
-
 .navbar-toggler-icon2 {
   display: inline-block;
   width: 20%;
