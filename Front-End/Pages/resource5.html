@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+     <!------------------------------Navbar Section------------------------------->
+     <header class="container-fluid resource">
+        <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
+            <div class="container">
+                <a class="navbar-brand" href="./home2.html"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
+                <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+                        <li class="nav-item nav-items">
+                            <a class="nav-link " aria-current="page" href="./home2.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown nav-items">
+                            <a class="nav-link dropdown-toggle" href="./ResourcePGs/resourcepg.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu dropdown1">
+                                <li><a href="./FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
+                                <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
+                                <li><a class="dropdown-item dropdown-items" href="./Dashboard.html">Developers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-items">
+                            <a class="nav-link dropdown-toggle" href="./FileUpload.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Tools
+                            </a>
+                            <div class="dropdown-menu dropdown1 wide-nav ">
+                                <div class="row ">
+                                    <div class="col-lg-3 col-sm-12 col-md-12 text-sm-center">
+                                        <h5 class="text-center"><strong>Split Files</strong></h5>
+                                        <a class="btn btn-light dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./splitbyLine.html">Split by
+                                                line</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./splitbySize.html">Split by
+                                                size</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item nav-items">
+                            <a href="./contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="nav navbar-nav navbar-right">
+                        <div class="dropdown ">
+                            <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
+                                <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="../assets/img/user-profile.svg" alt=""> Shawn L.</span></a>
+                            <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
+                                <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
+                                <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
+
+                                <div class=""><button href="./Sign_In.html" class="btn btn-subscribe1 m-3"><span><i class="fa-solid fa-right-from-bracket"></i></span>
+                                Logout</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!----------------------------------------Main Part----------------------------------------------->
+<main>
+    <div class="pg5 container">
+        <h2>How to flatten JSON Data using pandas.</h2>by Jane Cooper
+        <p>It is now quite popular to store semi-structured information using JSON format. Indeed, JSON files have quite
+            simple structure and can be easily read by human beings. JSON syntax allows one to represent complex
+            dependencies in data and avoid data duplication. Moreover, all modern programming languages have
+            libraries<br>
+            that facilitate JSON parsing and storing data into this format. Not surprisingly, JSON is extensively used
+            to return data in Application Programming Interfaces (APIs) .
+        </p>
+        <p>At the same time, data analysts prefer to deal with structured data represented in the form of series and
+            dataframes. Unfortunately, transforming JSON data into structured format is not that straightforward. To
+            parse one type of JSON file may see you writing 40 lines of code, an approach which isn`t really
+            scalable.</p>
+        <p>
+        <h5>Flattening JSON using pandas</h5>
+        If you have limited time, it is better to make use of pandas’s json_normalize function. This function is rarely
+        used by data analysts. That’s why I decide to write this article.
+        The function, which uses json_normalize and achieves the result equivalent to the one considered in the previous
+        section, is the following:
+
+        </p>
+        <p>Although it is only 10 lines smaller, it is much easier to read. There, only two actions are performed:
+            json_normalize was used to read and normalize json data, and rename function to rename the columns of the
+            dataframe. The usage of the latter is not necessary but allows us to have the same column names as in the
+            previous section.
+        </p>
+        <p>Let us consider json_normalize function parameters closer. The first parameter json_data is a dictionary
+            representation of json data.</p>
+        <p>The second parameter record_path specifies the path to the record data (usually, this is the data important
+            for the analysis). Each piece of this data will become a separate row in the final dataframe. For instance,
+            in our function we specify that the record data should be taken from matches -> segments.</p>
+        <p>The meta list enumerates all the contextual fields, data from which should appear in columns in the final
+            dataframe. Note that if you want to include data from some internal fields, you need to specify the full
+            path to them in the form of list (e.g., ). For instance, in our case if we want to have a column with
+            reference UID data, we need to add ['matches', 'uid'] to the meta parameter list. Then, in the final
+            dataframe, we would get a column which name would consist of these parts separated by . by default (you can
+            change the separator using sep parameter).</p>
+        <p>Media type entries have different set of context fields. The third parameter, errors (equal to ignore), asks
+            the json_normalize function to ignore errors if some fields are not found.</p>
+        <p>Then, we use pandas’s rename function to rename columns in the final dataframe.<br>
+
+            Source: Yury Zhauniarovich</p>
+    </div>
+
+</main>
+
+
+<!---------------------Footer Section---------------------->
+<section class="footer container-fluid " id="footer">
+    <div class="container ml-lg-5 mr-lg-4 ml-sm-2 ml-md-2">
+        <div class="row ">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="container text-left footer-logo">
+                    <div class="">
+                        <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="../assets/img/logof.svg " class="" alt="footer-logo ">
+                        </div>
+                        <div class="col-sm footer-text mb-4">
+                            <p class="footer-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna</p>
+                        </div>
+                        <div class="col-sm icons mb-4">
+                            <img src="../assets/img/socials.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12  pt-lg-3 pt-sm-2">
+                <h4 class="footer-header">Quick Links</h4>
+                <ul class="quicklinks">
+                    <a href="../index.html">
+                        <li class="">Home</li>
+                    </a>
+                    <a href="./FileUpload.html ">
+                        <li>Tools</li>
+                    </a>
+                    <a href="Blog.html">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="./ResourcePGs/resourcepg1.html">
+                        <li>Resources</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
+                <h4 class=" footer-header">Quick Action</h4>
+                <ul class="quickActions ">
+                    <a href="./FAQ.html">
+                        <li>FAQs</li>
+                    </a>
+                    <a href="">
+                        <li>API</li>
+                    </a>
+                    <a href="contact.html">
+                        <li>Contact</li>
+                    </a>
+                    <a href="">
+                        <li>Testimonial</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
+                <h4 class=" footer-header">Address</h4>
+                <div class="location d-flex d-sm-flex mt-3">
+                    <i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2"></i>
+                    <p class="p-2">No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.</p>
+                </div>
+                <div class="number d-flex ">
+                    <i class="fa-solid fa-phone p-2"></i>
+                    <p class="p-2">01-023-257</p>
+                </div>
+                <div class="mail d-flex ">
+                    <i class="fa-solid fa-envelope p-2"></i>
+                    <p class="p-2">hello@Bytsfy.work</p>
+                </div>
+            </div>
+        </div>
+        <div class="container row chat-box">
+            <div class="col-8 "></div>
+            <div class="col-4 footer-chat d-flex">
+                <img src="../assets/img/chat-img.svg" class="chatimg" alt="chatimg">
+                <h5 class="chattext">Chat with our Agents</h5>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- <hr class="footer-line"> -->
+<section class="container-fluid copyright pb-2 pt-4 " id="copyright">
+    <div class="container">
+        <div class="row flex-column-reverse flex-lg-row ">
+            <div class="col text-left">
+                <p> Copyright &copy; 2022
+                    <span class="copy-span"> Bytsfy </span> - All rights reserved.
+                </p>
+            </div>
+            <div class="col ">
+
+            </div>
+            <div class="col ">
+                <ul class="termspolicy ">
+                    <li class="">Privacy Policy</li> &nbsp;
+                    <li class="">Terms</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

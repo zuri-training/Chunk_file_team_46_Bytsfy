@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+<!------------------------------Navbar Section------------------------------->
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg- pt-3 mb-1">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/assets/img/logo.svg" alt="nav-logo"></a>
+            <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+                    <li class="nav-item nav-items">
+                        <a class="nav-link " aria-current="page" href="#" id="home">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown nav-items">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown1">
+                            <li><a class="dropdown-item dropdown-items" href="#">FAQs</a></li>
+                            <li><a class="dropdown-item dropdown-items" href="#">Blogs</a></li>
+                            <li><a class="dropdown-item dropdown-items" href="#">Developers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown nav-items">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Tools
+                        </a>
+                        <div class="dropdown-menu dropdown1 wide-nav">
+                            <div class="row">
+                                <div class="text-center">
+                                    <h5 class="text-center"><strong>Split Files</strong></h5>
+                                    <a class="dropdown-item text-center" href="#">Upload Files</a>
+                                    <a class="dropdown-item text-center" href="#">Chunk by CSV
+                                    </a>
+                                    <a class="dropdown-item text-center" href="#">Chunk by JSON</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-items">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex inbtn">
+                    <a href="./Pages/Sign_In.html">
+                        <button type="button" class="btn btn-subscribe2 mr-3">Sign Up</button>
+                    </a>
+                    <a href="./Pages/Sign_In.html">
+                        <button type="button" class="btn btn-subscribe1">Log In</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!------------------------------hero Section------------------------------->
+<div class="container mb-3">
+    <div class="row flex-column-reverse flex-lg-row">
+        <div class="col">
+            <div class="hero">
+                <h1 class="hero-text mb-4">Split Files Between <br><span class="hero-color">JSON and CSV</span></h1>
+                <p class="hero-paragraph mb-5">Break up and convert your files safely and securely with our Bytsfile
+                    tool from any web browser of your choice </p>
+                <div class="d-flex abt-btn">
+                    <button type="button" class="btn-subscribe1 text-center">Get Started</button>
+                    <button type="button" class="btn-subscribe text-center ml-3">Check How</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <img src="./assets/img/hero-image.svg" class="hero-img w-100 h-100" alt="hero-img">
+        </div>
+    </div>
+
+</div>
+
+<!------------------------------about Section------------------------------->
+<section id="about" class="container-fluid mb-4">
+    <div class="mb-3 mt-4 mb-4">
+        <h2 class="heading text-center">About</h2>
+    </div>
+    <div class="container">
+        <div class="row flex-column flex-lg-row">
+            <div class="col">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators mb-5">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/blog1.svg" class="d-block w-100" alt="abou-slider">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/blog2.svg" class="d-block w-100" alt="abou-slider">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/blog3.svg" class="d-block w-100" alt="abou-slider">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="">
+                    <h3 class="about-header mb-4 ">Split, Convert, and Compress your Files into Various Forms Using
+                        Bytsfy</h3>
+                    <p class="hero-paragraph mb-5">With you our esteemed customers in our mind, Bytsfy was built to
+                        break up your large and medium files into smaller chunks and make it easy for you to share, sae
+                        or download. /with a sophisticated interfer, clearity is assured and
+                        with our great user experience, you assured of a secured platform to achieve your aim.</p>
+                    <div class="d-flex abt-btn">
+                        <button type="button" class="btn-subscribe1 text-center">Read More</button>
+                        <button type="button" class="btn-subscribe2 text-center ml-3">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!------------------------------Feature Section------------------------------->
+<div class="mb-3 text-center">
+    <h2 class="heading text-center mb-3 mt-5">Features</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col mb-3">
+                <p class="">Whatever type of file you need to split, convert or compress online, our product is just the
+                    tool for your seemless splitting and downloads. With our reliable fast cloud database, you are
+                    guaranteed of the fastest speed.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container feature-text ">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <p>Developers</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <p>Data Analysts</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <p>Businesses</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <p>E-Commerce</p>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="feature" class="container-fluid mb-4 pb-5 pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="./assets/img/Split Icon.png" class="feature-icon mb-4" alt="spliticon">
+                <h4 class="feature-header mb-3">Split</h4>
+                <p class="">Easy Spliting of files between Json and CSV either in lines or by the file size.</p>
+            </div>
+            <div class="col-sm">
+                <img src="./assets/img/compress.svg" class="feature-icon mb-4" alt="spliticon">
+                <h4 class="feature-header mb-3">Compress</h4>
+                <p class="feature-paragraph">Reducing your files will come easy with this our upcoming feature with your
+                    choice of file.</p>
+            </div>
+            <div class="col-sm">
+                <img src="./assets/img/convertIcon.png" class="feature-icon mb-4" alt="spliticon">
+                <h4 class="feature-header mb-3">Convert</h4>
+                <p class="feature-paragraph">we promise a very convenient way of converting your files to your choice of
+                    file type</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="d-flex feature-btn mt-5">
+        <button type="button" class="btn-subscribe3 text-center">Read More</button>
+        <button type="button" class="btn-subscribe4 text-center ml-3">Get Started</button>
+    </div>
+</section>
+<!------------------------------Extension Section------------------------------->
+<section id="Extension" class="container mb-4">
+    <div class="mb-2">
+        <h2 class="heading text-center">Extension</h2>
+    </div>
+    <div class="row flex-column-reverse flex-lg-row">
+        <div class="col">
+            <div class="hero">
+                <h3 class="extension-header mb-4">Easy Intergration to all Your Software Workflow</h3>
+                <p class="hero-paragraph mb-5">We work endlessly to bring to make your work easy and closer to you,
+                    watch out for our upcoming upgrade which will enable you use your favourise tool from your work
+                    tools. </p>
+                <div class="d-flex extension-btn">
+                    <button type="button" class="btn-subscribe6 text-center">Download Extension</button>
+                    <button type="button" class="btn-subscribe5 text-center ml-3">Read Documentation</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <img src="./assets/img/Extension-DesktopBG.png" class="hero-img w-100 h-100" alt="hero-img">
+        </div>
+    </div>
+
+</section>
+<!------------------------------blog Section------------------------------->
+<section id="blog" class="container-fluid  pb-5" style="background-color: #D1EAFE;">
+    <div class="mb-4 pt-4">
+        <h2 class="heading text-center">Blog</h2>
+    </div>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <div class="" style="width: 18rem;">
+                    <img src="./assets/img/blog1.svg" class="card-img-top card-icon" alt="homeblog-img">
+                    <h5 class="card-title blog-header">JSON to CSV <br> Files</h5>
+                    <a href="#">
+                        <button type="button" class="btn-subscribe1 text-center ">Read Details</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <div class="" style="width: 18rem;">
+                    <img src="./assets/img/blog2.svg" class="card-img-top  card-icon" alt="homeblog-img">
+                    <h5 class="card-title blog-header">JSON and CSV Files <br> in Python</h5>
+                    <a href="#">
+                        <button type="button" class="btn-subscribe1 text-center ">Read Details</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <div class="" style="width: 18rem;">
+                    <img src="./assets/img/blog3.svg" class="card-img-top  card-icon" alt="homeblog-img">
+                    <h5 class="card-title blog-header">Learn About JSON <br> Data Structures</h5>
+                    <a href="#">
+                        <button type="button" class="btn-subscribe1 text-center ">Read Details</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <div class="" style="width: 18rem;">
+                    <img src="./assets/img/blog4.png" class="card-img-top  card-icon" alt="homeblog-img">
+                    <h5 class="card-title blog-header">CVS with Excel</h5>
+                    <a href="#">
+                        <button type="button" class="btn-subscribe1 text-center ">Read Details</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!------------------------------team Section------------------------------->
+<div class="mb-3 text-center">
+    <h2 class="text-center mb-3 mt-4">Teams</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col mb-3">
+                <p class=""> Bytsfy was created by a team of intelligent and hardworking smart minds who wth limited
+                    time frame if able to launch this outstanding to help our customers work with easy and speed</p>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="team" class="container-fluid mb-4 pb-5 pt-5">
+    <div class="container text-center">
+        <div class="row text-center">
+            <div class="col-sm ">
+                <img src="./assets/img/john.svg" class="feature-icon mb-4 " alt="">
+                <h4 class="team-header mb-2 ">John Adekola</h4>
+                <h6 class="mb-4">Lead: Team_46</h6>
+                <p class="team-paragraph mb-3 ">As the teamlead, John worked with the backend to ensure our product goes
+                    live </p>
+                <img src="./assets//img/socials2.svg" class="feature-icon mb-4" alt="">
+            </div>
+            <div class="col-sm">
+                <img src="./assets/img/mercy.svg" class="feature-icon mb-4" alt="">
+                <h4 class="team-header mb-2">Mercy Kalu</h4>
+                <h6 class="mb-4">Lead: Team_46</h6>
+                <p class="team-paragraph mb-3">Mercy designed the landing page and made sure the design screens are
+                    ready </p>
+                <img src="./assets//img/socials2.svg" class="feature-icon mb-4" alt="">
+            </div>
+            <div class="col-sm">
+                <img src="./assets/img/shula.svg" class="feature-icon mb-4" alt="">
+                <h4 class="team-header mb-2">shulamite Ofua</h4>
+                <h6 class="mb-4">Lead: Team_46</h6>
+                <p class="team-paragraph mb-3">Shula was , worked on documentation and designed the API page </p>
+                <img src="./assets//img/socials2.svg" alt="">
+            </div>
+        </div>
+        <div class="d-flex feature-btn mt-5">
+            <button type="button" class="btn-subscribe7 text-center">Check All Team Members</button>
+        </div>
+</section>
+<!------------------------------FAQs Section------------------------------->
+<div class="mb-lg-3 mb-sm-2 text-center">
+    <h2 class="faq-heading text-center mb-3">Frequently Asked Questions</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col mb-3">
+                <p class="">Our customers sometimes get comfused about our product usage. These frequently asked
+                    questions have helped alot of our users understand our product better, read through and also feel
+                    free to add yours</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <button class="drop collapsible">What form of file can i download</button>
+            <div class="content">
+                <p>you can download two forms of files, that is a JSON file and CSV file. Other form of file coming
+                    soon.</p>
+            </div>
+            <button class="drop collapsible">How do i upload a file for splitting?</button>
+            <div class="content">
+                <p>You can click on the “upload file” button and drop your file from your computer</p>
+            </div>
+            <button class="drop collapsible">How long will it take to download my file?</button>
+            <div class="content">
+                <p>depending on the size of the file, you spend few minute to download your file
+                </p>
+            </div>
+            <button class="drop collapsible">Must i signn up before i can use the platform</button>
+            <div class="content">
+                <p>There is no need for a subscription fee before using the platform, it is totally free, however you
+                    need to sign up before you can have full access to the platform.
+                </p>
+            </div>
+
+            <button class="drop collapsible">when can i use the platform as an extension?</button>
+            <div class="content">
+                <p>subscribe to get our email updates as soon as it is released, also the download button will become
+                    available to enable users to download the extension.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <button class="drop collapsible">What is the limit for setting the size of uploaded file?</button>
+            <div class="content">
+                <p>you can set the size of your file to a reasonable range for chunking depending on the size of the
+                    file. However, the minimum data size should be up to 100Bytes and the maximum is 200MB.</p>
+            </div>
+            <button class="drop collapsible">Are my files save and secured by bytsfy?</button>
+            <div class="content">
+                <p>Your data is processed as safely as possible. For more privacy, our service incudes end-to-end
+                    encryption for all file uploads use http/ssl. Our compliance is in line with one of the most
+                    nonindulgent safety standards in the world
+                    (GDPR), EU Data Protection Regulation. These steps ensure security and satisfy most of the </p>
+            </div>
+            <button class="drop collapsible">Are my files probed b y bytsfy?</button>
+            <div class="content">
+                <p>Utterly not. Your files are yours! not in any way would we analyse, check or copy them. Your files
+                    are scrictly secured in our servers.
+                </p>
+            </div>
+            <button class="drop collapsible">How do i dowload my splitted file?</button>
+            <div class="content">
+                <p>After using the platform for your desired function, click on download to download the file into your
+                    PC or mobile phone</p>
+            </div>
+
+            <button class="drop collapsible">Can btysfy be accessed through my web browser?</button>
+            <div class="content">
+                <p>Bytsfy can be accessed through chrome, Firefox, Explorer +10, UC and Safari. To run our tools
+                    smoothly, we recommend that you work with the browsers listed. Our system requirement are basic and
+                    if at any point you experience issues,
+                    we recommend that you contact us.</p>
+            </div>
+        </div>
+        <button class="collapsible q-form">Still Confused About Something? Click Here to Add a Question</button>
+        <div class="q-content">
+            <form action="">
+                <div class="form-group mb-4">
+                    <label for="exampleFormControlTextarea1" class="m-2 q-label">Type a Question Below</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+                </div>
+                <button type="submit" class="btn-contact mt-2 mb-3">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!---------------------------Subscription Section---------------------------->
+
+
+<div class="container-fluid Subscription mt-5 pb-4">
+    <div class="text-center pt-5 pb-3">
+        <h2 class="contact-header">Subscribe to Our NewsLetter</h2>
+        <p class="contact-paragraph pt-2 pb-4">We constantly work towards serving you better. subscribing to our news
+            letter means getting the latest update about our product and services</p>
+    </div>
+    <div class="container text-center pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col-sm-auto col-lg-6 mb-3">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="background-color: #0E103D;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        </div>
+                        <input type="text " class="form-control " id="inlineFormInputGroupUsername2 "
+                               placeholder="enter email">
+                    </div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <button type="button" class="btn-subscribe text-center">Subscribe</button>
+        </div>
+
+    </div>
+</div>
+<!---------------------Footer Section---------------------->
+<section class="footer container-fluid " id="footer">
+    <div class="container ml-lg-5 mr-lg-4 ml-sm-2 ml-md-2">
+        <div class="row ">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="container text-left footer-logo">
+                    <div class="">
+                        <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="./assets/img/logof.svg " class=""
+                                                                        alt="footer-logo ">
+                        </div>
+                        <div class="col-sm footer-text mb-4">
+                            <p class="footer-p">With you our esteemed customers in our mind, Bytsfy was built to break
+                                up your large and medium files into smaller chunks and make it easy for you to share,
+                                sae or download. </p>
+                        </div>
+                        <div class="col-sm icons mb-4">
+                            <img src="./assets/img/socials.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12  pt-lg-3 pt-sm-2">
+                <h4 class="footer-header">Quick Links</h4>
+                <ul class="quicklinks">
+                    <a href="../index.html">
+                        <li class=".">Home</li>
+                    </a>
+                    <a href="./Pages/FileUpload.html">
+                        <li>Tools</li>
+                    </a>
+                    <a href="./Pages/Blog.html">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="./Pages/ResourcePGs/resourcepg.html">
+                        <li>Resources</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
+                <h4 class=" footer-header">Quick Action</h4>
+                <ul class="quickActions ">
+                    <a href="./PagesFAQ.html">
+                        <li>FAQs</li>
+                    </a>
+                    <a href="">
+                        <li>API</li>
+                    </a>
+                    <a href="./Pages/contact.html">
+                        <li>Contact</li>
+                    </a>
+                    <a href="">
+                        <li>Testimonial</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
+                <h4 class=" footer-header">Address</h4>
+                <div class="location d-flex d-sm-flex mt-3">
+                    <i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2"></i>
+                    <p class="p-2">No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.</p>
+                </div>
+                <div class="number d-flex ">
+                    <i class="fa-solid fa-phone p-2"></i>
+                    <p class="p-2">01-023-257</p>
+                </div>
+                <div class="mail d-flex ">
+                    <i class="fa-solid fa-envelope p-2"></i>
+                    <p class="p-2">hello@Bytsfy.work</p>
+                </div>
+            </div>
+        </div>
+        <div class="container row chat-box">
+            <div class="col-8 "></div>
+            <div class="col-4 footer-chat d-flex">
+                <img src="./assets/img/chat-img.svg" class="chatimg" alt="chatimg">
+                <h5 class="chattext">Chat with our Agents</h5>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- <hr class="footer-line"> -->
+<section class="container-fluid copyright pb-2 pt-4 " id="copyright">
+    <div class="container">
+        <div class="row flex-column-reverse flex-lg-row ">
+            <div class="col text-left">
+                <p> Copyright &copy; 2022
+                    <span class="copy-span"> Bytsfy </span> - All rights reserved.
+                </p>
+            </div>
+            <div class="col ">
+
+            </div>
+            <div class="col ">
+                <ul class="termspolicy ">
+                    <li class="">Privacy Policy</li> &nbsp;
+                    <li class="">Terms</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+</body>
+
+</html>
