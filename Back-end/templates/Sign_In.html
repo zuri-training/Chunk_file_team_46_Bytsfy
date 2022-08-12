@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!------------------------------Sign in Section------------------------------->
+<section class="login">
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3">
+                <img src="../assets/img/logo.svg" alt="logo">
+                <img src="../assets/img/hero-signin.svg" class="login-hero" alt="hero-img">
+            </div>
+            <div class="col account shadow p-3 mb-4 bg-body rounded mt-3">
+                <h2 class="text-center account-header">Welcome</h2>
+                <p class="text-center account-p">Let's Sign you In for Free</p>
+                <div class="socia-signin mb-4">
+                    <a href="">
+                        <button type="button" class="btn-social pr-2 mb-3 text-center"><img
+                                src="../assets/img/google.svg" alt=""> Sign In With Google
+                        </button>
+                    </a>
+                    <a href="">
+                        <button type="button" class="btn-social text-center"><img src="../assets/img/github.svg" alt="">
+                            Sign In With Github
+                        </button>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr class="text-bg-dark">
+                    </div>
+                    or
+                    <div class="col">
+                        <hr class="text-bg-dark">
+                    </div>
+                </div>
+                <form class="mt-3">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label class="form-check-label" for="exampleCheck1"><a
+                                href="./AuthenticationPGs/forgotpassword.html">Forgot Password?</a></label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-newbtn" type="button"><a href="./Landing_page.html"
+                                                                        class="text-white btn-newbtn">Sign In</a>
+                        </button>
+                        <p class="text-center"> Already have an account?
+                            <a href="./Sign_Up.html">Sign Un</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+</body>
+
+</html>
