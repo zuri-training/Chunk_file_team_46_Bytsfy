@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saved Files</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css">
+
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!--Testimonial Specific CSS--->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+    
+    
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+    <!------------------------------Navbar Section------------------------------->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-light pt-3 mb-1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+                        <li class="nav-item nav-items">
+                            <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown nav-items">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu dropdown1">
+                                <li><a class="dropdown-item dropdown-items" href="FAQ.html">FAQs</a></li>
+                                <li><a class="dropdown-item dropdown-items" href="Blog.html">Blogs</a></li>
+                                <li><a class="dropdown-item dropdown-items" href="#">Developers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-items">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              href="#"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              Tools
+                            </a>
+                            <div class="dropdown-menu dropdown1 wide-nav">
+                              <div class="row">
+                                <div class="col">
+                                  <h5 class="text-center"><strong>Split Files</strong></h5>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Split by line</a>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Split by size</a>
+                                  </div>
+                                <div class="col">
+                                  <h5 class="text-center"><strong>Convert Files</strong></h5>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Convert CSV to JSON</a>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Convert JSON to CSV</a>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Convert CSV to Others</a>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Convert JSON to Others</a>
+                                  
+                                </div>
+                                <div class="col">
+                                  <h5 class="text-center"><strong>Compress Files</strong></h5>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                                  <a class="btn btn-light dropdown-item text-center" href="#">Compress by size</a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        <li class="nav-item nav-items">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="nav navbar-nav navbar-right ">
+                        <div class="dropdown align-items-center" >
+                            <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
+                                <span class=" nav-link  navbar-toggler-icon2"><img src="../assets/img/user-profile.svg" alt="Shawn"> Shawn L.</span></a>    
+                         <div class=" row dropdown-menu user_dropdownmenu dropdown1 wide-nav">
+                               
+                               <div class="m-4"><a href="" class="nav-link2" >Profile</a></div>
+                               <div class="m-4"><a href="Dashboard.html" class="nav-link2">Saved Items</a></div>
+                               
+                               <div class=""><button href="#" class="btn btn-primary m-4"><span><i class="fa-solid fa-right-from-bracket"></i></span>
+                                Logout</button></div>
+                          </div>                   
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--------Header Section-->
+
+
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+    
+        <div class="row">
+            <div class="col-sm-12">
+            <div class="container-fluid px-3 px-sm-5 my-5 text-center">
+                <h1>Testimonials</h1>
+                <h3>Bytsfy makes you happy.</h3>
+                <p>More than 1 Billion people uses Bystfy to help them with their work.</p>
+            </div>
+            <div id="customers-testimonials" class="owl-carousel">
+    
+                <!--TESTIMONIAL 1 -->
+                <div class="item">
+                <div class="shadow-lg p-4 bg-white rounded">
+                    <img src="../assets/img/t1.jpg" alt="Grace Loveth">
+                    <h5 class="pb-2 pt-3">Grace Loveth, <span>Nigeria</span></h5>
+                    <p class="mb-0 text-muted">Completely synergize resource niche markets.</p>
+                </div>             
+                </div>
+                <!--END OF TESTIMONIAL 1 -->
+
+                <!--TESTIMONIAL 2 -->
+                <div class="item">
+                <div class="shadow-lg p-4 bg-white rounded">
+                    <img  src="../assets/img/t2.jpg" alt="John Crystals">
+                    <h5 class="pb-2 pt-3">John Crystals, <span>Tanzania</span></h5>
+                    <p class="mb-0 text-muted">Professionally cultivate relationships.</p>
+                </div>
+                
+                </div>
+                <!--END OF TESTIMONIAL 2 -->
+                <!--TESTIMONIAL 3 -->
+                <div class="item">
+                <div class="shadow-lg p-4 bg-white rounded">
+                    <img src="../assets/img/t3.jpg" alt="Jane Williams">
+                    <h5 class="pb-2 pt-3">Jane Williams, <span>USA</span></h5>
+                    <p class="mb-0 text-muted">Completely synergize resources via premier niche markets.</p>
+                </div>
+                
+                </div>
+                <!--END OF TESTIMONIAL 3 -->
+                <!--TESTIMONIAL 4 -->
+                <div class="item">
+                <div class="shadow-lg p-4 bg-white rounded">
+                    <img  src="../assets/img/t4.jpg" alt="Steve Dave">
+                    <h5 class="pb-2 pt-3">Steve Dave, <span>Mexico</span></h5>
+                    <p class="mb-0 text-muted">Dramatically maintain solutions with ease using bystfy API.</p>
+                </div>
+                
+                </div>
+                <!--END OF TESTIMONIAL 4 -->
+
+                <!--TESTIMONIAL 5 -->
+                <div class="item">
+                <div class="shadow-lg p-4 bg-white rounded">
+                    <img src="../assets/img/t5.jpg" alt="Shulamite Orero">
+                    <h5 class="pb-2 pt-3">Shulamite Orero, <span>Kenya</span></h5>
+                    <p class="mb-0 text-muted">Completely synergize resource niche markets.</p>
+                </div>             
+                </div>
+                <!--END OF TESTIMONIAL 5 -->
+        
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- END OF TESTIMONIALS -->
+  
+    <!-- START OF TESTIMONIALS SECTION 2 -->
+    <section class="s2-testimonials">
+        <div class="container">
+    
+        <div class="row">
+            
+<!-- Testimonial 1-->
+<div class="col-sm-12">         
+    <div class="image-left">
+        <div class="col-sm-4">
+            <img src="../assets/img/t1.jpg" alt="Grace Loveth"/>
+        </div>
+        <div class="col-sm-8 tcontent">
+            <h3 class="pb-2 pt-3">Grace Loveth, <span>Nigeria</span></h3>
+            <h5 class="pb-2 pt-3">Product Designer</h5>
+            <p>The Logo has its origin in the international “Logo for Human Rights” initiative, which was started from Serbia.</p>
+        </div>
+    </div>
+</div>
+    
+<!-- Testimonial 2-->
+<div class="col-sm-12">          
+    <div class="image-right">
+        <div class="col-sm-8 tcontent">
+            <h3 class="pb-2 pt-3">Jane Williams, <span>USA</span></h3>
+            <h5 class="pb-2 pt-3">Frontend Developer</h5>
+            <p>The Rights has its origin in the international “Logo for Human Rights” initiative, which was started in 2010.</p>         
+        </div>
+        <div class="col-sm-4">
+            <img src="../assets/img/t2.jpg" alt="Jane Williams"/>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonial 3 -->
+<div class="col-sm-12">
+                
+    <div class="image-left">
+        <div class="col-sm-4">
+            <img src="../assets/img/t5.jpg" alt="Shulamite Orero"/>
+        </div>
+        <div class="col-sm-8 tcontent">
+            <h3 class="pb-2 pt-3">Shulamite Orero, <span>Kenya</span></h3>
+            <h5 class="pb-2 pt-3">Fullstack Developer</h5>
+            <p>The Shulamite has its origin in the international "Human Rights” initiative, which was started from DMK.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-12">
+        <div class="testimonial-button">        
+
+            <a class="btn-subscribe bkg" href="#">Give Us a Review</a>
+        
+            <a class="btn-subscribe" href="#">Get Started Now</a>
+       
+
+    </div>
+</div>
+
+
+</div>
+</div>
+</section>
+<!-- END OF TESTIMONIALS SECTION 2 -->
+
+
+
+
+    
+<!------------------------------Footer Section------------------------------->
+
+<section class="footer container-fluid " id="footer">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+                <div class="container text-left ">
+                    <div class=" footer-header">
+                        <div class="col-sm footer-logo mb-5"><img src="/assets/img/footer-logo.svg " class="" lt="footer-logo ">
+                        </div>
+                        <div class="col-sm footer-text mb-5">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna</p>
+                        </div>
+                        <div class="col-sm icons mb-4">
+                            <i class="fa-brands fa-linkedin-in text-primary pr-2"></i>
+                            <i class="fa-brands fa-google p-2 text-white"></i>
+                            <i class="fa-brands fa-facebook p-2 text-primary "></i>
+                            <i class="fa-brands fa-square-instagram p-2 text-white"></i>
+                            <i class="fa-brands fa-twitter p-2 text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+                <h4 class=" footer-header">Quick Links</h4>
+                <ul class="quicklinks ">
+                    <a href=" ">
+                        <li>Home</li>
+                    </a>
+                    <a href=" ">
+                        <li>Tools</li>
+                    </a>
+                    <a href="Blog.html">
+                        <li>Blogs</li>
+                    </a>
+                    <a href=" ">
+                        <li>Resources</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 text-left">
+                <h4 class=" footer-header">Quick Action</h4>
+                <ul class="quickActions ">
+                    <a href=" ">
+                        <li>Signup</li>
+                    </a>
+                    <a href=" ">
+                        <li>Login</li>
+                    </a>
+                    <a href="contact.html">
+                        <li>Contact</li>
+                    </a>
+                    <a href=" ">
+                        <li>Testimonial</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col ">
+                <h4 class=" footer-header">Address</h4>
+                <div class="location d-flex d-sm-flex mt-3">
+                    <i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2"></i>
+                    <p class="p-2">No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.</p>
+                </div>
+                <div class="number d-flex ">
+                    <i class="fa-solid fa-phone p-2"></i>
+                    <p class="p-2">01-023-257</p>
+                </div>
+                <div class="mail d-flex ">
+                    <i class="fa-solid fa-envelope p-2"></i>
+                    <p class="p-2">hello@managely.work</p>
+                </div>
+            </div>
+        </div>
+        <div class=" container row ">
+            <div class="col-8 "></div>
+            <div class="col-4 footer-chat ">
+                <img src="/assets/img/chat-img.svg" alt="chatimg ">
+                <h5>Chat with our Agents</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid copyright pb-2 pt-4" id="copyright">
+    <div class=" container  ">
+        <div class="row flex-column-reverse flex-lg-row ">
+            <div class="col text-left">
+                <p> Copyright &copy; 2022 Bytsfy - All rights reserved.</p>
+            </div>
+            <div class="col ">
+
+            </div>
+            <div class="col ">
+                <ul class="termspolicy ">
+                    <li class="">Privacy Policy</li> &nbsp;
+                    <li class="">Terms</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+
+<!-- Testimonial Slider-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  jQuery(document).ready(function($) {
+                "use strict";
+                //  TESTIMONIALS CAROUSEL HOOK
+                $('#customers-testimonials').owlCarousel({
+                    loop: true,
+                    center: true,
+                    items: 3,
+                    margin: 0,
+                    autoplay: true,
+                    dots:true,
+                    autoplayTimeout: 5000,
+                    smartSpeed: 890,
+                    responsive: {
+                      0: {
+                        items: 1
+                      },
+                      768: {
+                        items: 2
+                      },
+                      1170: {
+                        items: 3
+                      }
+                    }
+                });
+            });
+</script>
+
+
+</html>
