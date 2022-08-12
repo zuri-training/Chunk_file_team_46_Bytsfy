@@ -8,6 +8,9 @@ https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/110 How it wor
 Research on Figjam
 https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/url Information Architecture
 
+Presentation Slide
+https://www.figma.com/proto/9WMnUR7iemk5JmnIqcLQiN/Bytsfy-Team46?node-id=0%3A1
+
 Designs done on Figma (WEB)
 https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Design-Screens/Desktop-View/Colors.png colors style guide
 https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Design-Screens/Desktop-View/Buttons.png Buttons style guide

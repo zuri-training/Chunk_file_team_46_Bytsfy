@@ -5,6 +5,8 @@ from .models import UploadedFile, Contact, Subscribers
 from django.contrib import messages
 from pathlib import Path
 from django.http import HttpResponseRedirect
+from django.http import FileResponse
+from django.conf import settings
 
 
 # Create your views here.
@@ -27,8 +29,9 @@ def chunk(request):
         doc_name = name_of_file[-1].split(".")[0]
 
         if name_of_file[-1].split(".")[1] == "csv":
-            bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=2855780, output_ext=".csv", doc_name=doc_name, file_size=file_size)
+            bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=int(request.POST["spec_size"]), output_ext=".csv", doc_name=doc_name, file_size=file_size)
             bytfy.bytfy_start() 
+            # 2855780
 
         else:
             
@@ -50,6 +53,13 @@ def chunk(request):
 
 #     return render(request, "dashboard")
 
+
+def download(request, id):
+    obj = File.objects.get(id=id) #model with sved file
+    filename = obj.model_attribute_name.path # path to file in models
+    response = FileResponse(open(filename, 'rb'))
+    messages.success("file deleted successfully")
+    return render(request, "dashboard")
 
 def contact(request):
     if request.method == 'POST':

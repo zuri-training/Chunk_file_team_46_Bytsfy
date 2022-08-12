@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+<!------------------------------Navbar Section------------------------------->
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
+            <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+                    <li class="nav-item nav-items">
+                        <a class="nav-link " aria-current="page" href="./HomePage.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown nav-items">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown1">
+                            <li><a href="./FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
+                            <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
+                            <li>
+                                <a class="dropdown-item dropdown-items" href="./API-introduction.html">Documentation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown nav-items">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Tools
+                        </a>
+                        <div class="dropdown-menu dropdown1 wide-nav ">
+                            <div class="row ">
+                                <div class="text-center">
+                                    <h5 class="text-center"><strong>Split Files</strong></h5>
+                                    <a class="dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
+                                    <a class="dropdown-item text-center" href="./CSV.html">Chunk by CSV
+                                    </a>
+                                    <a class="dropdown-item text-center" href="./JSON.html">Chunk by JSON</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item nav-items">
+                        <a href="./contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav navbar-nav navbar-right">
+                    <div class="dropdown ">
+                        <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
+                            <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="../assets/img/user-profile.svg"
+                                                                                    alt=""> Shawn L.</span></a>
+                        <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
+                            <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
+                            <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
+
+                            <div class="">
+
+                                <a href="./Sign_In.html">
+                                    <button href="./Sign_In.html" class="btn btn-subscribe1 m-3">
+                                            <span>
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                            </span>
+                                        Logout
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-------------------------------------------------------------------------------------Blog Header---------------------------------->
+<div class="container-fluid">
+    <div class="row blog-post">
+        <a class="blogHeader" href="./Blog.html">
+            <h4>
+                Bytsfy Blog
+            </h4>
+        </a>
+    </div>
+</div>
+
+<!-------------------------------------------------------------------------------Blog Article  Section----------------------------->
+<div class="container-fluid">
+    <div class="row mx-3 ">
+
+        <!----------------Blog Image----------------->
+        <div class="col-12 mt-5 mb-3">
+            <img src="/assets/img/blog-image 13.png" alt="computer screen with code"
+                 class=" img-fluid w-100  rounded"></img>
+        </div>
+
+        <!------------------Blog Article ----------------->
+
+        <div class="col-12">
+
+            <div class="w-100">
+                <h3 class="w-100 mb-1">
+                    Working with CSV and JSON files for Data solutions.
+                </h3>
+                <p mb-3>by Floyd Miles</p>
+                <p>
+                    Modern industries today are flooded with data and as a result , there is great value in processing
+                    and analyzing the data to derive insights from it. Discovering actionable insights can birth great
+                    value in any business by stimulating creative ideas.Modern
+                    industries today are flooded with data and as a result , there is great value in processing and
+                    analyzing the data to derive insights from it. Discovering actionable insights can birth great value
+                    in any business by stimulating
+                    creative ideas.
+                </p><br>
+                <h6>Choosing Different formats</h6><br>
+                <p>
+                    The data used in a model can be collected from different (external or internal) sources and saved in
+                    different file formats for processing. Your choice of data format can greatly affect the space
+                    requirements, cost, and performance of project. There are
+                    several factors that need to be taken into account when trying to decide which data format to be
+                    used. In this article, our focus will be on the two most popular text-based file formats:CSV and
+                    JSON.
+                </p>
+                <h6>
+                    What is a CSV format?
+                </h6>
+                <p>
+                    A CSV (comma separated value) file is a matrix of data. Each row is an array that represents a
+                    record, and each column represents a specific field within that record. Each field (or element) is
+                    separated by a comma. CSV files store data in a simple and
+                    easy to read manner. These can be opened using pretty much any piece of software, even plain text
+                    editors like the Notepad.
+                </p>
+                <h6>
+                    What is a JSON format?
+                </h6>
+                <p>
+                    JSON (Java Script Object Notation) files store data based on JavaScript object index. Each object
+                    can have multiple keys/value pairs or other objects within it. Data can be saved in various data
+                    types including strings, arrays, integers, e.t.c
+                    <br> Unlike CSV, JSON allows for creating hierarchical structure of data. It is used for
+                    transmitting data in web/mobile applications projects as it is easy to integrate with APIs
+                </p>
+                <h6>
+                    When to use each format.
+                </h6>
+                <p>
+                    When deciding upon which format to use, consider asking the following questions:<br>
+                    <strong>Use case:</strong>Who is going to use the data? Or how is it going to be used? Some file
+                    formats are meant for general use, while others are for more specific use cases.<br>
+                    <strong>Your system specifications:</strong>What ETL processes are you working with? What tools are
+                    you going to use for analyzing your data? Are you constrained on storage or memory?<br>
+                    <strong>Your data characteristics:</strong>What is the type of your data? How large or small is it?
+                    How complex is your data? Is it structured or unstructured? How many columns are relevant to your
+                    use case, if not all? Is your
+                    data evolving over time?<br>
+
+                </p>
+                <p>Now let`s compare CSV and JSON formats on the consideratios mentioned above.</p>
+
+
+                <h5 class="text-center"> CSV vs JSON</h5>
+                <h6>Project type</h6>
+                <p>JSON is a highly efficient data exchange format. In application projects, JSON is used in the
+                    interaction between server and client (HTTP requests). It is lightweight and hence, does not burden
+                    the network. Due to its low memory demand,
+                    it can transfer great amounts of data pretty quickly.
+                </p>
+                <p>CSV files on the other hand are convenient for storing and analyzing problems involving small
+                    datasets but are nowhere near a good option when your data is huge and complex.
+                </p>
+                <h6>Format type</h6>
+                <p>Both CSV and JSON are text-based formats, hence are easier to use. They can be read by the end-user
+                    who can also modify the file content. These formats are usually compressed to reduce their storage
+                    footprints, but their performance
+                    is subpar to binary file formats.</p>
+                <h6>Storage</h6>
+                <p>CSV file format is so widely used because of its ability to store data in a simple tabular manner.
+                    However, CSVs are slow to query and difficult to store efficiently. But, they also have an excellent
+                    compression ratio.
+                </p>
+                <p>JSON files are like a mini database for textual data JSON is a partially structured format and can be
+                    used to efficiently store tons of data that you may need to use within your project
+                </p>
+                <h6>Parsing</h6>
+                <p>CSVs are simple in nature, hence simple to parse and split (just break on comma to convert to
+                    column). Although there is a significant potential for data loss or data corruption if the
+                    application receiving CSV input isn't the same
+                    application that created it. A key point to take note of is that CSV is not a standardized format.
+                    This means that a file may be in the C SV format. This means that a file may be in CSV format, but
+                    not necessarily will be read
+                    by the CSV parser used in your project.
+                </p>
+                <p>A JSON file is larger by default and more flexible. So, it is more technical to parse and split. JSON
+                    is loaded and parsed into memory and hence depending on the size, can take up a lot of disk space.
+                    CSV is easier to parse than JSON
+                    and is therefore potentially faster to write.</p>
+                <h6>Schema Evolution</h6>
+                <p>Schema evolution deals with the need to retain current data when your database structure changes with
+                    time. Unless your data is guaranteed to never change or is immutable in nature, your database design
+                    must involve handling schema
+                    updates.
+                </p>
+                <p>You can choose CSV to create your tables if your schema evolution requires only renaming of the
+                    columns but not reordering them. CSV does not support removing columns. Nor does it allow adding
+                    columns at the beginning or in the middle
+                    of the table. For such operations, you can use other formats, preferably columnar.
+                </p>
+                <h5 class="text-center">Takeaways</h5>
+                <p>If you want to retrieve simple data as lists or a table with rows and some columns, CSVs are a good
+                    option. However, you need to remember that you lose type when exporting data to CSV.</p>
+                <p>Use JSON format for communication. Although JSON is referred to as comparatively better than CSV when
+                    dealing with huge data sets and in terms of scalability of files for applications, you should avoid
+                    this format when working with
+                    big data. There are more efficient alternatives.
+                </p>
+                <p>More optimized data formats can be utilized to meet the needs of your data science project in terms
+                    of splitability, compression, support, and the ability to support complex data structures. But for
+                    easy readability and faster read/write
+                    time, JSON and CSV are hands down preferable choices.
+                </p>
+                <p>The biggest of business achievements in recent times have had data-driven approach in some way or the
+                    other. Hence, it is important that you choose the right data storage format for your business needs.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------Subscription Section---------------------------->
+
+<div class="container-fluid Subscription mt-5 ">
+    <div class="text-center pt-5 pb-3">
+        <h2 class="contact-header">Subscribe to Our NewsLetter</h2>
+        <p class="contact-paragraph pt-2 pb-4">We constantly work towards serving you better. subscribing to our news
+            letter means getting the latest update about our product and services</p>
+    </div>
+    <div class="container text-center pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+                <div class="col-sm-auto col-lg-6 mb-3">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="background-color: #0E103D;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        </div>
+                        <input type="text " class="form-control " id="inlineFormInputGroupUsername2 "
+                               placeholder="enter email">
+                    </div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <button type="button" class="btn-subscribe text-center">Subscribe</button>
+            <a href="index.html">
+                <button type="button" class="btn-subscribe1 text-center"> Contact Us</button>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!---------------------Footer Section---------------------->
+<section class="footer container-fluid " id="footer">
+    <div class="container ml-lg-5 mr-lg-4 ml-sm-2 ml-md-2">
+        <div class="row ">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="container text-left footer-logo">
+                    <div class="">
+                        <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="../assets/img/logof.svg " class=""
+                                                                        alt="footer-logo ">
+                        </div>
+                        <div class="col-sm footer-text mb-4">
+                            <p class="footer-p">With you our esteemed customers in our mind, Bytsfy was built to break
+                                up your large and medium files into smaller chunks and make it easy for you to share,
+                                sae or download. </p>
+                        </div>
+                        <div class="col-sm icons mb-4">
+                            <img src="../assets/img/socials.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12  pt-lg-3 pt-sm-2">
+                <h4 class="footer-header">Quick Links</h4>
+                <ul class="quicklinks">
+                    <a href="../index.html">
+                        <li class=".">Home</li>
+                    </a>
+                    <a href="./FileUpload.html">
+                        <li>Tools</li>
+                    </a>
+                    <a href="./Blog.html">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="./ResourcePGs/resourcepg.html">
+                        <li>Resources</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
+                <h4 class=" footer-header">Quick Action</h4>
+                <ul class="quickActions ">
+                    <a href="./FAQ.html">
+                        <li>FAQs</li>
+                    </a>
+                    <a href="">
+                        <li>API</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li>Contact</li>
+                    </a>
+                    <a href="./testimonial">
+                        <li>Testimonial</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
+                <h4 class=" footer-header">Address</h4>
+                <div class="location d-flex d-sm-flex mt-3">
+                    <i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2"></i>
+                    <p class="p-2">No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.</p>
+                </div>
+                <div class="number d-flex ">
+                    <i class="fa-solid fa-phone p-2"></i>
+                    <p class="p-2">01-023-257</p>
+                </div>
+                <div class="mail d-flex ">
+                    <i class="fa-solid fa-envelope p-2"></i>
+                    <p class="p-2">hello@Bytsfy.work</p>
+                </div>
+            </div>
+        </div>
+        <div class="container row chat-box">
+            <div class="col-8 "></div>
+            <div class="col-4 footer-chat d-flex">
+                <img src="../assets/img/chat-img.svg" class="chatimg" alt="chatimg">
+                <h5 class="chattext">Chat with our Agents</h5>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- <hr class="footer-line"> -->
+<section class="container-fluid copyright pb-2 pt-4 " id="copyright">
+    <div class="container">
+        <div class="row flex-column-reverse flex-lg-row ">
+            <div class="col text-left">
+                <p> Copyright &copy; 2022
+                    <span class="copy-span"> Bytsfy </span> - All rights reserved.
+                </p>
+            </div>
+            <div class="col ">
+
+            </div>
+            <div class="col ">
+                <ul class="termspolicy ">
+                    <li class="">Privacy Policy</li> &nbsp;
+                    <li class="">Terms</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
