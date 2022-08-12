@@ -41,9 +41,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # local apps
     "accounts.apps.AccountsConfig",
-
-    #local apps
-    'accounts.apps.AccountsConfig',
     'chunked_files.apps.ChunkedFilesConfig',
 
     'django.contrib.admin',
