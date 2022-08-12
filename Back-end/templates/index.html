@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page</title>
+    <title>Landing Page</title>
     <!--Bootstrap--->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!--Custom CSS--->
-    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!--Google Fonts--->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
           rel="stylesheet">
@@ -23,21 +23,19 @@
 
 <body>
 <!------------------------------Navbar Section------------------------------->
-
 <header class="container-fluid">
-    <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
+    <nav class="navbar navbar-expand-lg bg- pt-3 mb-1">
         <div class="container">
-            <a class="navbar-brand" href="/index.html"><img src="/static/assets/img/logo.svg" alt="nav-logo"></a>
+            <a class="navbar-brand" href="#"><img src="/assets/img/logo.svg" alt="nav-logo"></a>
             <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
             </button>
-            {% if user.is_authenticated %}
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
                     <li class="nav-item nav-items">
-                        <a class="nav-link " aria-current="page" href="./HomePage.html">Home</a>
+                        <a class="nav-link " aria-current="page" href="#" id="home">Home</a>
                     </li>
 
                     <li class="nav-item dropdown nav-items">
@@ -46,11 +44,9 @@
                             Resources
                         </a>
                         <ul class="dropdown-menu dropdown1">
-                            <li><a href="{% url 'FAQ' %}" class="dropdown-item dropdown-items">FAQs</a></li>
-                            <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
-                            <li>
-                                <a class="dropdown-item dropdown-items" href="./API-introduction.html">Documentation</a>
-                            </li>
+                            <li><a class="dropdown-item dropdown-items" href="#">FAQs</a></li>
+                            <li><a class="dropdown-item dropdown-items" href="#">Blogs</a></li>
+                            <li><a class="dropdown-item dropdown-items" href="#">Developers</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown nav-items">
@@ -58,70 +54,113 @@
                            aria-expanded="false">
                             Tools
                         </a>
-                        <div class="dropdown-menu dropdown1 wide-nav ">
-                            <div class="row ">
+                        <div class="dropdown-menu dropdown1 wide-nav">
+                            <div class="row">
                                 <div class="text-center">
                                     <h5 class="text-center"><strong>Split Files</strong></h5>
-                                    <a class="dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
-                                    <a class="dropdown-item text-center" href="./CSV.html">Chunk by CSV
+                                    <a class="dropdown-item text-center" href="#">Upload Files</a>
+                                    <a class="dropdown-item text-center" href="#">Chunk by CSV
                                     </a>
-                                    <a class="dropdown-item text-center" href="./JSON.html">Chunk by JSON</a>
+                                    <a class="dropdown-item text-center" href="#">Chunk by JSON</a>
                                 </div>
-
                             </div>
                         </div>
-
                     </li>
                     <li class="nav-item nav-items">
-                        <a href="./contact.html" class="nav-link">Contact</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
-                <div class="nav navbar-nav navbar-right">
-                    <div class="dropdown ">
-                        <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
-                            <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="{{user.profile_pic.url }}"
-                                                                                    alt=""
-                                                                                    class="fa-regular fa-circle fa-3x px-15"
-                                                                                    width="20px"> Shawn L.</span></a>
-                        <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
-                            <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
-                            <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
-
-                            <div class="">
-
-                                <a href="{% url 'account_logout' %}">
-                                    <button href="./Sign_In.html" class="btn btn-subscribe1 m-3">
-                                            <span>
-                                                <i class="fa-solid fa-right-from-bracket"></i>
-                                            </span>
-
-                                        Logout
-                                    </button>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
+                <div class="d-flex inbtn">
+                    <a href="./Pages/Sign_In.html">
+                        <button type="button" class="btn btn-subscribe2 mr-3">Sign Up</button>
+                    </a>
+                    <a href="./Pages/Sign_In.html">
+                        <button type="button" class="btn btn-subscribe1">Log In</button>
+                    </a>
                 </div>
             </div>
-            {% else %}
-            {% endif %}
         </div>
     </nav>
 </header>
 <!------------------------------hero Section------------------------------->
-<section class="container-fluid hero-login p-5">
+<div class="container mb-3">
+    <div class="row flex-column-reverse flex-lg-row">
+        <div class="col">
+            <div class="hero">
+                <h1 class="hero-text mb-4">Split Files Between <br><span class="hero-color">JSON and CSV</span></h1>
+                <p class="hero-paragraph mb-5">Break up and convert your files safely and securely with our Bytsfile
+                    tool from any web browser of your choice </p>
+                <div class="d-flex abt-btn">
+                    <button type="button" class="btn-subscribe1 text-center">Get Started</button>
+                    <button type="button" class="btn-subscribe text-center ml-3">Check How</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <img src="./assets/img/hero-image.svg" class="hero-img w-100 h-100" alt="hero-img">
+        </div>
+    </div>
 
-    <div class="container mb-3 text-center ">
-        <h2 class="h-head ">Top-Notch Splitting Tool at Your Fingertips</h2>
-        <p class="m-4 p-head">Break up and convert your files safely and securely with our Bytsfile tool from any web
-            browser of your choice</p>
-        <a href="{% url 'account_signup' %}">
-            <button type="button" class="btn-subscribe1 text-center">Start Splitting</button>
-        </a>
+</div>
+
+<!------------------------------about Section------------------------------->
+<section id="about" class="container-fluid mb-4">
+    <div class="mb-3 mt-4 mb-4">
+        <h2 class="heading text-center">About</h2>
+    </div>
+    <div class="container">
+        <div class="row flex-column flex-lg-row">
+            <div class="col">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators mb-5">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/blog1.svg" class="d-block w-100" alt="abou-slider">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/blog2.svg" class="d-block w-100" alt="abou-slider">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/blog3.svg" class="d-block w-100" alt="abou-slider">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="">
+                    <h3 class="about-header mb-4 ">Split, Convert, and Compress your Files into Various Forms Using
+                        Bytsfy</h3>
+                    <p class="hero-paragraph mb-5">With you our esteemed customers in our mind, Bytsfy was built to
+                        break up your large and medium files into smaller chunks and make it easy for you to share, sae
+                        or download. /with a sophisticated interfer, clearity is assured and
+                        with our great user experience, you assured of a secured platform to achieve your aim.</p>
+                    <div class="d-flex abt-btn">
+                        <button type="button" class="btn-subscribe1 text-center">Read More</button>
+                        <button type="button" class="btn-subscribe2 text-center ml-3">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
-
 
 <!------------------------------Feature Section------------------------------->
 <div class="mb-3 text-center">
@@ -156,18 +195,18 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <img src="/static/assets/img/Split Icon.png" class="feature-icon mb-4" alt="spliticon">
+                <img src="./assets/img/Split Icon.png" class="feature-icon mb-4" alt="spliticon">
                 <h4 class="feature-header mb-3">Split</h4>
                 <p class="">Easy Spliting of files between Json and CSV either in lines or by the file size.</p>
             </div>
             <div class="col-sm">
-                <img src="/static/assets/img/compress.svg" class="feature-icon mb-4" alt="spliticon">
+                <img src="./assets/img/compress.svg" class="feature-icon mb-4" alt="spliticon">
                 <h4 class="feature-header mb-3">Compress</h4>
                 <p class="feature-paragraph">Reducing your files will come easy with this our upcoming feature with your
                     choice of file.</p>
             </div>
             <div class="col-sm">
-                <img src="/static/assets/img/convertIcon.png" class="feature-icon mb-4" alt="spliticon">
+                <img src="./assets/img/convertIcon.png" class="feature-icon mb-4" alt="spliticon">
                 <h4 class="feature-header mb-3">Convert</h4>
                 <p class="feature-paragraph">we promise a very convenient way of converting your files to your choice of
                     file type</p>
@@ -176,12 +215,8 @@
 
     </div>
     <div class="d-flex feature-btn mt-5">
-        <a href="./how.html">
-            <button type="button" class="btn-subscribe3 text-center">Read More</button>
-        </a>
-        <a href="{% url 'account_signup' %}">
-            <button type="button" class="btn-subscribe4 text-center ml-3">Get Started</button>
-        </a>
+        <button type="button" class="btn-subscribe3 text-center">Read More</button>
+        <button type="button" class="btn-subscribe4 text-center ml-3">Get Started</button>
     </div>
 </section>
 <!------------------------------Extension Section------------------------------->
@@ -198,14 +233,12 @@
                     tools. </p>
                 <div class="d-flex extension-btn">
                     <button type="button" class="btn-subscribe6 text-center">Download Extension</button>
-                    <a href="./API-introduction.html">
-                        <button type="button" class="btn-subscribe5 text-center ml-3">Read Documentation</button>
-                    </a>
+                    <button type="button" class="btn-subscribe5 text-center ml-3">Read Documentation</button>
                 </div>
             </div>
         </div>
         <div class="col">
-            <img src="/static/assets/img/Extension-DesktopBG.png" class="hero-img w-100 h-100" alt="hero-img">
+            <img src="./assets/img/Extension-DesktopBG.png" class="hero-img w-100 h-100" alt="hero-img">
         </div>
     </div>
 
@@ -219,38 +252,36 @@
         <div class="row ">
             <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
                 <div class="" style="width: 18rem;">
-                    <img src="/static/assets/img/blog1.svg" class="card-img-top card-icon" alt="homeblog-img">
+                    <img src="./assets/img/blog1.svg" class="card-img-top card-icon" alt="homeblog-img">
                     <h5 class="card-title blog-header">JSON to CSV <br> Files</h5>
-
-                    <a href="./blog.html">
+                    <a href="#">
                         <button type="button" class="btn-subscribe1 text-center ">Read Details</button>
                     </a>
-
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
                 <div class="" style="width: 18rem;">
-                    <img src="/static/assets/img/blog2.svg" class="card-img-top  card-icon" alt="homeblog-img">
+                    <img src="./assets/img/blog2.svg" class="card-img-top  card-icon" alt="homeblog-img">
                     <h5 class="card-title blog-header">JSON and CSV Files <br> in Python</h5>
-                    <a href="./blog.html">
+                    <a href="#">
                         <button type="button" class="btn-subscribe1 text-center ">Read Details</button>
                     </a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
                 <div class="" style="width: 18rem;">
-                    <img src="/static/assets/img/blog3.svg" class="card-img-top  card-icon" alt="homeblog-img">
+                    <img src="./assets/img/blog3.svg" class="card-img-top  card-icon" alt="homeblog-img">
                     <h5 class="card-title blog-header">Learn About JSON <br> Data Structures</h5>
-                    <a href="./blog.html">
+                    <a href="#">
                         <button type="button" class="btn-subscribe1 text-center ">Read Details</button>
                     </a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
                 <div class="" style="width: 18rem;">
-                    <img src="/static/assets/img/blog4.png" class="card-img-top  card-icon" alt="homeblog-img">
+                    <img src="./assets/img/blog4.png" class="card-img-top  card-icon" alt="homeblog-img">
                     <h5 class="card-title blog-header">CVS with Excel</h5>
-                    <a href="./blog.html">
+                    <a href="#">
                         <button type="button" class="btn-subscribe1 text-center ">Read Details</button>
                     </a>
                 </div>
@@ -274,27 +305,27 @@
     <div class="container text-center">
         <div class="row text-center">
             <div class="col-sm ">
-                <img src="/static/assets/img/john.svg" class="feature-icon mb-4 " alt="">
+                <img src="./assets/img/john.svg" class="feature-icon mb-4 " alt="">
                 <h4 class="team-header mb-2 ">John Adekola</h4>
                 <h6 class="mb-4">Lead: Team_46</h6>
                 <p class="team-paragraph mb-3 ">As the teamlead, John worked with the backend to ensure our product goes
                     live </p>
-                <img src="/static/assets//img/socials2.svg" class="feature-icon mb-4" alt="">
+                <img src="./assets//img/socials2.svg" class="feature-icon mb-4" alt="">
             </div>
             <div class="col-sm">
-                <img src="/static/assets/img/mercy.svg" class="feature-icon mb-4" alt="">
+                <img src="./assets/img/mercy.svg" class="feature-icon mb-4" alt="">
                 <h4 class="team-header mb-2">Mercy Kalu</h4>
                 <h6 class="mb-4">Lead: Team_46</h6>
                 <p class="team-paragraph mb-3">Mercy designed the landing page and made sure the design screens are
                     ready </p>
-                <img src="/static/assets//img/socials2.svg" class="feature-icon mb-4" alt="">
+                <img src="./assets//img/socials2.svg" class="feature-icon mb-4" alt="">
             </div>
             <div class="col-sm">
-                <img src="/static/assets/img/shula.svg" class="feature-icon mb-4" alt="">
+                <img src="./assets/img/shula.svg" class="feature-icon mb-4" alt="">
                 <h4 class="team-header mb-2">shulamite Ofua</h4>
                 <h6 class="mb-4">Lead: Team_46</h6>
                 <p class="team-paragraph mb-3">Shula was , worked on documentation and designed the API page </p>
-                <img src="/static/assets//img/socials2.svg" alt="">
+                <img src="./assets//img/socials2.svg" alt="">
             </div>
         </div>
         <div class="d-flex feature-btn mt-5">
@@ -317,7 +348,6 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12">
-
             <button class="drop collapsible">What form of file can i download</button>
             <div class="content">
                 <p>you can download two forms of files, that is a JSON file and CSV file. Other form of file coming
@@ -379,7 +409,6 @@
                     we recommend that you contact us.</p>
             </div>
         </div>
-
         <button class="collapsible q-form">Still Confused About Something? Click Here to Add a Question</button>
         <div class="q-content">
             <form action="">
@@ -433,16 +462,16 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="container text-left footer-logo">
                     <div class="">
-                        <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="/static/assets/img/logof.svg " class=""
+                        <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="./assets/img/logof.svg " class=""
                                                                         alt="footer-logo ">
                         </div>
                         <div class="col-sm footer-text mb-4">
                             <p class="footer-p">With you our esteemed customers in our mind, Bytsfy was built to break
                                 up your large and medium files into smaller chunks and make it easy for you to share,
-                                sae or download.</p>
+                                sae or download. </p>
                         </div>
                         <div class="col-sm icons mb-4">
-                            <img src="/static/assets/img/socials.svg" alt="">
+                            <img src="./assets/img/socials.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -450,16 +479,16 @@
             <div class="col-lg-3 col-md-6 col-sm-12  pt-lg-3 pt-sm-2">
                 <h4 class="footer-header">Quick Links</h4>
                 <ul class="quicklinks">
-                    <a href="{% url 'home' %}">
-                        <li class="">Home</li>
+                    <a href="../index.html">
+                        <li class=".">Home</li>
                     </a>
-                    <a href="./FileUpload.html ">
+                    <a href="./Pages/FileUpload.html">
                         <li>Tools</li>
                     </a>
-                    <a href="Blog.html">
+                    <a href="./Pages/Blog.html">
                         <li>Blogs</li>
                     </a>
-                    <a href="./ResourcePGs/resourcepg1.html">
+                    <a href="./Pages/ResourcePGs/resourcepg.html">
                         <li>Resources</li>
                     </a>
                 </ul>
@@ -467,13 +496,13 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
                 <h4 class=" footer-header">Quick Action</h4>
                 <ul class="quickActions ">
-                    <a href="{% url 'FAQ' %}">
+                    <a href="./PagesFAQ.html">
                         <li>FAQs</li>
                     </a>
                     <a href="">
                         <li>API</li>
                     </a>
-                    <a href="contact.html">
+                    <a href="./Pages/contact.html">
                         <li>Contact</li>
                     </a>
                     <a href="">
@@ -500,7 +529,7 @@
         <div class="container row chat-box">
             <div class="col-8 "></div>
             <div class="col-4 footer-chat d-flex">
-                <img src="/static/assets/img/chat-img.svg" class="chatimg" alt="chatimg">
+                <img src="./assets/img/chat-img.svg" class="chatimg" alt="chatimg">
                 <h5 class="chattext">Chat with our Agents</h5>
             </div>
         </div>
