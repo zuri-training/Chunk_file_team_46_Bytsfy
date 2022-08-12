@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     "allauth",  # new
     "allauth.account",  # new
     "widget_tweaks",  # new
-    "chunked_files"
+   
 
 ]
 
