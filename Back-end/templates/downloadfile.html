@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>File Download</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+    <!------------------------------Navbar Section------------------------------->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
+                <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+                        <li class="nav-item nav-items">
+                            <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown nav-items">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu dropdown1">
+                                <li><a href="./FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
+                                <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
+                                <li>
+                                    <a class="dropdown-item dropdown-items" href="./API-introduction.html">Documentation</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-items">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Tools
+                            </a>
+                            <div class="dropdown-menu dropdown1 wide-nav ">
+                                <div class="row ">
+                                    <div class="text-center">
+                                        <h5 class="text-center"><strong>Split Files</strong></h5>
+                                        <a class="dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
+                                        <a class="dropdown-item text-center" href="./CSV.html">Chunk by CSV
+                                            </a>
+                                        <a class="dropdown-item text-center" href="./JSON.html">Chunk by JSON</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item nav-items">
+                            <a href="./contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="nav navbar-nav navbar-right">
+                        <div class="dropdown ">
+                            <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
+                                <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="../assets/img/user-profile.svg" alt=""> Shawn L.</span></a>
+                            <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
+                                <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
+                                <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
+
+                                <div class="">
+
+                                    <a href="./Sign_In.html">
+                                        <button href="./Sign_In.html" class="btn btn-subscribe1 m-3">
+                                            <span>
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                            </span>
+                                Logout</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!------------------------------Tools Section------------------------------->
+    <div class="fluid-container mb-3 mt-5">
+        <div class="container text-center ">
+            <div class="d-flex tools-page">
+                <img src="../assets/img/Split Icon.png" id="split-icon" alt="spliticon ">
+                <h2 class="tools-header ">Splitting of File with Bytsfy</h2>
+            </div>
+            <p class="contact-paragraph  pb-1">The easiest way to extract files</p>
+        </div>
+    </div>
+
+    <!---------------------------Uploaded file Section--------------------------->
+
+    <section class="uploaded-file container-fluid ml-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col ">
+                    <img src="../assets/img/file.png" class="w-75 h-75" alt="loadedfile ">
+                </div>
+                <div class="col ">
+                    <div class=" container splitted-file">
+                        <div class="row">
+                            <div class="col"> <img src="../assets/img/success-icon.svg" class="w-50 h-50" alt="success-icon ">
+                            </div>
+                            <div class="col">
+                                <span class="success-zip ">File Split and Zipped Successfully</span>
+                            </div>
+                            <div class="col">
+                                <img src="../assets/img/file-icon.svg" class="w-50 h-50" alt="file-icon ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex abt-btn  saveDownload">
+                        <div class="btn-div">
+                            Download
+                            <input type="file" class="hide_file">
+                        </div>
+                        <a href="./Saved_File.html"> <button type="button" class="btn-subscribe1 text-center ml-3">Save</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col ">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------Back to split Section--------------------------->
+    <section class="back container-fluid">
+
+        <div class="container">
+            <h3 class="saveFile-header">Continue to Tools</h3>
+            <div class="row continue">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card text-center mt-3">
+                        <div class="card-body d-flex save-card p-4s">
+                            <img src="../assets/img/Split Icon.svg" class="w-15 h-15 pl-4 saveFile-icons" alt="">
+                            <h5 class="card-title pl-3 pt-3 pr-3">Split File</h5>
+                            <a href="./FileUpload.html">
+                                <i class="fa-solid fa-chevron-down pt-3 pl-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card text-center mt-3">
+                        <div class="card-body d-flex save-card p-4 ">
+                            <img src="../assets/img/convertIcon.png" class="w-15 h-15 pl-4 saveFile-icons" alt="">
+                            <h5 class="card-title pl-3 pt-3 pr-3">Convert File</h5>
+                            <a href="./FileUpload.html">
+                                <i class="fa-solid fa-chevron-down pt-3 pl-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card text-center mt-3">
+                        <div class="card-body d-flex save-card p-4">
+                            <img src="../assets/img/compress.svg" class="w-15 h-15 pl-4 saveFile-icons" alt="">
+                            <h5 class="card-title pl-3 pt-3 pr-3">Compres File</h5>
+                            <a href="./FileUpload.html">
+                                <i class="fa-solid fa-chevron-down pt-3 pl-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------How to extract Section---------------------->
+    <hr class="container mt-5 mb-5 divider ">
+    <section class="Split-option mt-4 ">
+        <div class="container text-center ">
+            <div class="row ">
+                <div class="col ">
+                    <img src="../assets/img/preview.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Preview before Split</h2>
+                </div>
+                <div class="col ">
+                    <img src="../assets/img/integration_instructions.svg " alt="previewicon " class="w-25 h-25 mb-4 ">
+                    <h2 class="Split-option_header ">Split Accross Platforms</h2>
+                </div>
+                <div class="col ">
+                    <img src="../assets/img/call_split.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Seperate Files Easily</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-4 ">
+            <div class="row ">
+                <div class="col ">
+                    <img src="../assets/img/security.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Secured Split</h2>
+                </div>
+                <div class="col ">
+                    <img src="../assets/img/cloud.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Split to ICloud</h2>
+                </div>
+                <div class="col ">
+
+                    <img src="../assets/img/folder-open.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Save and Download</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="container mt-5 mb-5 border-2 divider ">
+    <section class="split-steps ">
+        <div class="container text-left ">
+            <div class="row flex-column flex-lg-row ">
+                <div class="col ">
+                    <img src="../assets/img/Ilustration.svg " alt="illustrationicon " class="w-100 h-100 ">
+                </div>
+                <div class="col mt-5 ml-5 ">
+                    <h3 class="Split-text_header mb-4 ">HOW TO EXTRACT FILES TO SPLIT</h3>
+                    <ol class="Split-text_item ">
+                        <li>Choose files from your computer</li>
+                        <li>Drag or drop files</li>
+                        <li>Choose to extract by lines or files</li>
+                        <li>Select your orefered option and proceed to split</li>
+                        <li>Save to dashboard or download when split <br> is done</li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------Subscription Section---------------------------->
+
+
+    <div class="container-fluid Subscription mt-5 pb-4 ">
+        <div class="text-center pt-5 pb-3 ">
+            <h2 class="contact-header ">Subscribe to Our NewsLetter</h2>
+            <p class="contact-paragraph pt-2 pb-4 ">We constantly work towards serving you better. subscribing to our news letter means getting the latest update about our product and services</p>
+        </div>
+        <div class="container text-center pb-3 ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col ">
+                    </div>
+                    <div class="col-sm-auto col-lg-6 mb-3 ">
+                        <div class="input-group mb-2 mr-sm-2 ">
+                            <div class="input-group-prepend ">
+                                <div class="input-group-text " style="background-color: #0E103D; ">
+                                    <i class="fa-solid fa-envelope "></i>
+                                </div>
+                            </div>
+                            <input type="text " class="form-control " id="inlineFormInputGroupUsername2 " placeholder="enter email ">
+                        </div>
+                    </div>
+                    <div class="col ">
+
+                    </div>
+                </div>
+                <button type="button " class="btn-subscribe text-center ">Subscribe</button>
+            </div>
+
+        </div>
+    </div>
+    <!---------------------Footer Section---------------------->
+    <section class="footer container-fluid " class="footer">
+        <div class="container ml-lg-5 mr-lg-4 ml-sm-2 ml-md-2 ">
+            <div class="row ">
+                <div class="col-lg-3 col-md-6 col-sm-12 ">
+                    <div class="container text-left footer-logo ">
+                        <div class=" ">
+                            <div class="col-sm mb-2 pt-lg-5 pt-sm-3 "><img src="../assets/img/logof.svg " class=" " alt="footer-logo ">
+                            </div>
+                            <div class="col-sm footer-text mb-4 ">
+                                <p class="footer-p text-white ">With you our esteemed customers in our mind, Bytsfy was built to break up your large and medium files into smaller chunks and make it easy for you to share, sae or download. with a sophisticated interfer, clearity is assured
+                                    and with our great user experience, you assured of a secured platform to achieve your aim.</p>
+                            </div>
+                            <div class="col-sm icons mb-4 ">
+                                <img src="../assets/img/socials.svg " alt=" ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2 ">
+                    <h4 class="footer-header ">Quick Links</h4>
+                    <ul class="quicklinks ">
+                        <a href="../index.html ">
+                            <li class=" ">Home</li>
+                        </a>
+                        <a href="./FileUpload.html ">
+                            <li>Tools</li>
+                        </a>
+                        <a href="Blog.html ">
+                            <li>Blogs</li>
+                        </a>
+                        <a href="./ResourcePGs/resourcepg1.html ">
+                            <li>Resources</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2 ">
+                    <h4 class=" footer-header ">Quick Action</h4>
+                    <ul class="quickActions ">
+                        <a href="./FAQ.html ">
+                            <li>FAQs</li>
+                        </a>
+                        <a href=" ">
+                            <li>API</li>
+                        </a>
+                        <a href="contact.html ">
+                            <li>Contact</li>
+                        </a>
+                        <a href=" ">
+                            <li>Testimonial</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2 ">
+                    <h4 class=" footer-header ">Address</h4>
+                    <div class="location d-flex d-sm-flex mt-3 ">
+                        <i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2 "></i>
+                        <p class="p-2 text-white ">No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.</p>
+                    </div>
+                    <div class="number d-flex ">
+                        <i class="fa-solid fa-phone p-2 "></i>
+                        <p class="p-2 text-white ">01-023-257</p>
+                    </div>
+                    <div class="mail d-flex ">
+                        <i class="fa-solid fa-envelope p-2 "></i>
+                        <p class="p-2 text-white ">hello@Bytsfy.work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container row chat-box ">
+                <div class="col-8 "></div>
+                <div class="col-4 footer-chat d-flex ">
+                    <img src="../assets/img/chat-img.svg " class="chatimg " alt="chatimg ">
+                    <h5 class="chattext ">Chat with our Agents</h5>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- <hr class="footer-line "> -->
+    <section class="container-fluid copyright pb-2 pt-4 " class="copyright">
+        <div class="container ">
+            <div class="row flex-column-reverse flex-lg-row ">
+                <div class="col text-left ">
+                    <p class="copyright1 "> Copyright &copy; 2022
+                        <span class="copy-span "> Bytsfy </span> - All rights reserved.
+                    </p>
+                </div>
+                <div class="col ">
+
+                </div>
+                <div class="col ">
+                    <ul class="termspolicy ">
+                        <li class=" ">Privacy Policy</li> &nbsp;
+                        <li class=" ">Terms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js " integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js " integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK " crossorigin="anonymous "></script>
+
+
+</body>
+
+</html>

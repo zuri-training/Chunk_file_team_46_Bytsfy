@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
                     <li class="nav-item nav-items">
-                        <a class="nav-link " aria-current="page" href="./HomePage.html">Home</a>
+                        <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
 
                     <li class="nav-item dropdown nav-items">
@@ -47,7 +47,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown1">
                             <li><a href="{% url 'FAQ' %}" class="dropdown-item dropdown-items">FAQs</a></li>
-                            <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
+                            <li><a href="{% url 'Blog' %}" class="dropdown-item dropdown-items">Blogs</a></li>
                             <li>
                                 <a class="dropdown-item dropdown-items" href="./API-introduction.html">Documentation</a>
                             </li>
@@ -62,10 +62,10 @@
                             <div class="row ">
                                 <div class="text-center">
                                     <h5 class="text-center"><strong>Split Files</strong></h5>
-                                    <a class="dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
-                                    <a class="dropdown-item text-center" href="./CSV.html">Chunk by CSV
+                                    <a class="dropdown-item text-center" href="{% url 'upload' %}">Upload Files</a>
+                                    <a class="dropdown-item text-center" href="{% url 'splitcsv' %}">Chunk by CSV
                                     </a>
-                                    <a class="dropdown-item text-center" href="./JSON.html">Chunk by JSON</a>
+                                    <a class="dropdown-item text-center" href="{% url 'splitjson' %}">Chunk by JSON</a>
                                 </div>
 
                             </div>
