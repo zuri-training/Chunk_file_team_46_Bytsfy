@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Conversion</title>
+</head>
+<body>
+    <header class="container-fluid resource">
+        <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
+            <div class="container">
+                <a class="navbar-brand" href="./home2.html"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
+                <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+                        <li class="nav-item nav-items">
+                            <a class="nav-link " aria-current="page" href="./home2.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown nav-items">
+                            <a class="nav-link dropdown-toggle" href="./ResourcePGs/resourcepg.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu dropdown1">
+                                <li><a href="./FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
+                                <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
+                                <li><a class="dropdown-item dropdown-items" href="./Dashboard.html">Developers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-items">
+                            <a class="nav-link dropdown-toggle" href="./FileUpload.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Tools
+                            </a>
+                            <div class="dropdown-menu dropdown1 wide-nav ">
+                                <div class="row ">
+                                    <div class="col-lg-3 col-sm-12 col-md-12 text-sm-center">
+                                        <h5 class="text-center"><strong>Split Files</strong></h5>
+                                        <a class="btn btn-light dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./splitbyLine.html">Split by
+                                                line</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./splitbySize.html">Split by
+                                                size</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item nav-items">
+                            <a href="./contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="nav navbar-nav navbar-right">
+                        <div class="dropdown ">
+                            <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
+                                <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="../assets/img/user-profile.svg" alt=""> Shawn L.</span></a>
+                            <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
+                                <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
+                                <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
+
+                                <div class=""><button href="./Sign_In.html" class="btn btn-subscribe1 m-3"><span><i class="fa-solid fa-right-from-bracket"></i></span>
+                                Logout</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Man Section-->
+<main>
+    <div class="pg1 container-fluid mt-5 ">
+
+
+        <h2>Converting files from CSV to JSON, what you should know.</h2>
+        by Christian Stone
+        <p>
+            When converting your files from CSV to JSON, there are some really important things to know,
+            this will help you convert your files really effectively and have good downloadable formats to work with.
+            In this article, we will explore the best approach to convert CSV files to JSON files in the most efficient
+            manner.
+        </p>
+        <P>
+            In the following code snippet you will see how to convert a CSV file into JSON file and vice versa.
+            We use the JSON-Java library CDL class to convert between CSV and JSON format. The CDL class provide
+            the toJSONArray(String) and toString(JSONArray) methods that allows us to do the conversion between data
+            format.
+
+        </P>
+        <h4>Convert CSV to JSON file</h5>
+
+            <ul>
+                <li>package org.kodejava.json;</li>
+                <li>import org.json.CDL;</li>
+                <li>import java.io.BufferedReader;</li>
+                <li>import java.io.IOException;</li>
+                <li>import java.io.InputStream;</li>
+                <li>import java.io.InputStreamReader;</li>
+                <li>import java.nio.charset.StandardCharsets;</li>
+                <li>import java.nio.file.Files;</li>
+                <li>import java.nio.file.Path;</li>
+                <li>import java.util.Objects;</li>
+                <li>import java.util.stream.Collectors;</li>
+            </ul>
+
+            <ul>
+                <li>public class CsvFileToJsonFile {</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp; public static void main(String[] args) {</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Read csv data file and store it in a string</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InputStream is =
+                    CsvFileToJsonFile.class.getResourceAsStream("/data.csv");
+                </li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String csv = new BufferedReader(</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new InputStreamReader(Objects.requireNonNull(is),
+                    StandardCharsets.UTF_8))
+                </li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.lines()</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.collect(Collectors.joining("\n"));</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Convert csv text to JSON string, and save it</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // to a data.json file.</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String json = CDL.toJSONArray(csv).toString(2);</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Files.write(Path.of("data.json"), json.getBytes());</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (IOException e) {</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp; }</li>
+                <li> }</li>
+
+            </ul>
+
+            <ul>
+                <li><h5>What was done in the steps above :</h5></li>
+                <li>CSV data was gotten as InputStream from the resources directory.</li>
+                <li>We used the BufferedReader and InputStreamReader to iterate and read the InputStream and return it
+                    as a string.
+                </li>
+                <li>Convert the csv string into JSON string using CDL.toJSONArray()</li>
+                <li>We can pretty-printed the JSON string by specifying an indentFactor to the toString() method of the
+                    JSONArray object.
+                </li>
+                <li>Write the JSON string to a file.</li>
+            </ul>
+
+    </div>
+</main>
+ <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
