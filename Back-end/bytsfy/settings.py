@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "accounts.apps.AccountsConfig",
     'chunked_files.apps.ChunkedFilesConfig',
 
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
     'allauth', # new
     'allauth.account', # new
     'widget_tweaks',    # new
+
 
 
 ]
