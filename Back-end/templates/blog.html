@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!--Custom CSS--->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
     <!--Google Fonts--->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
           rel="stylesheet">
@@ -26,7 +26,7 @@
 <header class="container-fluid">
     <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
         <div class="container">
-            <a class="navbar-brand" href="/index.html"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
+            <a class="navbar-brand" href="/index.html"><img src="/static/assets/img/logo.svg" alt="nav-logo"></a>
             <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
                     <li class="nav-item nav-items">
-                        <a class="nav-link " aria-current="page" href="./HomePage.html">Home</a>
+                        <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
 
                     <li class="nav-item dropdown nav-items">
@@ -77,8 +77,9 @@
                 <div class="nav navbar-nav navbar-right">
                     <div class="dropdown ">
                         <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
-                            <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="../assets/img/user-profile.svg"
-                                                                                    alt=""> Shawn L.</span></a>
+                            <span class=" nav-link  navbar-toggler-icon2 mb-3"><img
+                                    src="/static/assets/img/user-profile.svg"
+                                    alt=""> Shawn L.</span></a>
                         <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
                             <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
                             <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
@@ -123,7 +124,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <img src="../assets/img/blog-image 8.png" alt="JSON" class=" img-fluid w-100 rounded"></img>
+            <img src="/static/assets/img/blog-image 8.png" alt="JSON" class=" img-fluid w-100 rounded"></img>
         </div>
     </div>
 
@@ -135,7 +136,7 @@
     <div class="row mt-5 mb-2 mx-5 d-flex align-items-stretch">
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image 10.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image 10.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title blogh5">What is JSON? Explained with JSON Examples</h5>
                     <p class="card-text">What is JSON? JSON is a way to store, persist data in a structure which is easy
@@ -153,7 +154,7 @@
         </div>
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image 11.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image 11.png" class="card-img-top" alt="...">
                 <div class="card-body h-100">
                     <h5 class="card-title blogh5">Survey on JSON Data Modelling</h5>
                     <p class="card-text">JSON (JavaScript Object Notation) [1-3] is a popular lightweight
@@ -171,7 +172,7 @@
         </div>
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image 12.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image 12.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title blogh5">JSON Example With Data Types Including JSON Array</h5>
                     <p class="card-text">This article will have all the JSON Examples which covers each and every data
@@ -194,7 +195,7 @@
     <div class="row mt-5 mb-2 mx-5 d-flex align-items-stretch">
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image 13.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image 13.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title blogh5">Working with CSV and JSON for data solutions.</h5>
                     <p class="card-text">Modern industries today are flooded with data, and as a result, there is great
@@ -212,7 +213,7 @@
         </div>
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image 14.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image 14.png" class="card-img-top" alt="...">
                 <div class="card-body h-100">
                     <h5 class="card-title blogh5">Check undefined Javascript, two ways to do it.</h5>
                     <p class="card-text">How to check for undefined in Javascript? Simple answer would be to use If
@@ -230,7 +231,7 @@
         </div>
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image 15.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image 15.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title blogh5">XLM Pretty Print Using Python- With Examples</h5>
                     <p class="card-text">XML Pretty Print using Python is required frequently for testing, analyzing and
@@ -253,7 +254,7 @@
     <div class="row mt-5 mb-2 mx-5 d-flex align-items-stretch">
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image 16.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image 16.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title blogh5">Convert String to JSON object using Javascript</h5>
                     <p class="card-text">Converting String to JSON object using Javascript is an essential task if you
@@ -271,7 +272,7 @@
         </div>
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image 17.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image 17.png" class="card-img-top" alt="...">
                 <div class="card-body h-100">
                     <h5 class="card-title blogh5">Generate Random number using Python</h5>
                     <p class="card-text">Need some random numbers in your program? This article will help you to know
@@ -288,7 +289,7 @@
         </div>
         <div class="col-12 col-md-4 my-3">
             <div class="card w-auto h-100">
-                <img src="../assets/img/blog-image18.png" class="card-img-top" alt="...">
+                <img src="/static/assets/img/blog-image18.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title blogh5">A deep look into comparison of CSV and JSON files</h5>
                     <p class="card-text">It has been a commonly raised question as to what works best between JSON and
@@ -353,7 +354,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="container text-left footer-logo">
                     <div class="">
-                        <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="../assets/img/logof.svg " class=""
+                        <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="/static/assets/img/logof.svg " class=""
                                                                         alt="footer-logo ">
                         </div>
                         <div class="col-sm footer-text mb-4">
@@ -362,7 +363,7 @@
                                 sae or download. </p>
                         </div>
                         <div class="col-sm icons mb-4">
-                            <img src="../assets/img/socials.svg" alt="">
+                            <img src="/static/assets/img/socials.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -420,7 +421,7 @@
         <div class="container row chat-box">
             <div class="col-8 "></div>
             <div class="col-4 footer-chat d-flex">
-                <img src="../assets/img/chat-img.svg" class="chatimg" alt="chatimg">
+                <img src="/static/assets/img/chat-img.svg" class="chatimg" alt="chatimg">
                 <h5 class="chattext">Chat with our Agents</h5>
             </div>
         </div>
