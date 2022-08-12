@@ -366,10 +366,14 @@ html {
   margin-left: 5px;
 }
 
-.active:after {
+/* Spindles - I modified the above code to only affect FAQ as inteneded to */
+
+.drop .active:after { 
   content: "\2212";
   color: #0e103d;
 }
+
+/* I modified the above code by adding the class selector: ".drop"  */
 
 .content {
   padding: 0px 18px;
@@ -1590,4 +1594,146 @@ ul {
 }
 a{
   color: white;
+}
+
+
+/** Testimonial Page **/
+
+.testimonials h1, .testimonials h3, .testimonials p, .items h5 {
+  color: #0e103d;
+}
+
+#customers-testimonials .item {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
+  opacity: .2;
+  -webkit-transform: scale3d(0.8, 0.8, 1);
+  transform: scale3d(0.8, 0.8, 1);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#customers-testimonials .owl-item.active.center .item {
+  opacity: 1;
+  -webkit-transform: scale3d(1.0, 1.0, 1);
+  transform: scale3d(1.0, 1.0, 1);
+}
+
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+  /*max-width: 80%; enable if picture is too small */
+  margin: 0 auto 17px;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span, #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+  background: #4280bd;
+  transform: translate3d(0px, -50%, 0px) scale(0.6);
+}
+
+#customers-testimonials.owl-carousel .owl-dots {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+  outline: none;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+  background: #111;
+  display: inline-block;
+  height: 20px;
+  margin: 0 2px 5px;
+  transform: translate3d(0px, -50%, 0px) scale(0.3);
+  transform-origin: 50% 50% 0;
+  transition: all 250ms ease-out 0s;
+  width: 20px;
+  border-radius: 100%;
+}
+
+.s2-testimonials {
+	margin: 65px 0 0;
+}
+
+.s2-testimonials .tcontent h5 {
+	padding-top: 0 !important;
+}
+
+
+.s2-testimonials img {
+	max-width: 100%;
+}
+
+.s2-testimonials .image-left, .s2-testimonials .image-right {
+	margin: 25px 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+}
+
+.testimonial-button {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 35px auto;
+  width: fit-content;
+}
+
+
+.testimonial-button a {
+  text-decoration: none;
+  background: none;
+  border-color: #4280bd;
+  flex-direction: column;
+  width: auto;
+  margin: 0 10px;
+  align-items: center;
+}
+
+.testimonial-button a:hover {
+  text-decoration: none;
+}
+
+.testimonial-button a.bkg {
+  background: #0e103d;
+  color: #fff;
+}
+
+@media (min-width: 20em) {
+	.s2-testimonials .image-left, .s2-testimonials .image-right {
+		display: flex;
+		align-items: center;
+	}
+
+
+	.s2-testimonials .image-left img {
+		margin-right: 25px;
+		float: left; /* fallback */
+	}
+
+	.s2-testimonials .image-right img {
+		order: 1;
+		margin-left: 25px;
+		float: right; /* fallback */
+	}
+	
+	/* clearfix for fallback */
+	.s2-testimonials .image-left::after,
+	.s2-testimonials .image-right::after
+	{
+		content: "";
+  	display: block;
+		clear: both;
+	}
+}
+
+@media (min-width: 30em) {
+	.s2-testimonials .image-left img, .s2-testimonials .image-right img
+	{
+		flex-shrink: 0;
+	}
+  
 }
