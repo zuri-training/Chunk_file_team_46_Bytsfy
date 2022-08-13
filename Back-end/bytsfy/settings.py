@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "allauth",  # new
     "allauth.account",  # new
     "widget_tweaks",  # new
+   
 
 ]
 
@@ -163,6 +164,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

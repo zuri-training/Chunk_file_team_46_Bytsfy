@@ -77,13 +77,13 @@ def contact(request):
         new_contact.save() 
     
    
-        print(entered_email)
-        print(chosen_subject)
-        print(entered_message)
+        # print(entered_email)
+        # print(chosen_subject)
+        # print(entered_message)
 
         return HttpResponseRedirect("/thank-you")
     
-    return render(request, "chunked_files/contact.html")
+    return render(request, "contact.html")
 
 
 def Subscriber(request):
@@ -96,14 +96,14 @@ def Subscriber(request):
     
       
 
-        print(entered_subscriber_email)
+        # print(entered_subscriber_email)
   
 
         return HttpResponseRedirect("/thank-you")
 
-    return render(request, "chunked_files/contact.html")
+    return render(request, "contact.html")
 
 
 def thank_you(request):
 
-    return render(request, "chunked_files/thankyou.html")    
+    return render(request, "thankyou.html")    
