@@ -5,3 +5,4 @@ Worked on split by size screen https://github.com/zuri-training/Chunk_file_team_
 Worked on split by line screen https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/94
 Worked on tools upload screen https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/92
 Worked on error screen https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/96 
+Worked on dropdown https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/191
