@@ -23,14 +23,14 @@
     <header class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
             <div class="container">
-                <a class="navbar-brand" href="/index.html"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
+                <a class="navbar-brand" href="./Home_page.html"><img src="../assets/img/logo.svg" alt="nav-logo"></a>
                 <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
                         <li class="nav-item nav-items">
-                            <a class="nav-link " aria-current="page" href="./HomePage.html">Home</a>
+                            <a class="nav-link " aria-current="page" href="./Landing_page.html">Home</a>
                         </li>
 
                         <li class="nav-item dropdown nav-items">
@@ -40,9 +40,7 @@
                             <ul class="dropdown-menu dropdown1">
                                 <li><a href="./FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
                                 <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
-                                <li>
-                                    <a class="dropdown-item dropdown-items" href="./API-introduction.html">Documentation</a>
-                                </li>
+                                <li><a class="dropdown-item dropdown-items" href="./">Developers</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-items">
@@ -53,11 +51,13 @@
                                 <div class="row ">
                                     <div class="text-center">
                                         <h5 class="text-center"><strong>Split Files</strong></h5>
-                                        <a class="dropdown-item text-center" href="./CSV.html">Chunk by CSV
-                                            </a>
-                                        <a class="dropdown-item text-center" href="./JSON.html">Chunk by JSON</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./splitbyLine.html">Split by
+                                                line</a>
+                                        <a class="btn btn-light dropdown-item text-center" href="./splitbySize.html">Split by
+                                                size</a>
                                     </div>
-
+                                    
                                 </div>
                             </div>
 
@@ -72,11 +72,11 @@
                                 <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="../assets/img/user-profile.svg" alt=""> Shawn L.</span></a>
                             <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
                                 <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
-                                <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
+                                <div class="m-4"><a href="./Saved_Files.html" class="nav-link2">Saved Items</a></div>
 
                                 <div class="">
-
                                     <a href="./Sign_In.html">
+
                                         <button href="./Sign_In.html" class="btn btn-subscribe1 m-3">
                                             <span>
                                                 <i class="fa-solid fa-right-from-bracket"></i>
@@ -96,7 +96,7 @@
         <div class="container text-center ">
             <div class="d-flex tools-page">
                 <img src="../assets/img/Split Icon.png" id="split-icon" alt="spliticon ">
-                <h2 class="tools-header ">Splitting of File with Bytsfy</h2>
+                <h2 class="tools-header ">Split Files by Line</h2>
             </div>
             <p class="contact-paragraph  pb-1">The easiest way to extract files</p>
         </div>
@@ -124,12 +124,8 @@
                         </div>
                     </div>
                     <div class="d-flex abt-btn  saveDownload">
-                        <div class="btn-div">
-                            Download
-                            <input type="file" class="hide_file">
-                        </div>
-                        <a href="./Saved_File.html"> <button type="button" class="btn-subscribe1 text-center ml-3">Save</button>
-                        </a>
+                        <button type="button" class="btn-Download text-center">Download</button>
+                        <button type="button" class="btn-Download text-center ml-3">Save</button>
                     </div>
                 </div>
                 <div class="col ">
@@ -182,43 +178,37 @@
     </section>
     <!---------------------How to extract Section---------------------->
     <hr class="container mt-5 mb-5 divider ">
-    <section class="Split-option mt-4">
+    <section class="Split-option mt-4 ">
         <div class="container text-center ">
             <div class="row ">
-                <div class="col">
-                    <img src="../assets/img/preview.svg" alt="previewicon" class="w-25 h-25 mb-3">
-                    <h2 class="Split-option_header">Preview before Split</h2>
-                    <p>You are able to preview the pages you want to split. </p>
+                <div class="col ">
+                    <img src="../assets/img/preview.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Preview before Split</h2>
                 </div>
-                <div class="col">
-                    <img src="../assets/img/integration_instructions.svg" alt="previewicon" class="w-25 h-25 mb-4">
-                    <h2 class="Split-option_header">Split Accross Platforms</h2>
-                    <p>You can split your CSV or JSON files across all operating system. It is available on Windows, Mac and Linux.</p>
+                <div class="col ">
+                    <img src="../assets/img/integration_instructions.svg " alt="previewicon " class="w-25 h-25 mb-4 ">
+                    <h2 class="Split-option_header ">Split Accross Platforms</h2>
                 </div>
-                <div class="col">
-                    <img src="../assets/img/call_split.svg" alt="previewicon" class="w-25 h-25 mb-3">
-                    <h2 class="Split-option_header">Seperate Files Easily</h2>
-                    <p>Divide your CSV or JSON instantly into individual one pagers.</p>
+                <div class="col ">
+                    <img src="../assets/img/call_split.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Seperate Files Easily</h2>
                 </div>
             </div>
         </div>
-        <div class="container text-center mt-4">
-            <div class="row">
-                <div class="col">
-                    <img src="../assets/img/security.svg" alt="previewicon" class="w-25 h-25 mb-3">
-                    <h2 class="Split-option_header">Secured Split</h2>
-                    <p>Use an OTP only you can access for your privacy. We care about your security</p>
+        <div class="container text-center mt-4 ">
+            <div class="row ">
+                <div class="col ">
+                    <img src="../assets/img/security.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Secured Split</h2>
                 </div>
-                <div class="col">
-                    <img src="../assets/img/cloud.svg" alt="previewicon" class="w-25 h-25 mb-3">
-                    <h2 class="Split-option_header">Split to ICloud</h2>
-                    <p>Your split, saved and deleted files works in the Icloud. You need not worry about your storage space.</p>
+                <div class="col ">
+                    <img src="../assets/img/cloud.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Split to ICloud</h2>
                 </div>
-                <div class="col">
+                <div class="col ">
 
-                    <img src="../assets/img/folder-open.svg" alt="previewicon" class="w-25 h-25 mb-3">
-                    <h2 class="Split-option_header">Save and Download</h2>
-                    <p>Save your files in your profile or download to your computer.</p>
+                    <img src="../assets/img/folder-open.svg " alt="previewicon " class="w-25 h-25 mb-3 ">
+                    <h2 class="Split-option_header ">Save and Download</h2>
                 </div>
             </div>
         </div>

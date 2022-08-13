@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # local apps
     "accounts.apps.AccountsConfig",
     'chunked_files.apps.ChunkedFilesConfig',
+    'chunker.apps.ChunkerConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',

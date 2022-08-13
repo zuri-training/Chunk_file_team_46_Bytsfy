@@ -28,6 +28,7 @@ urlpatterns = [
 
     path("accounts/", include("allauth.urls")),
     path("accounts/", include("accounts.urls")),
+    path("chunker/", include("chunker.urls")),
     
     # social logins
     path("social-auth/", include("social_django.urls", namespace="social")),
@@ -37,6 +38,8 @@ urlpatterns = [
     path("homepage.html", homePage, name="home-page"),
     path("profile.html", profilePage, name="profile-page"),
     path("FAQ.html", TemplateView.as_view(template_name="FAQ.html"), name="faq-page"),
+    
+    path("testimonial.html", TemplateView.as_view(template_name="testimonial.html"), name="testimonial-page"),
     path("documentation.html", TemplateView.as_view(template_name="API-introduction.html"), name="api-page"),
     path("documentation.html/get-started", TemplateView.as_view(template_name="getStarted.html"), name="api-getstarted"),
     path("contact.html", contact, name="contact-page"),
@@ -55,6 +58,14 @@ urlpatterns = [
     path("Blog.html/0", TemplateView.as_view(template_name="blogpg9.html"), name="blogpg9"),
     
 
+     # Resource page and its linked pages routing
+    path("resource.html", TemplateView.as_view(template_name="resourcemain.html"), name="resource-page"),
+    path("resource.html/1", TemplateView.as_view(template_name="resourcepg1.html"), name="resourcepg1"),
+    path("resource.html/2", TemplateView.as_view(template_name="resourcepg2.html"), name="resourcepg2"),
+    path("resource.html/3", TemplateView.as_view(template_name="resourcepg3.html"), name="resourcepg3"),
+    path("resource.html/4", TemplateView.as_view(template_name="resourcepg4.html"), name="resourcepg4"),
+    path("resource.html/5", TemplateView.as_view(template_name="resourcepg5.html"), name="resourcepg5"),
+    path("resource.html/6", TemplateView.as_view(template_name="resourcepg6.html"), name="resourcepg6"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
