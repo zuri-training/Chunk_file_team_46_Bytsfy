@@ -19,7 +19,7 @@ def chunk_jsonfile():
         # returns JSON object as a dictionary
         jsonFile = json.load(uploadedfile)
 
-        # Set Chunk size per file
+        # Set Chunk size per file - to be set by user as a variable
         chunkSize = 1400
 
         # Iterating through the json list
@@ -40,24 +40,35 @@ df.to_csv (r'../jsontocsv/jsonoutput.csv', index = None)
 
 # Solution 2 without pandas
 
-def chunking_pdf():
+def jsonToCSv():
+    if request.method == "POST":
+        
+        json_upload = request.FILES["jsonfile"]
+        file_name = default_storage.save(json_upload)
+        file_path = default_storage.path(file_name)
 
-    with open(sys.argv[1],'r') as json_file:
-        jsondata = json.load(json_file)
+        csv_output_path = f"{settings.MEDIA_ROOT}/jsontocsv/jsonoutput.csv"
 
-    data_file = open('..\jsontocsv\jsonoutput.csv', 'w', newline='')
-    csv_writer = csv.writer(data_file)
+        with open(file_path,'r') as json_file:
+            jsondata = json.load(json_file)
 
-    count = 0
-    for data in jsondata:
-        if count == 0:
-            header = data.keys()
-            csv_writer.writerow(header)
-            count += 1
-        csv_writer.writerow(data.values())
+        data_file = open(csv_output_path, 'w', newline='')
+        csv_writer = csv.writer(data_file)
 
-    data_file.close()
+        count = 0
+        for data in jsondata:
+            if count == 0:
+                header = data.keys()
+                csv_writer.writerow(header)
+                count += 1
+            csv_writer.writerow(data.values())
 
+        data_file.close()
+        context = {"file": file}
+        return render(request, "jsonToCsv.html", context)
+
+    context = {}
+    return render(request, "jsonToCsv.html", context)
 
 
 
@@ -67,7 +78,7 @@ def chunking_pdf():
 # Solution 1
 
 # In case of PDF REad Error, added strict=False
-inputpdf = PdfFileReader(open("C:\Spindles\sampledoc.pdf", "rb"), strict=False)
+inputpdf = PdfFileReader(open("..\Spindles\sampledoc.pdf", "rb"), strict=False)
 
 for i in range(inputpdf.numPages):
     output = PdfFileWriter()
@@ -96,7 +107,6 @@ def pdf_split(fname, start, end=None):
 
     get_pages = list(range(start,end))
     #print('get_pages', get_pages, 'of', num_pages)
-    # get_pages [0, 1, 2, 3]
 
     for i in range(start,end):
         if i < start:
