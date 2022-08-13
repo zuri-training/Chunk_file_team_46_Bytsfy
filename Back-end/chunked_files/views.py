@@ -81,7 +81,7 @@ def contact(request):
 
         return HttpResponseRedirect("/thank-you")
     
-    return render(request, "chunked_files/contact.html")
+    return render(request, "contact.html")
 
 
 def Subscriber(request):
