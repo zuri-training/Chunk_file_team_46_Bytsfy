@@ -1,12 +1,12 @@
 Team 46
 1. Worked on javascript code to select all check boxes at once on the dashboard
 https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/168
-https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/167 - https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Front-End/Pages/dashboard
+https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/167 - https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Front-End/Pages/saved_files.html
 
 
 2. Wrote a script to reveal or hide a content using a See More/Less button:
 https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/169
-https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/167 - https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Front-End/Pages/dashboard
+https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/167 - https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Front-End/Pages/saved_files.html
 
 
 3. Worked on the Javscript code to modify the input boxes for the csv and json pages
@@ -20,6 +20,8 @@ https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/95 - https://g
 https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/16 - https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Front-End/Pages/tools
 
 
-5. Worked on the Testimonial page: testimonial.html
+5. Worked on the Testimonial page:
 https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/172
 https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Front-End/Pages/testimonial.html
+
+6. Contributed to database Schema.

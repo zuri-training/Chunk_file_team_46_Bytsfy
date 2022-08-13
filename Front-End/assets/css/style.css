@@ -1491,27 +1491,28 @@ main {
 }
 
 /*Code for removing the inner counters in the box*/
+
 .code::-webkit-outer-spin-button,
 .code::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+/** This code is affecting the drop down menu and needs to be modified to affect only this element*/
+
 .proceed,.continue,.pro,.butn,.btn,.ceed {
   text-align: center;
   background-color: #091540;
   border: none;
   font-weight: bolder;
-
-  background-color: #091540;
-
   width: 30%;
   height: 35px;
-
   border-radius: 10px;
   color: white;
 
 }
+
+/** The code above is affecting the drop down menu - .proceed, .continue, .pro, .butn, .btn, .ceed {...} */
 
 .butn,.ceed{width: 20%; }
 b{margin-bottom: 30px;}
@@ -1578,8 +1579,6 @@ a{text-decoration: none; }
   width: 80%;
   line-height: 2.0;
   word-spacing: 3px;
-
-
 }
 
 ul {
@@ -1594,6 +1593,33 @@ ul {
 }
 a{
   color: white;
+}
+
+/** Saved Files Page **/
+
+/* For the Control Button and the hidden section on the saved_files.html (line 284) - button#seeMore*/
+
+button#seeMore {
+  border: 0;
+  padding: 10px;
+  text-transform: Capitalize;
+  background: none;
+  font-weight: 500;
+  color: #091540;
+}
+
+button#seeMore:hover{
+  color: #0d6efd;
+}
+
+.hideContent {
+  overflow: hidden;
+  height: 440px;
+}
+
+.showContent {
+  height: auto;
+  overflow: auto;
 }
 
 
@@ -1626,6 +1652,7 @@ a{
   /*max-width: 80%; enable if picture is too small */
   margin: 0 auto 17px;
 }
+
 #customers-testimonials.owl-carousel .owl-dots .owl-dot.active span, #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
   background: #4280bd;
   transform: translate3d(0px, -50%, 0px) scale(0.6);

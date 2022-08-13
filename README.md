@@ -64,6 +64,7 @@ Go to the project directory
 ```
 
 cd Chunk_file_team_46_Bytsfy
+cd Backend
 
 ```
 
