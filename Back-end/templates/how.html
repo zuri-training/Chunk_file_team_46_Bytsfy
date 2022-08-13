@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API INTRODUCTION</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+<!------------------------------Navbar Section------------------------------->
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html"><img src="/static/assets/img/logo.svg" alt="nav-logo"></a>
+            <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+                    <li class="nav-item nav-items">
+                        <a class="nav-link " aria-current="page" href="./HomePage.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown nav-items">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown1">
+                            <li><a href="./FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
+                            <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
+                            <li>
+                                <a class="dropdown-item dropdown-items" href="./API-introduction.html">Documentation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown nav-items">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Tools
+                        </a>
+                        <div class="dropdown-menu dropdown1 wide-nav ">
+                            <div class="row ">
+                                <div class="text-center">
+                                    <h5 class="text-center"><strong>Split Files</strong></h5>
+                                    <a class="dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
+                                    <a class="dropdown-item text-center" href="./CSV.html">Chunk by CSV
+                                    </a>
+                                    <a class="dropdown-item text-center" href="./JSON.html">Chunk by JSON</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item nav-items">
+                        <a href="./contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav navbar-nav navbar-right">
+                    <div class="dropdown ">
+                        <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
+                            <span class=" nav-link  navbar-toggler-icon2 mb-3"><img
+                                    src="/static/assets/img/user-profile.svg"
+                                    alt=""> Shawn L.</span></a>
+                        <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
+                            <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
+                            <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
+
+                            <div class="">
+
+                                <a href="./Sign_In.html">
+                                    <button href="./Sign_In.html" class="btn btn-subscribe1 m-3">
+                                            <span>
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                            </span>
+                                        Logout
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-------------Resources Introduction Section-------------------->
+
+<!--------Style can be found in Resources-Introduction page section of style file-->
+<div class="container">
+    <div class="row pt-5">
+        <!---------Contents section-->
+        <div class="col-lg-4">
+            <div>
+                <h4 class="bytfy-guide pb-5">Bytsfy Guide</h4>
+            </div>
+            <div class="API-List">
+                <div class="pb-2"><a class="resintro-link">Introduction</a></div>
+                <div class="pb-2"><a class="resintro-link" href="./getStarted.html">Getting Started</a></div>
+                <div class="pb-2"><a class="resintro-link" href="./how.html">How Bystfy Works</a>
+                    <div>
+                        <span class="dot"></span> &nbsp; Sign Up
+                    </div>
+
+                    <div>
+                        <span class="dot"></span> &nbsp; Login
+                    </div>
+                    <div>
+                        <span class="dot"></span> &nbsp; Password Reset
+                    </div>
+                    <div>
+                        <span class="dot"></span> &nbsp; Split Files
+                    </div>
+                    <div>
+                        <span class="dot"></span> &nbsp; Convert Files
+                    </div>
+                    <div>
+                        <span class="dot"></span> &nbsp; Compress Files
+                    </div>
+                    <div>
+                        <span class="dot"></span> &nbsp; Download Files
+                    </div>
+                    <div>
+                        <span class="dot"></span> &nbsp; Save Files
+                    </div>
+                    <div>
+                        <span class="dot"></span> &nbsp; Profile Account
+                    </div>
+                    <div>
+                        <span class="dot"></span> &nbsp; Log Out
+                    </div>
+                </div>
+
+            </div>
+
+            <!-------------Main Article section-->
+            <div class="col-lg-8 ">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="main">
+                            <!-- Actual search box -->
+                            <div class="form-group has-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <td class="Doc_table_data2">
+                        <h3 class="API-header">Introduction</h3>
+                        <p>Welcome to Bytsfy, learn how to fully use and exlore our features to serve you. Bytsfy is a
+                            tool that allows you split JSON and CSV files using their chunk sizes, while maintaining a
+                            functional chunks of the file.</p>
+
+                        <h3 class="API-header">Bystfy Tutorials</h3>
+
+
+                        <h3 class="API-header">
+
+                            <div>
+                                <span class="dot"></span> &nbsp; Sign Up
+                            </div>
+                            </p>
+
+                            <h3 class="API-header">Why Split?</h3>
+                            <p>Splitting a file is cutting the data in span parts of desired size. Usually, this allows
+                                a large file to fit on multiple smaller supports or to fit in multiple email attachments
+                                (or upload chunks) if the file is larger
+                                than maximum allowed attachment or upload size</p>
+                    </td>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!---------------------Footer Section---------------------->
+    <section class="footer container-fluid " id="footer">
+        <div class="container ml-lg-5 mr-lg-4 ml-sm-2 ml-md-2">
+            <div class="row ">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="container text-left footer-logo">
+                        <div class="">
+                            <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="/static/assets/img/logof.svg " class=""
+                                                                            alt="footer-logo ">
+                            </div>
+                            <div class="col-sm footer-text mb-4">
+                                <p class="footer-p">With you our esteemed customers in our mind, Bytsfy was built to
+                                    break up your large and medium files into smaller chunks and make it easy for you to
+                                    share, sae or download. </p>
+                            </div>
+                            <div class="col-sm icons mb-4">
+                                <img src="/static/assets/img/socials.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12  pt-lg-3 pt-sm-2">
+                    <h4 class="footer-header">Quick Links</h4>
+                    <ul class="quicklinks">
+                        <a href="/static/index.html">
+                            <li class=".">Home</li>
+                        </a>
+                        <a href="./FileUpload.html">
+                            <li>Tools</li>
+                        </a>
+                        <a href="./Blog.html">
+                            <li>Blogs</li>
+                        </a>
+                        <a href="./ResourcePGs/resourcepg.html">
+                            <li>Resources</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
+                    <h4 class=" footer-header">Quick Action</h4>
+                    <ul class="quickActions ">
+                        <a href="./FAQ.html">
+                            <li>FAQs</li>
+                        </a>
+                        <a href="">
+                            <li>API</li>
+                        </a>
+                        <a href="./contact.html">
+                            <li>Contact</li>
+                        </a>
+                        <a href="./testimonial">
+                            <li>Testimonial</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
+                    <h4 class=" footer-header">Address</h4>
+                    <div class="location d-flex d-sm-flex mt-3">
+                        <i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2"></i>
+                        <p class="p-2">No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.</p>
+                    </div>
+                    <div class="number d-flex ">
+                        <i class="fa-solid fa-phone p-2"></i>
+                        <p class="p-2">01-023-257</p>
+                    </div>
+                    <div class="mail d-flex ">
+                        <i class="fa-solid fa-envelope p-2"></i>
+                        <p class="p-2">hello@Bytsfy.work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container row chat-box">
+                <div class="col-8 "></div>
+                <div class="col-4 footer-chat d-flex">
+                    <img src="/static/assets/img/chat-img.svg" class="chatimg" alt="chatimg">
+                    <h5 class="chattext">Chat with our Agents</h5>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- <hr class="footer-line"> -->
+    <section class="container-fluid copyright pb-2 pt-4 " id="copyright">
+        <div class="container">
+            <div class="row flex-column-reverse flex-lg-row ">
+                <div class="col text-left">
+                    <p> Copyright &copy; 2022
+                        <span class="copy-span"> Bytsfy </span> - All rights reserved.
+                    </p>
+                </div>
+                <div class="col ">
+
+                </div>
+                <div class="col ">
+                    <ul class="termspolicy ">
+                        <li class="">Privacy Policy</li> &nbsp;
+                        <li class="">Terms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

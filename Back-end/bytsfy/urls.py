@@ -32,6 +32,7 @@ urlpatterns = [
     # social logins
     path("social-auth/", include("social_django.urls", namespace="social")),
 
+
     path("", landingPage, name="landing-page"),
     path("homepage.html", homePage, name="home-page"),
     path("profile.html", profilePage, name="profile-page"),
