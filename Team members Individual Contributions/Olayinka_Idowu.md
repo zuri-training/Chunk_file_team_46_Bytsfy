@@ -17,6 +17,9 @@ FAQ (Frequently Asked Question) page: https://github.com/zuri-training/Chunk_fil
                       permalink: https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/380d09f43cc4e0df98409683f217dd5d0424beca/Front-End/Pages/FAQ.html
 
 
+LINKS TO PULL REQUESTS: https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/pull/177#issue-1336036211
+
+
 
 LINKS TO THE PAGES ISSUES
 Home page Issues:     https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/issues/129#issue-1333786221
