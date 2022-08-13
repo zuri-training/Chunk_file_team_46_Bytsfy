@@ -1,3 +1,6 @@
+
+{% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -5,294 +8,293 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Landing Page</title>
-    <!--Bootstrap--->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!--Custom CSS--->
-    <link rel="stylesheet" href="/static/assets/css/style.css">
-    <!--Google Fonts--->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
-          rel="stylesheet">
+    {% comment %} <!--Bootstrap---> {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    {% comment %} <!--Custom CSS---> {% endcomment %}
+    <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/contact.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
 
-    <!--Fontawesome CDN--->
+    {% comment %} <!--Google Fonts---> {% endcomment %}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    {% comment %} <!--Fontawesome CDN---> {% endcomment %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
 </head>
 
 <body>
-<!------------------------------Navbar Section------------------------------->
-<!------------------------------Navbar Section------------------------------->
-<header class="container-fluid">
-    <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
-        <div class="container">
-            <a class="navbar-brand" href="./Home_page.html"><img src="/static/assets/img/logo.svg" alt="nav-logo"></a>
-            <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
-                    <li class="nav-item nav-items">
-                        <a class="nav-link " aria-current="page" href="./Landing_page.html">Home</a>
-                    </li>
 
-                    <li class="nav-item dropdown nav-items">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Resources
-                        </a>
-                        <ul class="dropdown-menu dropdown1">
-                            <li><a href="./FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
-                            <li><a href="./Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
-                            <li><a class="dropdown-item dropdown-items" href="./Dashboard.html">Developers</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown nav-items">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Tools
-                        </a>
-                        <div class="dropdown-menu dropdown1 wide-nav ">
-                            <div class="row ">
-                                <div class="text-center">
-                                    <h5 class="text-center"><strong>Split Files</strong></h5>
-                                    <a class="dropdown-item text-center" href="./FileUpload.html">Upload Files</a>
-                                    <a class="dropdown-item text-center" href="./CSV.html">Chunk by CSV
-                                    </a>
-                                    <a class="dropdown-item text-center" href="./JSON.html">Chunk by JSON</a>
+    {% comment %} <!------------------------------Navbar Section-------------------------------> {% endcomment %}
+    <section class="container-fluid">
+        <header class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1" style="width:100%">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="{% static "assets/img/logo.svg" %}" alt="nav-logo"></a>
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon ">    <i class="fa-solid fa-align-right nav-icon"></i></span>
+                </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+                            <li class="nav-item nav-items">
+                                <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+                            </li>
+
+                            <li class="nav-item dropdown nav-items">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                                <ul class="dropdown-menu dropdown1">
+                                    <li><a href="FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
+                                    <li><a href="Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
+                                    <li><a class="dropdown-item dropdown-items" href="#">Developers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown nav-items">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Tools
+                            </a>
+                                <div class="dropdown-menu dropdown1 wide-nav">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="text-center"><strong>Split Files</strong></h5>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Split by line</a>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Split by size</a>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="text-center"><strong>Convert Files</strong></h5>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Convert CSV to JSON</a>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Convert JSON to CSV</a>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Convert CSV to Others</a>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Convert JSON to Others</a>
+
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="text-center"><strong>Compress Files</strong></h5>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Upload Files</a>
+                                            <a class="btn btn-light dropdown-item text-center" href="#">Compress by size</a>
+                                        </div>
+                                    </div>
                                 </div>
+                            </li>
+                            <li class="nav-item nav-items">
+                                <a href="{% url "contact" %}" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="nav navbar-nav navbar-right ">
+                            <div class="dropdown ">
+                                <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
+                                    <span class=" nav-link  navbar-toggler-icon2"><img src= "{% static "/chunked_files/img/user-profile.svg" %}" alt=""> Shawn L.</span></a>
+                                <div class=" row dropdown-menu user_dropdownmenu dropdown1 mt-3 ">
+                                    <div class="m-4"><a href="" class="nav-link2">Profile</a></div>
+                                    <div class="m-4"><a href="Dashboard.html" class="nav-link2">Saved Items</a></div>
 
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="nav-item nav-items">
-                        <a href="./contact.html" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-                <div class="nav navbar-nav navbar-right">
-                    <div class="dropdown ">
-                        <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
-                            <span class=" nav-link  navbar-toggler-icon2 mb-3"><img
-                                    src="/static/assets/img/user-profile.svg"
-                                    alt=""> Shawn L.</span></a>
-                        <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
-                            <div class="m-4"><a href="./profile.html" class="nav-link2">Profile</a></div>
-                            <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
-
-                            <div class="">
-
-                                <a href="./Sign_In.html">
-                                    <button href="./Sign_In.html" class="btn btn-subscribe1 m-3">
-                                            <span>
-                                                <i class="fa-solid fa-right-from-bracket"></i>
-                                            </span>
-                                        Logout
-                                    </button>
-                                </a>
+                                    <div class=""><button href="#" class="btn btn-primary m-3"><span><i class="fa-solid fa-right-from-bracket"></i></span>
+                                Logout</button></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </nav>
-</header>
-<!------------------------------Contact Section------------------------------->
-<div class="fluid-container mb-3 mt-5">
-    <div class="container text-center ">
-        <h2 class="contact-header">Contact Us</h2>
-        <p class="contact-paragraph pt-3 pb-5 pb-2">Ask questions, Give a suggestion or report a problem. for further
-            enquiry on the use of our product, send us a descriptive message <br>and we will get back to you within the
-            shortest time possible.</p>
-    </div>
+            </nav>
+        </header>
+    </section>
 
-    <div class="container">
-        <div class="row flex-column-reverse flex-lg-row">
-            <div class="col-sm-12 col-md-12 col-lg-6 ">
-                <form>
-                    <div class="mb-4 ">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="form-group mb-4 ">
-                        <label for="exampleFormControlSelect1" class="mb-2">Subject</label>
-                        <select class="form-control " id="exampleFormControlSelect1">
-                            <option>Choose a subject</option>
-                            <option>General Info</option>
-                            <option>suggest a Feature</option>
-                            <option>Report a Problem</option>
-                            <option>Privacy</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb-4 ">
-                        <label for="exampleFormControlTextarea1" class="mb-2">Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
-                    </div>
-                    <button type="submit" class="btn-contact">Submit</button>
-                </form>
-            </div>
-
-
-            <div class="col map-wrapper pb-3">
-                <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5447477289035!2d3.3881955142968088!3d6.452439025776647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b0e9e955b27%3A0xd97605c7777bd3e4!2sBroad%20St%2C%20Lagos%20Island%20102273%2C%20Lagos!5e0!3m2!1sen!2sng!4v1659228312627!5m2!1sen!2sng"
-                        width="528" height="528" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-
+    {% comment %} <!------------------------------Contact Section-------------------------------> {% endcomment %}
+    <div class="fluid-container mb-3 mt-5">
+        <div class="container text-center ">
+            <h2 class="contact-header">Contact Us</h2>
+            <p class="contact-paragraph pt-3 pb-5 pb-2">Ask questions, Give a suggestion or report a problem. for further enquiry on the use of our product, send us a descriptive message <br>and we will get back to you within the shortest time possible.</p>
         </div>
 
-    </div>
-</div>
-<!---------------------------Subscription Section---------------------------->
-
-
-<div class="container-fluid Subscription mt-5 pb-4">
-    <div class="text-center pt-5 pb-3">
-        <h2 class="contact-header">Subscribe to Our NewsLetter</h2>
-        <p class="contact-paragraph pt-2 pb-4">We constantly work towards serving you better. subscribing to our news
-            letter means getting the latest update about our product and services</p>
-    </div>
-    <div class="container text-center pb-3">
         <div class="container">
-            <div class="row">
-                <div class="col">
+            <div class="row flex-column-reverse flex-lg-row">
+                <div class="col-sm-12 col-md-12 col-lg-6 ">
+                    <form>
+
+                        {% csrf_token %}
+                        <div class="mb-4 ">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input  name = "contact_email"  type="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="form-group mb-4 ">
+                            <label for="exampleFormControlSelect1" class="mb-2">Subject</label>
+                            <select name = "subject" class="form-control " id="exampleFormControlSelect1">
+                                <option>Choose a subject</option>
+                                <option>General Info</option>
+                                <option>suggest a Feature</option>
+                                <option>Report a Problem</option>
+                                <option>Privacy</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-4 ">
+                            <label for="exampleFormControlTextarea1" class="mb-2">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name = "message" ></textarea>
+                        </div>
+                        <button type="submit" class="btn-contact">Submit</button>
+                    </form>
                 </div>
-                <div class="col-sm-auto col-lg-6 mb-3">
-                    <div class="input-group mb-2 mr-sm-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text" style="background-color: #0E103D;">
-                                <i class="fa-solid fa-envelope"></i>
+
+
+                <div class="col map-wrapper pb-3">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5447477289035!2d3.3881955142968088!3d6.452439025776647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b0e9e955b27%3A0xd97605c7777bd3e4!2sBroad%20St%2C%20Lagos%20Island%20102273%2C%20Lagos!5e0!3m2!1sen!2sng!4v1659228312627!5m2!1sen!2sng"
+                        width="528" height="528" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    {% comment %} <!---------------------------Subscription Section----------------------------> {% endcomment %}
+
+
+    <div class="container-fluid Subscription mt-5 pb-4">
+        <div class="text-center pt-5 pb-3">
+            <h2 class="contact-header">Subscribe to Our NewsLetter</h2>
+            <p class="contact-paragraph pt-2 pb-4">We constantly work towards serving you better. subscribing to our news letter means getting the latest update about our product and services</p>
+        </div>
+        <div class="container text-center pb-3">
+            <div class="container">
+                <form method = "POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col">
+                        </div>
+                        <div class="col-sm-auto col-lg-6 mb-3">
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" style="background-color: #0E103D;">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                             </div>
+                             <input type="text " class="form-control " id="inlineFormInputGroupUsername2 " placeholder="enter email" name = "subscribe_email">
+                         </div>
+                        </div>
+                        <div class="col">
+
+                        </div>
+                    </div>
+                        <button type="submit" class="btn-subscribe text-center">Subscribe</button>
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+    {% comment %} <!---------------------Footer Section----------------------> {% endcomment %}
+    <section class="footer container-fluid" id="footer">
+        <div class="container-fluid ">
+            <div class="row ">
+                <div class="col-lg-3 col-md-6 col-sm-12 ">
+                    <div class="container text-left ">
+                        <div class="footer-header">
+                            <div class="col-sm footer-logo mb-2"><img src = "{% static "assets/img/logof.svg" %}" class="" alt="footer-logo ">
+                            </div>
+                            <div class="col-sm footer-text mb-4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna</p>
+                            </div>
+                            <div class="col-sm icons mb-4">
+                                <!-- <i class="fa-brands fa-linkedin-in text-primary pr-2"></i>
+                                <i class="fa-brands fa-google p-2 text-white"></i>
+                                <i class="fa-brands fa-facebook p-2 text-primary "></i>
+                                <i class="fa-brands fa-square-instagram p-2 text-white"></i>
+                                <i class="fa-brands fa-twitter p-2 text-primary"></i> -->
+                                <img src= "{% static "assets/img/socials.svg" %}" alt="">
                             </div>
                         </div>
-                        <input type="text " class="form-control " id="inlineFormInputGroupUsername2 "
-                               placeholder="enter email">
                     </div>
                 </div>
-                <div class="col">
-
+                <div class="col-lg-3 col-md-6 col-sm-12 ">
+                    <h4 class="footer-header">Quick Links</h4>
+                    <ul class="quicklinks ">
+                        <a href=" ">
+                            <li>Home</li>
+                        </a>
+                        <a href=" ">
+                            <li>Tools</li>
+                        </a>
+                        <a href="Blog.html">
+                            <li>Blogs</li>
+                        </a>
+                        <a href=" ">
+                            <li>Resources</li>
+                        </a>
+                    </ul>
                 </div>
-            </div>
-            <button type="button" class="btn-subscribe text-center">Subscribe</button>
-        </div>
-    </div>
-</div>
-<!---------------------Footer Section---------------------->
-<section class="footer container-fluid " id="footer">
-    <div class="container ml-lg-5 mr-lg-4 ml-sm-2 ml-md-2">
-        <div class="row ">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="container text-left footer-logo">
-                    <div class="">
-                        <div class="col-sm  mb-2 pt-lg-5 pt-sm-3 "><img src="/static/assets/img/logof.svg " class=""
-                                                                        alt="footer-logo ">
-                        </div>
-                        <div class="col-sm footer-text mb-4">
-                            <p class="footer-p">With you our esteemed customers in our mind, Bytsfy was built to break
-                                up your large and medium files into smaller chunks and make it easy for you to share,
-                                sae or download. </p>
-                        </div>
-                        <div class="col-sm icons mb-4">
-                            <img src="/static/assets/img/socials.svg" alt="">
-                        </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 text-left">
+                    <h4 class=" footer-header">Quick Action</h4>
+                    <ul class="quickActions ">
+                        <a href="{% url 'account_signup' %}" >
+                            <li>Signup</li>
+                        </a>
+                        <a href="{% url 'account_login' %}">
+                            <li>Login</li>
+                        </a>
+                        <a href="{% url "contact" %}">
+                            <li>Contact</li>
+                        </a>
+                        <a href=" ">
+                            <li>Testimonial</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col ">
+                    <h4 class=" footer-header">Address</h4>
+                    <div class="location d-flex d-sm-flex mt-3">
+                        <i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2"></i>
+                        <p class="p-2">No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.</p>
+                    </div>
+                    <div class="number d-flex ">
+                        <i class="fa-solid fa-phone p-2"></i>
+                        <p class="p-2">01-023-257</p>
+                    </div>
+                    <div class="mail d-flex ">
+                        <i class="fa-solid fa-envelope p-2"></i>
+                        <p class="p-2">hello@Bytsfy.work</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12  pt-lg-3 pt-sm-2">
-                <h4 class="footer-header">Quick Links</h4>
-                <ul class="quicklinks">
-                    <a href="../index.html">
-                        <li class=".">Home</li>
-                    </a>
-                    <a href="./FileUpload.html">
-                        <li>Tools</li>
-                    </a>
-                    <a href="./Blog.html">
-                        <li>Blogs</li>
-                    </a>
-                    <a href="./ResourcePGs/resourcepg.html">
-                        <li>Resources</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
-                <h4 class=" footer-header">Quick Action</h4>
-                <ul class="quickActions ">
-                    <a href="./FAQ.html">
-                        <li>FAQs</li>
-                    </a>
-                    <a href="">
-                        <li>API</li>
-                    </a>
-                    <a href="./contact.html">
-                        <li>Contact</li>
-                    </a>
-                    <a href="./testimonial">
-                        <li>Testimonial</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pt-lg-3 pt-sm-2">
-                <h4 class=" footer-header">Address</h4>
-                <div class="location d-flex d-sm-flex mt-3">
-                    <i class="fa-solid fa-location-dot pt-4 pr-2 pl-3 pb-2"></i>
-                    <p class="p-2">No 21 Broad Str, off Bypass St Philip, Dewa Nigeria.</p>
-                </div>
-                <div class="number d-flex ">
-                    <i class="fa-solid fa-phone p-2"></i>
-                    <p class="p-2">01-023-257</p>
-                </div>
-                <div class="mail d-flex ">
-                    <i class="fa-solid fa-envelope p-2"></i>
-                    <p class="p-2">hello@Bytsfy.work</p>
+            <div class="container row ">
+                <div class="col-8 "></div>
+                <div class="col-4 footer-chat d-flex">
+                    <img src= "{% static "assets/img/chat-img.svg" %}" class="chatimg" alt="chatimg">
+                    <h5 class="chattext">Chat with our Agents</h5>
                 </div>
             </div>
         </div>
-        <div class="container row chat-box">
-            <div class="col-8 "></div>
-            <div class="col-4 footer-chat d-flex">
-                <img src="/static/assets/img/chat-img.svg" class="chatimg" alt="chatimg">
-                <h5 class="chattext">Chat with our Agents</h5>
+
+    </section>
+    {% comment %} <!-- <hr class="footer-line"> --> {% endcomment %}
+    <section class="container-fluid copyright pb-2 pt-4 " id="copyright">
+        <div class=" container">
+            <div class="row flex-column-reverse flex-lg-row ">
+                <div class="col text-left">
+                    <p> Copyright &copy; 2022
+                        <span class="copy-span"> Bytsfy </span> - All rights reserved.</p>
+                </div>
+                <div class="col ">
+
+                </div>
+                <div class="col ">
+                    <ul class="termspolicy ">
+                        <li class="">Privacy Policy</li> &nbsp;
+                        <li class="">Terms</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-</section>
-<!-- <hr class="footer-line"> -->
-<section class="container-fluid copyright pb-2 pt-4 " id="copyright">
-    <div class="container">
-        <div class="row flex-column-reverse flex-lg-row ">
-            <div class="col text-left">
-                <p> Copyright &copy; 2022
-                    <span class="copy-span"> Bytsfy </span> - All rights reserved.
-                </p>
-            </div>
-            <div class="col ">
 
-            </div>
-            <div class="col ">
-                <ul class="termspolicy ">
-                    <li class="">Privacy Policy</li> &nbsp;
-                    <li class="">Terms</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-        crossorigin="anonymous"></script>
+    {% comment %} <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) --> {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 
 </body>
 
