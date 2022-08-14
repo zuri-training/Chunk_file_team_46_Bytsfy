@@ -1,3 +1,4 @@
+from textwrap import indent
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
@@ -18,15 +19,29 @@ import csv
 @login_required(login_url="account_login")
 def splitCSV(request):
     if request.method == 'POST':
+        if not request.FILES["file"]:# checking if the upload is empty
+            messages.error(request, "upload a file")
         file_data = request.FILES["file"]
+        split_type = request.POST.get("splittype") # get the split type
+        output_csv = request.POST.get("customRadio")
+        print(bool(request.POST["byline"]))
+        print(bool(request.POST["chunk_size"]))
+        if bool(request.POST["chunk_size"]):
+            print("hi")
+
+        
         
         if file_data.name.split(".")[-1] not in ["json","csv"]:
             messages.error(request, "Please upload csv or json file")
             return redirect(request.META.get("HTTP_REFERER"))
 
         try:
-            user_specified_size = request.POST["chunk_size"]
-            user_specified_size = int(user_specified_size)
+            if bool(request.POST["chunk_size"]): # check if the chunk size has a value
+                user_specified_size = request.POST["chunk_size"]
+                user_specified_size = int(user_specified_size)
+
+            else:
+                by_line = int(request.POST["byline"]) # check if the user specified by line chunk
         except:
              messages.error(request, "invalid size")
              return redirect(request.META.get("HTTP_REFERER"))
@@ -44,9 +59,11 @@ def splitCSV(request):
 
                 no_of_chuncked_file = math.ceil(file_size/user_specified_size)
                 chunksize_user_specified_size = math.ceil(no_file_row/no_of_chuncked_file)
-                if user_specified_size >= file_size:
-                    messages.error(request, "chunk size cannot be equal to or greater than file size")
-                    return redirect(request.META.get("HTTP_REFERER"))
+                used_size = chunksize_user_specified_size if split_type == "bsize" else by_line # if user selects bysize
+                if bool(request.POST["chunk_size"]): # check if user put chunk size
+                    if user_specified_size >= file_size:
+                        messages.error(request, "chunk size cannot be equal to or greater than file size")
+                        return redirect(request.META.get("HTTP_REFERER"))
                 
                 # file size should be 200mb or less 
                 # if file_size > 200000000:
@@ -61,8 +78,11 @@ def splitCSV(request):
                 folder_name = file_path.split(".")[0]
                 os.makedirs(folder_name)
                 index = 0
-                for chunk in pd.read_csv(file_path, chunksize=chunksize_user_specified_size):
-                    chunk.to_csv(f"{folder_name}/file{index}.csv".format(index), index=False)
+                for chunk in pd.read_csv(file_path, chunksize=used_size):
+                    if output_csv: # if the out put is csv
+                        chunk.to_csv(f"{folder_name}/file{index}.csv".format(index), index=False)
+                    else: # else chunk to json
+                        chunk.to_json(f"{folder_name}/file{index}.json".format(index), index=False, indent=True)
                     index += 1
 
                 # live server
@@ -180,30 +200,32 @@ def delete(request, pk):
 
 
 
-@login_required(login_url="account_login")
-def csvToJson(request):
-    if request.method == "POST":
-        csv_file = request.FILES["CSVfile"]
-        json_file_name = csv_file.name.split(".")[0] + "-json-file.json"
-        file_name = default_storage.save(csv_file.name, csv_file)
-        file_path = default_storage.path(file_name)
-        json_array= []
+""" wont be needing this"""
+
+# @login_required(login_url="account_login")
+# def csvToJson(request):
+#     if request.method == "POST":
+#         csv_file = request.FILES["CSVfile"]
+#         json_file_name = csv_file.name.split(".")[0] + "-json-file.json"
+#         file_name = default_storage.save(csv_file.name, csv_file)
+#         file_path = default_storage.path(file_name)
+#         json_array= []
         
-        json_path = f"{settings.MEDIA_ROOT}/{json_file_name}"
-        with open(file_path, encoding="utf-8") as csv_file_handler:
-            csv_reader = csv.DictReader(csv_file_handler)
-            for rows in csv_reader:
-                json_array.append(rows)
-        with open(json_path, 'w', encoding="utf-8") as json_file_handler:
-            json_file_handler.write(json.dumps(json_array, indent=4))
-        json_file = json_path.split("/")[-1]
-        file = File.objects.create(user=request.user, file_name=json_file_name, zip_file=json_file)
-        file.save()
-        os.remove(file_path)
-        context = {"file": file}
-        return render(request, "csvToJson.html", context)
-    context = {}
-    return render(request, "csvToJson.html", context)
+#         json_path = f"{settings.MEDIA_ROOT}/{json_file_name}"
+#         with open(file_path, encoding="utf-8") as csv_file_handler:
+#             csv_reader = csv.DictReader(csv_file_handler)
+#             for rows in csv_reader:
+#                 json_array.append(rows)
+#         with open(json_path, 'w', encoding="utf-8") as json_file_handler:
+#             json_file_handler.write(json.dumps(json_array, indent=4))
+#         json_file = json_path.split("/")[-1]
+#         file = File.objects.create(user=request.user, file_name=json_file_name, zip_file=json_file)
+#         file.save()
+#         os.remove(file_path)
+#         context = {"file": file}
+#         return render(request, "csvToJson.html", context)
+#     context = {}
+#     return render(request, "csvToJson.html", context)
 
 
 def jsonToCsv(request):
