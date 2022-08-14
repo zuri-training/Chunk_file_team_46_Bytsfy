@@ -19,11 +19,16 @@ import csv
 @login_required(login_url="account_login")
 def splitCSV(request):
     if request.method == 'POST':
-        if not request.FILES["file"]:# cecking if the upload is empty
+        if not request.FILES["file"]:# checking if the upload is empty
             messages.error(request, "upload a file")
         file_data = request.FILES["file"]
         split_type = request.POST.get("splittype") # get the split type
         output_csv = request.POST.get("customRadio")
+        print(bool(request.POST["byline"]))
+        print(bool(request.POST["chunk_size"]))
+        if bool(request.POST["chunk_size"]):
+            print("hi")
+
         
         
         if file_data.name.split(".")[-1] not in ["json","csv"]:
@@ -31,8 +36,12 @@ def splitCSV(request):
             return redirect(request.META.get("HTTP_REFERER"))
 
         try:
-            user_specified_size = request.POST["chunk_size"]
-            user_specified_size = int(user_specified_size)
+            if bool(request.POST["chunk_size"]): # check if the chunk size has a value
+                user_specified_size = request.POST["chunk_size"]
+                user_specified_size = int(user_specified_size)
+
+            else:
+                by_line = int(request.POST["byline"]) # check if the user specified by line chunk
         except:
              messages.error(request, "invalid size")
              return redirect(request.META.get("HTTP_REFERER"))
@@ -50,10 +59,11 @@ def splitCSV(request):
 
                 no_of_chuncked_file = math.ceil(file_size/user_specified_size)
                 chunksize_user_specified_size = math.ceil(no_file_row/no_of_chuncked_file)
-                used_size = chunksize_user_specified_size if split_type == "bsize" else user_specified_size # if user selects bysize
-                if user_specified_size >= file_size:
-                    messages.error(request, "chunk size cannot be equal to or greater than file size")
-                    return redirect(request.META.get("HTTP_REFERER"))
+                used_size = chunksize_user_specified_size if split_type == "bsize" else by_line # if user selects bysize
+                if bool(request.POST["chunk_size"]): # check if user put chunk size
+                    if user_specified_size >= file_size:
+                        messages.error(request, "chunk size cannot be equal to or greater than file size")
+                        return redirect(request.META.get("HTTP_REFERER"))
                 
                 # file size should be 200mb or less 
                 # if file_size > 200000000:
