@@ -32,6 +32,19 @@ urlpatterns = [
     
     # social logins
     path("social-auth/", include("social_django.urls", namespace="social")),
+<<<<<<< HEAD
+=======
+    path("", TemplateView.as_view(template_name="base.html"), name="home"),
+    path("", TemplateView.as_view(template_name="dashboard.html"), name="dashboard"),
+    path("FAQ", TemplateView.as_view(template_name="FAQ.html"), name="FAQ"),
+    path("Blog", TemplateView.as_view(template_name="blog.html"), name="Blog"),
+    # path("contact", TemplateView.as_view(template_name="contact.html"), name="contact"),     #included in chunked_files app
+    path("upload", TemplateView.as_view(template_name="upload.html"), name="upload"),
+    path("getStarted", TemplateView.as_view(template_name="getStarted.html"), name="about"),
+    path("chunk/", include("chunked_files.urls")),
+    path("", include('chunker.urls')),
+    path("",include('chunked_files.urls'))
+>>>>>>> main
 
 
     path("", landingPage, name="landing-page"),
