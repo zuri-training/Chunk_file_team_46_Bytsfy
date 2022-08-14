@@ -21,16 +21,16 @@
 <body>
     <!------------------------------Navbar Section------------------------------->
     <header class="container-fluid">
-        <nav class="navbar navbar-expand-lg bg-white pt-3 mb-1 ml-lg-3 mr-lg-3">
+        <nav class="navbar navbar-expand-lg bg- pt-3 mb-1">
             <div class="container">
-                <a class="navbar-brand" href="./Pages/Home_page.html"><img src="./assets/img/logo.svg" alt="nav-logo"></a>
+                <a class="navbar-brand" href="#"><img src="./assets/img/logo.svg" alt="nav-logo"></a>
                 <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class=""> <i class="fa-solid fa-align-right nav-icon"></i></span></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
                         <li class="nav-item nav-items">
-                            <a class="nav-link " aria-current="page" href="./">Home</a>
+                            <a class="nav-link " aria-current="page" href="#" id="home">Home</a>
                         </li>
 
                         <li class="nav-item dropdown nav-items">
@@ -38,53 +38,38 @@
                                 Resources
                             </a>
                             <ul class="dropdown-menu dropdown1">
-                                <li><a href="./Pages/FAQ.html" class="dropdown-item dropdown-items">FAQs</a></li>
-                                <li><a href="./Pages/Blog.html" class="dropdown-item dropdown-items">Blogs</a></li>
-                                <li><a class="dropdown-item dropdown-items" href="./Pages/Dashboard.html">Developers</a></li>
+                                <li><a class="dropdown-item dropdown-items" href="#">FAQs</a></li>
+                                <li><a class="dropdown-item dropdown-items" href="#">Blogs</a></li>
+                                <li><a class="dropdown-item dropdown-items" href="#">Developers</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-items">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Tools
                             </a>
-                            <div class="dropdown-menu dropdown1 wide-nav ">
-                                <div class="row ">
+                            <div class="dropdown-menu dropdown1 wide-nav">
+                                <div class="row">
                                     <div class="text-center">
                                         <h5 class="text-center"><strong>Split Files</strong></h5>
-                                        <a class="btn btn-light dropdown-item text-center" href="./Pages/FileUpload.html">Upload Files</a>
-                                        <a class="btn btn-light dropdown-item text-center" href="./Pages/splitbyLine.html">Split by
-                                                line</a>
-                                        <a class="btn btn-light dropdown-item text-center" href="./Pages/splitbySize.html">Split by
-                                                size</a>
+                                        <a class="dropdown-item text-center" href="#">Upload Files</a>
+                                        <a class="dropdown-item text-center" href="#">Chunk by CSV
+                                            </a>
+                                        <a class="dropdown-item text-center" href="#">Chunk by JSON</a>
                                     </div>
-                                    
                                 </div>
                             </div>
-
                         </li>
                         <li class="nav-item nav-items">
-                            <a href="./Pages/contact.html" class="nav-link">Contact</a>
+                            <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
-                    <div class="nav navbar-nav navbar-right">
-                        <div class="dropdown ">
-                            <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
-                                <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="./assets/img/user-profile.svg" alt=""> Shawn L.</span></a>
-                            <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
-                                <div class="m-4"><a href="./Pages/profile.html" class="nav-link2">Profile</a></div>
-                                <div class="m-4"><a href="../Front-End/Pages/Saved_Files.html" class="nav-link2">Saved Items</a></div>
-
-                                <div class="">
-                                    <a href="./Pages/Sign_In.html">
-                                        <button href="./Pages/Sign_In.html" class="btn btn-subscribe1 m-3">
-                                            <span>
-                                                <i class="fa-solid fa-right-from-bracket"></i>
-                                            </span>
-                                Logout</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="d-flex inbtn">
+                        <a href="./Pages/Sign_In.html">
+                            <button type="button" class="btn btn-subscribe2 mr-3">Sign Up</button>
+                        </a>
+                        <a href="./Pages/Sign_In.html">
+                            <button type="button" class="btn btn-subscribe1">Log In</button>
+                        </a>
                     </div>
                 </div>
             </div>

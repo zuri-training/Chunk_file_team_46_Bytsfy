@@ -41,7 +41,26 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # local apps
     "accounts.apps.AccountsConfig",
+    'chunked_files.apps.ChunkedFilesConfig',
+    'chunker.apps.ChunkerConfig',
 
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sites', # new
+
+    # 3rd party
+    'django_extensions',
+    'social_django', #new
+    'allauth', # new
+    'allauth.account', # new
+    'widget_tweaks',    # new
+
+<<<<<<< HEAD
+=======
     "chunker.apps.ChunkerConfig",
     "chunked_files.apps.ChunkedFilesConfig",
     "django.contrib.admin",
@@ -60,6 +79,7 @@ INSTALLED_APPS = [
     "allauth.account",  # new
     "widget_tweaks",  # new
    
+>>>>>>> main
 
 ]
 
@@ -164,7 +184,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+<<<<<<< HEAD
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+=======
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+>>>>>>> main
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
@@ -178,8 +202,8 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Redirect url that will be configured when we have the templates, views and urls
-LOGIN_REDIRECT_URL = "dashboard"
-LOGOUT_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "home-page"
+LOGOUT_REDIRECT_URL = "landing-page"
 
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False  # new make password input on sign up one
@@ -196,9 +220,9 @@ LOGOUT_URL = "logout"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
-SOCIAL_AUTH_GITHUB_KEY = config("SOCIAL_AUTH_GITHUB_KEY")
-SOCIAL_AUTH_GITHUB_SECRET = config("SOCIAL_AUTH_GITHUB_SECRET")
+SOCIAL_AUTH_GITHUB_KEY = config('SOCIAL_AUTH_GITHUB_KEY')
+SOCIAL_AUTH_GITHUB_SECRET = config('SOCIAL_AUTH_GITHUB_SECRET')
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
 

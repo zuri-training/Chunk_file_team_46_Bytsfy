@@ -30,7 +30,9 @@ def chunk(request):
         doc_name = name_of_file[-1].split(".")[0]
 
         if name_of_file[-1].split(".")[1] == "csv":
+
             bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=int(request.POST["spec_size"]), output_ext=".csv", doc_name=doc_name, file_size=file_size)
+
             bytfy.bytfy_start() 
             # 2855780
 
