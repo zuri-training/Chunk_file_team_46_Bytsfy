@@ -37,7 +37,7 @@ urlpatterns = [
     # path("upload", TemplateView.as_view(template_name="upload.html"), name="upload"),
     # path("getStarted", TemplateView.as_view(template_name="getStarted.html"), name="about"),
     # path("chunk/", include("chunked_files.urls")),
-    # path("", include('chunker.urls')),
+    path("", include('chunker.urls')),
     # path("",include('chunked_files.urls')),
 
 
