@@ -59,27 +59,8 @@ INSTALLED_APPS = [
     'allauth.account', # new
     'widget_tweaks',    # new
 
-<<<<<<< HEAD
-=======
-    "chunker.apps.ChunkerConfig",
-    "chunked_files.apps.ChunkedFilesConfig",
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    "django.contrib.sites",  # new
-    # apps created
-    # 'accounts',
 
-    "django_extensions",
-    "social_django",  # new
-    "allauth",  # new
-    "allauth.account",  # new
-    "widget_tweaks",  # new
-   
->>>>>>> main
+
 
 ]
 
@@ -184,11 +165,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-<<<<<<< HEAD
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-=======
+
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
->>>>>>> main
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
