@@ -73,6 +73,9 @@ urlpatterns = [
     path("resource.html/4", TemplateView.as_view(template_name="resourcepg4.html"), name="resourcepg4"),
     path("resource.html/5", TemplateView.as_view(template_name="resourcepg5.html"), name="resourcepg5"),
     path("resource.html/6", TemplateView.as_view(template_name="resourcepg6.html"), name="resourcepg6"),
-]
+   
+   
+#     path("password/reset/", TemplateView.as_view(template_name = "forgotpassword.html"), name="account_reset_password"),
+ ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
