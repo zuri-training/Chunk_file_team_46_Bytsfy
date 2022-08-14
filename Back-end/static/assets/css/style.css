@@ -418,10 +418,10 @@ html {
     margin-left: 5px;
 }
 
-.active:after {
+.drop .active:after {
     content: "\2212";
     color: #0E103D;
-}
+  }
 
 .content {
     padding: 0px 18px;
