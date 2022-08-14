@@ -23,7 +23,7 @@ def profilePage(request):
 
 
 class CustomPasswordChangeView(PasswordChangeView):
-    # template_name = "account/forgotpassword.html"
+    template_name = "account/password_change.html"
     success_url = reverse_lazy("password_change_done")
 
 
