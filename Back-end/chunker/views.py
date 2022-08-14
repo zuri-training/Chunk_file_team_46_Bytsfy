@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.conf import settings
 from django.core.files.storage import default_storage
 from .models import File, User
+from django.contrib.auth.decorators import login_required
 import pandas as pd
 from django.contrib import messages
 import shutil
@@ -13,18 +14,8 @@ import json
 import csv
 
 # Create your views here.
-# ******************* HOME VIEW *****************************
-def homePage(request):
-    if request.user.is_authenticated:
-        user = request.user
-        allfile = user.file_set.all()
-        context = {"allfile": allfile}
 
-        return render(request, "home.html", context)
-
-    return render(request, "home.html") 
-
-
+@login_required(login_url="account_login")
 def splitCSV(request):
     if request.method == 'POST':
         file_data = request.FILES["file"]
@@ -75,31 +66,32 @@ def splitCSV(request):
                     index += 1
 
                 # live server
-                fs = folder_name.split("/")[-1]
+                # fs = folder_name.split("/")[-1]
                 # local host
-                # fs = folder_name.split("\\")[-1]
+                fs = folder_name.split("\\")[-1]
                 outputfile = str(settings.MEDIA_ROOT) + f"/{fs}"
                 
                 shutil.make_archive(outputfile, 'zip', folder_name)
                 shutil.rmtree(folder_name)
                 zip_file_name = f"{fs}.zip"
                 #local host
-                # zip_file = f"/{outputfile}.zip"
+                zip_file = f"/{outputfile}.zip"
                 # live server
-                zip_file = f"/{outputfile.split('/')[-1]}.zip"
+                # zip_file = f"/{outputfile.split('/')[-1]}.zip"
                 file= File.objects.create(user=request.user, file_name=zip_file_name, zip_file=zip_file)
                 file.save()
                 os.remove(file_path)
                 context = {"file": file}
                 # context  = {}
-                return render(request, "splitcsv.html", context)
+                return render(request, "downloadfile.html", context)
 
             except:
                 messages.error(request, "Please upload a valid csv file")
                 return redirect(request.META.get("HTTP_REFERER"))
    
-    return render(request, "splitcsv.html")
+    return render(request, "csv.html")
 
+@login_required(login_url="account_login")
 def splitJSON(request):
     if request.method == 'POST':
         file_data = request.FILES["file"]
@@ -151,35 +143,36 @@ def splitJSON(request):
                 json.dump(split_data[i], outfile, indent=4)
 
         # live server
-        fs = folder_name.split("/")[-1]
+        # fs = folder_name.split("/")[-1]
         # local host
-        # fs = folder_name.split("\\")[-1]
+        fs = folder_name.split("\\")[-1]
         outputfile = str(settings.MEDIA_ROOT) + f"/{fs}"
         
         shutil.make_archive(outputfile, 'zip', folder_name)
         shutil.rmtree(folder_name)
         zip_file_name = f"{fs}.zip"
         #local host
-        # zip_file = f"/{outputfile}.zip"
+        zip_file = f"/{outputfile}.zip"
         # live server
-        zip_file = f"/{outputfile.split('/')[-1]}.zip"
+        # zip_file = f"/{outputfile.split('/')[-1]}.zip"
         file= File.objects.create(user=request.user, file_name=zip_file_name, zip_file=zip_file)
         file.save()
         os.remove(file_path)
         context = {"file": file}
-        # context  = {}
-        return render(request, "splitcsv.html", context)
+        return render(request, "downloadfile.html", context)
 
 
     context = {}
-    return render(request, "splitjson.html", context)
+    return render(request, "json.html", context)
 
+@login_required(login_url="account_login")
 def save(request, pk):
     file = File.objects.get(id=pk)
     file.saved_file = file.zip_file
     file.save()
     return HttpResponse("File saved successsfully")
 
+@login_required(login_url="account_login")
 def delete(request, pk):
     file = File.objects.get(id=pk)
     file.delete()
@@ -187,7 +180,7 @@ def delete(request, pk):
 
 
 
-
+@login_required(login_url="account_login")
 def csvToJson(request):
     if request.method == "POST":
         csv_file = request.FILES["CSVfile"]
