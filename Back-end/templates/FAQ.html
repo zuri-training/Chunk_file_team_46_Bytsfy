@@ -1,240 +1,164 @@
+<!doctype html>
 <html lang="en">
-
+{% load static %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ</title>
-    <!-- External css used -->
-    <link rel="stylesheet" href="/static/assets/css/FAQ.css">
-    <!-- For a felxible design, Bootstrap5 CSS was included-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Google fonts CDN -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet" />
-    <!-- FontAwesome 4.7.0 CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
 </head>
 
 <body>
-
-<div class="container-fluid bg-warning ask_section">
-        <div class="row ask_section_row">
-            <div class="col-lg-6 col-md-4 col-sm-3">
-                <h1 class="fw-bold">Ask A Question</h1>
-                <h4 class="fw-bold">Search our database for answers</h4>
-            </div>
-            <div class="col-lg-6 col-md-8 col-sm-9">
-                <div class="pt-5 me-3 search">
-                    <form action="" method="post">
-                        <div class="search_input">
-                            <input type="text" class="border border-0" name="" id="" placeholder="Search">
-                            <button class="fa fa-search border-0 " type="submit"></button>
+    <!------------------------------Navbar Section------------------------------->
+    {% include 'navbar.html' %}
+    <!------------------------------hero Section------------------------------->
+    <section class="container-fluid hero-login p-5">
+        <div class="container">
+            <div class="row flex-column flex-lg-row">
+                <div class="col">
+                    <h2>Ask A Question</h2>
+                    <p>Search our database for answers</p>
+                </div>
+                <div class="col">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search this blog">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
                         </div>
-                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------------------FAQs Section------------------------------->
+    <div class="mb-lg-3 mb-sm-2 text-center">
+        <h2 class=" text-center mb-3 mt-4">Frequently Asked Questions</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col mb-3">
+                    <p class="">Our customers sometimes get comfused about our product usage. These frequently asked questions have helped alot of our users understand our product better, read through and also feel free to add yours</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid row mx-auto questions">
-        <div class="col-lg-4 col-md-2 col-sm-0 ps-5 questions_col1">
-            <h1>FAQ's</h1>
-            <hr>
-        </div>
-        <div class="col questions_col2">
-            <div class="container everything">
-                <h3>Everything you need to know to use Bytsfy</h3>
-                <hr class="horizon2">
-            </div>
-        </div>
-    </div>
-
-    <!-- The list of questions followed by their respective answers starts from here. -->
-    <div class="container mx-auto faq_row">
-        <!-- first row -->
+    <div class="container">
         <div class="row">
-            <!-- first column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn btn-topic" data-bs-toggle="collapse">Do i have to suscribe before using the platform?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        There is no need for a subscription fee before using the platform, it is totally free, however you need to sign up before you can have full access to the platform.
-                    </div>
-                </div>
-            </div>
-            <!-- second column -->
-            <div class="col frsc">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">What form of file can i download?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        You can download two forms of files, that is a JSON file and CSV file. Other form of file coming soon.
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
 
-        <!-- second row -->
-        <div class="row mt-2">
-            <!-- first column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">Can i share this file from the dashboard if i don't wish to dowload?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        You can share your file directly if you do not wish to download.
-                    </div>
+                <button class="drop collapsible">What form of file can i download</button>
+                <div class="content">
+                    <p>you can download two forms of files, that is a JSON file and CSV file. Other form of file coming soon.</p>
                 </div>
-            </div>
-            <!-- second column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">What do i need to do to have full access to the platform?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        To have full access, you will need to sign up on the platform in order to have a better user experience.
-                    </div>
+                <button class="drop collapsible">How do i upload a file for splitting?</button>
+                <div class="content">
+                    <p>You can click on the “upload file” button and drop your file from your computer</p>
                 </div>
-            </div>
-        </div>
+                <button class="drop collapsible">How long will it take to download my file?</button>
+                <div class="content">
+                    <p>depending on the size of the file, you spend few minute to download your file
+                    </p>
+                </div>
+                <button class="drop collapsible">Must i signn up before i can use the platform</button>
+                <div class="content">
+                    <p>There is no need for a subscription fee before using the platform, it is totally free, however you need to sign up before you can have full access to the platform.
+                    </p>
+                </div>
 
-        <!-- third row -->
-        <div class="row mt-2">
-            <!-- first column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">How do i upload a file for splitting?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        You can click on the “upload file” button and drop your file from your computer.
-                    </div>
+                <button class="drop collapsible">when can i use the platform as an extension?</button>
+                <div class="content">
+                    <p>subscribe to get our email updates as soon as it is released, also the download button will become available to enable users to download the extension.
+                    </p>
+                </div>
+                <button class="drop collapsible">Can bytsfy be accessed through any web browser?</button>
+                <div class="content">
+                    <p>Bytsfy can be accessed through chrome, Firefox, Explorer +10, UC and Safari. To run our tools smoothly, we recommend that you work with the browsers listed. Our system requirement are basic and if at any point you experience issues,
+                        we recommend that you
+                        <a href="./contact.html">contact us</a>.
+                    </p>
                 </div>
             </div>
-            <!-- second column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">When can i use the platform as an extension?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        Subscribe to get our email updates as soon as it is released, also the download button will become available to enable users to download the extension.
-                    </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <button class="drop collapsible">What is the limit for setting the size of uploaded file?</button>
+                <div class="content">
+                    <p>you can set the size of your file to a reasonable range for chunking depending on the size of the file. However, the minimum data size should be up to 100Bytes and the maximum is 200MB.</p>
                 </div>
-            </div>
-        </div>
+                <button class="drop collapsible">Are my files save and secured by bytsfy?</button>
+                <div class="content">
+                    <p>Your data is processed as safely as possible. For more privacy, our service incudes end-to-end encryption for all file uploads use http/ssl. Our compliance is in line with one of the most nonindulgent safety standards in the world
+                        (GDPR), EU Data Protection Regulation. These steps ensure security and satisfy most of the </p>
+                </div>
+                <button class="drop collapsible">Are my files probed b y bytsfy?</button>
+                <div class="content">
+                    <p>Utterly not. Your files are yours! not in any way would we analyse, check or copy them. Your files are scrictly secured in our servers.
+                    </p>
+                </div>
+                <button class="drop collapsible">How do i dowload my splitted file?</button>
+                <div class="content">
+                    <p>After using the platform for your desired function, click on download to download the file into your PC or mobile phone</p>
+                </div>
 
-        <!-- fourth row -->
-        <div class="row mt-2">
-            <!-- first column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">How long will it take to download my splitted file?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        Depending on the size of the file, you spend few minute to download your file
-                    </div>
+                <button class="drop collapsible">Can btysfy be accessed through my web browser?</button>
+                <div class="content">
+                    <p>Bytsfy can be accessed through chrome, Firefox, Explorer +10, UC and Safari. To run our tools smoothly, we recommend that you work with the browsers listed. Our system requirement are basic and if at any point you experience issues,
+                        we recommend that you contact us.</p>
                 </div>
-            </div>
-            <!-- second column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">How do i download my splitted file?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        After using the platform for your desired function, click on download to download the file into your PC or mobile phone
-                    </div>
+                <button class="drop collapsible">How can i gain full access to the platform?</button>
+                <div class="content">
+                    <p>to have full access, you will need to sign up on the platform in order to have a better user experience.</p>
                 </div>
-            </div>
-        </div>
 
-        <!-- fifth row -->
-        <div class="row mt-2">
-            <!-- first column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">Can i save the file on the platform for download later?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        There is no need for a subscription fee before using the platform, it is totally free, however you need to sign up before you can have full access to the platform.
-                    </div>
-                </div>
             </div>
-            <!-- second column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">What is the limit for setting the size of uploaded file?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        Yes, we can keep your processed file in our server except you delete them yourself. you can comeback at any time to download over and over.
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- sixth row -->
-        <div class="row mt-2">
-            <!-- first column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">Are my files probed by Bytsfy?</a>
+            <button class="collapsible q-form">Still Confused About Something? Click Here to Add a Question</button>
+            <div class="q-content">
+                <form action="">
+                    <div class="form-group mb-4">
+                        <label for="exampleFormControlTextarea1" class="m-2 q-label">Type a Question Below</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
                     </div>
-                    <div id="demo" class="collapse ans">
-                        Utterly not. Your files are yours! not in any way would we analyse, check or copy them. Your files are scrictly secured in our servers.
-                    </div>
-                </div>
-            </div>
-            <!-- second column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">Can bytsfy be accessed through any web browser?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        Bytsfy can be accessed through chrome, Firefox, Explorer +10, UC and Safari. To run our tools smoothly, we recommend that you work with the browsers listed. Our system requirement are basic and if at any point you experience issues, we recommend that
-                        you contact us.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- seventh row -->
-        <div class="row mt-2">
-            <!-- first column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">Are my files save and secured by bytsfy?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        Your data is processed as safely as possible. For more privacy, our service incudes end-to-end encryption for all file uploads use http/ssl. Our compliance is in line with one of the most nonindulgent safety standards in the world (GDPR), EU Data Protection
-                        Regulation. These steps ensure security and satisfy most of the corporate data privacy policy.
-                    </div>
-                </div>
-            </div>
-            <!-- second column -->
-            <div class="col">
-                <div class="container mt-3">
-                    <div class="frfc">
-                        <a href="#demo" class="btn" data-bs-toggle="collapse">How do i leave comment or feedback?</a>
-                    </div>
-                    <div id="demo" class="collapse ans">
-                        Here it is: Kindly send your <a href="" class="sug text-decoration-none">suggestion</a>, <a href="" class="feed text-decoration-none">feedback</a>, or <a href="" class="quest text-decoration-none">question</a> to us
-                    </div>
-                </div>
+                    <button type="submit" class="btn-contact mt-2 mb-3">Submit</button>
+                </form>
             </div>
         </div>
     </div>
+    <!---------------------------Subscription Section---------------------------->
+
+    {% include 'subscription.html' %}
+    
+    <!---------------------Footer Section---------------------->
+    {% include 'footer.html' %}
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 
 </body>
 
