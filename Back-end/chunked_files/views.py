@@ -41,7 +41,7 @@ def chunk(request):
             jsnify=csv_chunk.Bytsfy_json(user_specify_size=20, file_path=newfile_path, doc_name=doc_name )
             jsnify.json_chunk()
         # user_upload.delete()
-    return render(request, "upload.html")
+    return render(request, "csv.html")
 
 # def save(request, pk):
 #     file = File.objects.get(id=pk)
