@@ -1607,13 +1607,8 @@ a{
 
 button#seeMore {
   border: 0;
-  /*margin-top: 15px; - disabled because of the class .smDiv that was added*/
-  padding: 20px;
-=======
-button#seeMore {
   border: 0;
   padding: 10px;
->>>>>>> main
   text-transform: Capitalize;
   background: none;
   font-weight: 500;
