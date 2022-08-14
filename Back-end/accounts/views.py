@@ -23,4 +23,12 @@ def profilePage(request):
 
 
 class CustomPasswordChangeView(PasswordChangeView):
+    # template_name = "account/forgotpassword.html"
     success_url = reverse_lazy("password_change_done")
+
+
+# password_reset = PasswordResetView.as_view()
+
+
+# class PasswordResetDoneView(TemplateView):
+#     template_name = "account/password_reset_done."

@@ -33,6 +33,7 @@ class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = User
         fields = ["first_name", "last_name", "email", "username", "profile_pic"]
+        
 class CustomUserProfilePic(UserCreationForm):
     model = User
     fields = ["profile_pic"]
