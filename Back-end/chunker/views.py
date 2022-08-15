@@ -29,10 +29,10 @@ def splitCSV(request):
         print(bool(request.POST["chunk_size"]))
         print("csv",output_csv)
         print("json",output_json)
+        print(split_type)
         if bool(request.POST["chunk_size"]):
             print("hi")
 
-        
         
         if file_data.name.split(".")[-1] not in ["json","csv"]:
             messages.error(request, "Please upload csv or json file")
@@ -40,11 +40,11 @@ def splitCSV(request):
 
         try:
             if bool(request.POST["chunk_size"]): # check if the chunk size has a value
-                user_specified_size = request.POST["chunk_size"]
-                user_specified_size = int(user_specified_size)
+                user_specified_size = int(request.POST["chunk_size"])
 
-            else:
+            elif bool(request.POST["byline"]):
                 by_line = int(request.POST["byline"]) # check if the user specified by line chunk
+                used_size = by_line
         except:
              messages.error(request, "invalid size")
              return redirect(request.META.get("HTTP_REFERER"))
@@ -62,8 +62,9 @@ def splitCSV(request):
                 no_file_row = len(pd.read_csv(file_path)) - 1
 
                 no_of_chuncked_file = math.ceil(file_size/user_specified_size)
-                chunksize_user_specified_size = math.ceil(no_file_row/no_of_chuncked_file) *1000
-                used_size = chunksize_user_specified_size if split_type == "bsize" else by_line # if user selects bysize
+                chunksize_user_specified_size = math.ceil(no_file_row/no_of_chuncked_file) * 1000
+                used_size = chunksize_user_specified_size if bool(request.POST["chunk_size"]) else by_line # if user selects bysize
+                print("tis is the used line", used_size)
                 if bool(request.POST["chunk_size"]): # check if user put chunk size
                     if user_specified_size >= file_size:
                         messages.error(request, "chunk size cannot be equal to or greater than file size")
