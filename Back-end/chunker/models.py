@@ -1,13 +1,7 @@
 from django.db import models
 from accounts.models import User
-# from cloudinary_storage.storage import RawMediaCloudinaryStorage
 
 # Create your models here.
-
-
-class OurUser(User):
-    pass
-
 class File(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     file_name = models.CharField(max_length=500, blank=True)
@@ -18,4 +12,7 @@ class File(models.Model):
 
     def __str__(self):
         return self.file_name
+
+    class Meta:
+        ordering = ['-saved_on']
         

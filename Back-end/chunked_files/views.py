@@ -1,3 +1,4 @@
+import os
 import os.path
 from django.shortcuts import render
 from . import csv_chunk
@@ -29,7 +30,9 @@ def chunk(request):
         doc_name = name_of_file[-1].split(".")[0]
 
         if name_of_file[-1].split(".")[1] == "csv":
+
             bytfy = csv_chunk.Bytfy_csv(newfile_path, user_sepecif_size=int(request.POST["spec_size"]), output_ext=".csv", doc_name=doc_name, file_size=file_size)
+
             bytfy.bytfy_start() 
             # 2855780
 
@@ -38,7 +41,7 @@ def chunk(request):
             jsnify=csv_chunk.Bytsfy_json(user_specify_size=20, file_path=newfile_path, doc_name=doc_name )
             jsnify.json_chunk()
         # user_upload.delete()
-    return render(request, "upload.html")
+    return render(request, "csv.html")
 
 # def save(request, pk):
 #     file = File.objects.get(id=pk)
@@ -76,13 +79,13 @@ def contact(request):
         new_contact.save() 
     
    
-        print(entered_email)
-        print(chosen_subject)
-        print(entered_message)
+        # print(entered_email)
+        # print(chosen_subject)
+        # print(entered_message)
 
         return HttpResponseRedirect("/thank-you")
     
-    return render(request, "chunked_files/contact.html")
+    return render(request, "contact.html")
 
 
 def Subscriber(request):
@@ -95,14 +98,14 @@ def Subscriber(request):
     
       
 
-        print(entered_subscriber_email)
+        # print(entered_subscriber_email)
   
 
         return HttpResponseRedirect("/thank-you")
 
-    return render(request, "chunked_files/contact.html")
+    return render(request, "contact.html")
 
 
 def thank_you(request):
 
-    return render(request, "chunked_files/thankyou.html")    
+    return render(request, "thankyou.html")    

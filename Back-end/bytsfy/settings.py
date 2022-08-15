@@ -41,23 +41,26 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # local apps
     "accounts.apps.AccountsConfig",
+    'chunked_files.apps.ChunkedFilesConfig',
+    'chunker.apps.ChunkerConfig',
 
-    "chunker.apps.ChunkerConfig",
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    "django.contrib.sites",  # new
-    # apps created
-    # 'accounts',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sites', # new
 
-    "django_extensions",
-    "social_django",  # new
-    "allauth",  # new
-    "allauth.account",  # new
-    "widget_tweaks",  # new
+    # 3rd party
+    'django_extensions',
+    'social_django', #new
+    'allauth', # new
+    'allauth.account', # new
+    'widget_tweaks',    # new
+
+
+
 
 ]
 
@@ -162,9 +165,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -175,8 +180,8 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Redirect url that will be configured when we have the templates, views and urls
-LOGIN_REDIRECT_URL = "dashboard"
-LOGOUT_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "home-page"
+LOGOUT_REDIRECT_URL = "landing-page"
 
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False  # new make password input on sign up one
@@ -186,6 +191,9 @@ ACCOUNT_USERNAME_REQUIRED = False  # new
 ACCOUNT_AUTHENTICATION_METHOD = "email"  # new
 ACCOUNT_EMAIL_REQUIRED = True  # new
 ACCOUNT_UNIQUE_EMAIL = True  # new
+# ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+
+
 
 LOGIN_URL = "login"
 LOGOUT_URL = "logout"
@@ -193,9 +201,9 @@ LOGOUT_URL = "logout"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
-SOCIAL_AUTH_GITHUB_KEY = config("SOCIAL_AUTH_GITHUB_KEY")
-SOCIAL_AUTH_GITHUB_SECRET = config("SOCIAL_AUTH_GITHUB_SECRET")
+SOCIAL_AUTH_GITHUB_KEY = config('SOCIAL_AUTH_GITHUB_KEY')
+SOCIAL_AUTH_GITHUB_SECRET = config('SOCIAL_AUTH_GITHUB_SECRET')
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
 

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+{% load static%}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!--Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+<!------------------------------Navbar Section------------------------------->
+{% include 'navbar.html' %}
+
+
+<!-------------------------Profile Page-------------------------->
+
+<!--------------Personal info section------------->
+<section class="container  mt-5 section-Profile">
+    <h3 class="Profile-heading">Personanl Information</h3>
+    <div class="container Profile  mt-4 mb-5">
+        <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert-body">
+            Confirmed! Your Personal Information has been updated successfully
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="row">
+            <div class="col profile-hero">
+                <div class="profile-img">
+                    <img src="{% static 'assets/img/avatar.svg' %}" alt="profile-img" class="dummy-profile">
+                </div>
+                <div class="d-flex user-edit mt-5">
+                    <div class="">
+                        <h4 class="Profile-name">Shawn Lawson</h4>
+                        <p class="Profile-email">shawnlawson@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <a href="{% url 'profile-update' %}">
+                        <p class="user-edit1">Edit</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <form>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 d-flex mt-4">
+                    <h5 class="pr-3 name-header">First Name:</h5>
+                    <p claa="name-p">Shawn</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 d-flex middle-form mt-4">
+                    <h5 class="pr-3 name-header">Last Name:</h5>
+                    <p claa="name-p">Lawson</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-12 col-md-6 col-lg-6 d-flex">
+                    <h5 class="pr-3 name-header">UserName:</h5>
+                    <p claa="name-p">Shawnson</p>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <a href="{% url 'profile-update' %}"><button class="mt-4" id="profile-btn">Edit</button></a>
+        </form>
+    </div>
+
+    <!----------------contact section------------->
+
+    <h3 class="Profile-heading">Contact Information</h3>
+    <div class="container  mt-4 mb-4 Profile">
+        <form>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 d-flex d-sm-flex mt-4">
+                    <h5 class="pr-3 name-header">Email:</h5>
+                    <p claa="name-p">shawnlawson@workmail.com</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 d-flex middle-form mt-4">
+                    <h5 class="pr-3 name-header">Country:</h5>
+                    <p claa="name-p">Nigeria</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-12 col-md-6 col-lg-6 d-flex">
+                    <h5 class="pr-3 name-header">Contact Phone:</h5>
+                    <p claa="name-p">+234 8532 444 2547</p>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <button type="submit" class=" mt-4" id="profile-btn">Edit</button>
+        </form>
+    </div>
+
+    <!----------------Security details section------------->
+
+    <h3 class="Profile-heading">Security Details</h3>
+    <div class="container mt-4 mb-4 Profile">
+        <form>
+            <h5 class="change-paasword mb-4">Current Password</h5>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <label for="inputPassword4">New Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="********" required>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 middle-form">
+                    <label for="inputPassword4">Confirm Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="********" required>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <label for="inputPassword4">Confirm Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="********" required>
+                </div>
+                <div class="col">
+
+                </div>
+
+            </div>
+
+            <button type="submit" class=" mt-4" id="profile-btn">Change</button>
+        </form>
+    </div>
+</section>
+
+
+<!---------------------Footer Section---------------------->
+{% include 'footer.html' %}
+
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
