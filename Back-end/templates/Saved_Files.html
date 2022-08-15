@@ -41,7 +41,7 @@
 
     <div class="container pt-5 pb-5 mb-5">
         <div class="container table-responsive dash-box p-4">
-            
+           
             <div class="hideContent" id="contentDiv">
                 <table class="dash-table">
                     <thead>
@@ -53,11 +53,12 @@
                     </thead>
                     <tbody>
                         {% for file in files %}
+                        {% if file.saved_file %}
                         <tr class="dash-row dash-table-row mt-2 mb-5 align-middle">
                             <td class="dash-text text-left">
                                 {{file.file_name}}</td>
                             <td class="dash-text text-center">
-                                500kb
+                                {{file.file_size}}kb
                             </td>
                             <td class="dash-text text-center">
                                 {{file.saved_on|date:'d-m-Y'}}
@@ -78,12 +79,7 @@
                                             <div>
                                                 <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
                                                 </span>
-                                                <a class="dash-text" href="{{file.saved_file.url}}" download="{{file.saved_file.url}}">Download</a>
-                                            </div>
-                                            <div>
-                                                <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
-                                                </span>
-                                                <a class="dash-text" href="#">Share</a>
+                                                <a class="dash-text" href="{{file.saved_file.url}}" download="{{file.save_file.url}}">Download</a>
                                             </div>
                                             <div>
                                                 <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
@@ -101,11 +97,6 @@
                                         <a class="dash-text" href="{{file.saved_file.url}}" download="{{file.save_file.url}}">Download</a>
                                     </div>
                                     <div class="px-3 dash-desktop">
-                                        <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
-                                        </span>
-                                        <a class="dash-text" href="#">Share</a>
-                                    </div>
-                                    <div class="px-3 dash-desktop">
                                         <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
                                         </span>
                                         <a class="dash-text" href="{% url 'delete' file.id %}">Delete</a>
@@ -114,6 +105,7 @@
     
     
                         </tr>
+                        {% endif %}
                         {% endfor %}
                     </tbody>
                 </table>    
@@ -122,6 +114,7 @@
             <!-- <a id="seeMore" class="text-center dash-text" href="#"><strong>See more</strong></a>-->
             <!-- <button id="seeMore" class="text-center dash-text">See more</button>
             </div> -->
+            
         </div>
     </div>
 

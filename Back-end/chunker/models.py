@@ -6,6 +6,7 @@ class File(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     file_name = models.CharField(max_length=500, blank=True)
     uploaded_file = models.FileField()
+    file_size = models.IntegerField(null=True)
     zip_file = models.FileField()
     saved_file = models.FileField()
     saved_on = models.DateTimeField(auto_now_add=True)
