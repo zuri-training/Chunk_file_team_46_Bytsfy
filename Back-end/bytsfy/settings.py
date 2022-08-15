@@ -116,10 +116,15 @@ WSGI_APPLICATION = "bytsfy.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbsf8ljkp72lt7',
+        'USER': 'puyjiyhkdwaqaj',
+        'PORT': '5432',
+        'PASSWORD': 'f7f23528fda176c46952ec35eb3eebf74734e69c87a32150b87cd9c20c597420',
+        'HOST': 'ec2-52-86-115-245.compute-1.amazonaws.com',
     }
 }
 
