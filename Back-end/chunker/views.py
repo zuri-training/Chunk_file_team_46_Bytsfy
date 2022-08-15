@@ -24,8 +24,11 @@ def splitCSV(request):
         file_data = request.FILES["file"]
         split_type = request.POST.get("splittype") # get the split type
         output_csv = request.POST.get("customRadio")
+        output_json = request.POST.get("customRadio1")
         print(bool(request.POST["byline"]))
         print(bool(request.POST["chunk_size"]))
+        print("csv",output_csv)
+        print("json",output_json)
         if bool(request.POST["chunk_size"]):
             print("hi")
 
@@ -59,7 +62,7 @@ def splitCSV(request):
                 no_file_row = len(pd.read_csv(file_path)) - 1
 
                 no_of_chuncked_file = math.ceil(file_size/user_specified_size)
-                chunksize_user_specified_size = math.ceil(no_file_row/no_of_chuncked_file)
+                chunksize_user_specified_size = math.ceil(no_file_row/no_of_chuncked_file) *1000
                 used_size = chunksize_user_specified_size if split_type == "bsize" else by_line # if user selects bysize
                 if bool(request.POST["chunk_size"]): # check if user put chunk size
                     if user_specified_size >= file_size:
@@ -80,10 +83,10 @@ def splitCSV(request):
                 os.makedirs(folder_name)
                 index = 0
                 for chunk in pd.read_csv(file_path, chunksize=used_size):
-                    if output_csv: # if the out put is csv
+                    if output_csv is not None: # if the out put is csv
                         chunk.to_csv(f"{folder_name}/file{index}.csv".format(index), index=False)
                     else: # else chunk to json
-                        chunk.to_json(f"{folder_name}/file{index}.json".format(index), index=False, indent=True)
+                        chunk.to_json(f"{folder_name}/file{index}.json".format(index), indent=2)
                     index += 1
 
                 # live server
