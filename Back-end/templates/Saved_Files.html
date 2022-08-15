@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saved Files</title>
+    <!--Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Custom CSS--->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!--Google Fonts--->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!--Fontawesome CDN--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+    <!------------------------------Navbar Section------------------------------->
+    {% include 'navbar.html' %}
+
+    <!------------------------------Saved Files Header Section------------------------------->
+    <div class="container-fluid mb-3 mt-5">
+        <div class="container ">
+            <h4 class="mb-5">Saved Files</h4>
+            <div class="d-flex text-left dash-header align-items-center mt-2">
+                <img src="{% static 'assets/img/Split Icon.svg' %}" id="split-icon" alt="spliticon ">
+                <h5 class="ms-3">Splitted Files</h5>
+            </div>
+
+        </div>
+    </div>
+    <!---------------------------Split Files Tables Section---------------------------->
+
+    
+
+    <div class="container pt-5 pb-5 mb-5">
+        <div class="container table-responsive dash-box p-4">
+            
+            <div class="hideContent" id="contentDiv">
+                <table class="dash-table">
+                    <thead>
+                        <tr class="my-3 pt-1 pb-1  dash-table-row dash-text align-middle">
+                            <th class="dash-text" scope="col">File Name</th>
+                            <th class="dash-text text-center" scope="col">File Size</th>
+                            <th class="dash-text text-center" scope="col">Date Splitted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for file in files %}
+                        <tr class="dash-row dash-table-row mt-2 mb-5 align-middle">
+                            <td class="dash-text text-left">
+                                {{file.file_name}}</td>
+                            <td class="dash-text text-center">
+                                500kb
+                            </td>
+                            <td class="dash-text text-center">
+                                {{file.saved_on|date:'d-m-Y'}}
+                            </td>
+                            <td class="dash-text text-center">
+                                <div class="dash-mobile">
+    
+                                    <p>
+    
+                                        <button class="btn dash-ellipse" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample2" aria-expanded="false"
+                                            aria-controls="collapseExample2">
+                                            <i class="fa-solid fa-ellipsis-vertical dash-ellipse fa-2x"></i>
+                                        </button>
+                                    </p>
+                                    <div class="collapse" id="collapseExample2">
+                                        <div class="">
+                                            <div>
+                                                <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                                                </span>
+                                                <a class="dash-text" href="{{file.saved_file.url}}" download="{{file.saved_file.url}}">Download</a>
+                                            </div>
+                                            <div>
+                                                <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                                                </span>
+                                                <a class="dash-text" href="#">Share</a>
+                                            </div>
+                                            <div>
+                                                <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                                                </span>
+                                                <a class="dash-text" href="{% url 'delete' file.id %}">Delete</a>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex dash-desktop">
+                                    <div class="px-3 dash-desktop">
+                                        <span><i class="fa-solid fa-download" style="color:#AAAAAA ;"></i>
+                                        </span>
+                                        <a class="dash-text" href="{{file.saved_file.url}}" download="{{file.save_file.url}}">Download</a>
+                                    </div>
+                                    <div class="px-3 dash-desktop">
+                                        <span><i class="fa-solid fa-share-from-square" style="color: #AAAAAA;"></i>
+                                        </span>
+                                        <a class="dash-text" href="#">Share</a>
+                                    </div>
+                                    <div class="px-3 dash-desktop">
+                                        <span><i class="fa-solid fa-trash-can " style="color: red;"></i>
+                                        </span>
+                                        <a class="dash-text" href="{% url 'delete' file.id %}">Delete</a>
+                                    </div>
+                                </div>
+    
+    
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>    
+            </div>
+            <!-- <div class="text-center dash-text pt-2"> -->
+            <!-- <a id="seeMore" class="text-center dash-text" href="#"><strong>See more</strong></a>-->
+            <!-- <button id="seeMore" class="text-center dash-text">See more</button>
+            </div> -->
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!------------------------------------File History Header Section---------------------->
+
+    <!-- <div class="container-fluid mb-3 mt-5">
+        <div class="container ">
+
+            <div class="d-flex text-left dash-header align-items-center mt-2">
+                <img src="/assets/img/File history Icon.png" id="split-icon" alt="spliticon ">
+                <h5 class="ms-3 dash-text">File History</h5>
+            </div>
+
+        </div>
+    </div> -->
+    <!---------------------------File  History Tables Section---------------------------->
+
+    <!-- <div class="container pt-5 pb-5 mb-5">
+        <div class="container table-responsive dash-box p-4">
+
+            <table class=" dash-table" id="file-history-table">
+                <thead>
+                    <tr class="  my-3 pt-1 pb-1 dash-table-row align-middle">
+                        <th class="dash-text" scope="col">
+                            <input class="col-2 m-1 form-check-input saved-check boxcontrol" type="checkbox"
+                                onClick="toggle(this, '#file-history-table' )" value="" id="flexCheckChecked">
+                        </th>
+                        <th class="dash-text" scope="col">File Name</th>
+                        <th class="dash-text text-center" scope="col">File Size</th>
+                        <th class="dash-text text-center" scope="col">Date Splitted</th>
+                        <th class="dash-text ps-5" scope="col">Status</th>
+                        <th class="dash-text" scope="col"></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr class="dash-row dash-table-row mt-2 mb-5 ps-3  align-middle">
+                        <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value=""
+                                id="flexCheckChecked"></th>
+                        <td class="dash-text text-center">
+
+                            Shawn's Doc.CSV</td>
+                        <td class="dash-text text-center">
+                            500kb
+                        </td>
+                        <td class="dash-text text-center">
+                            06.08.2022
+                        </td>
+                        <td>
+                            <div class="dash-mobile">
+                                <button type="button" class="btn btn-success fileHistoryButon">Success</button>
+                            </div>
+                            <div class="dash-desktop d-flex">
+                                <div class="px-4 dash-desktop"><button type="button"
+                                        class="btn btn-success fileHistoryButon">Success</button></div>
+                                <div><a class="dash-text text-center dash-data dash-desktop ps-5"><span><i
+                                                class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                                        Delete</a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr class="dash-row  mt-2 mb-3   align-middle">
+                        <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value=""
+                                id="flexCheckChecked"></th>
+                        <td class="dash-text text-center">
+                            Shawn's Doc.CSV</td>
+                        <td class="dash-text text-center">
+                            200kb
+                        </td>
+                        <td class="dash-text text-center">
+                            02.07.2022
+                        <td>
+                            <div class="dash-mobile">
+                                <button type="button" class="btn btn-success fileHistoryButon">Success</button>
+                            </div>
+                            <div class="dash-desktop d-flex">
+                                <div class="px-4 dash-desktop"><button type="button"
+                                        class="btn btn-success fileHistoryButon">Success</button></div>
+                                <div><a class="dash-text text-center dash-data dash-desktop ps-5"><span><i
+                                                class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                                        Delete</a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr class="dash-row  mt-2 mb-3   align-middle">
+                        <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value=""
+                                id="flexCheckChecked"></th>
+
+                        <td class="dash-text text-center">
+                            Shawn's Doc.CSV</td>
+                        <td class="dash-text text-center">
+                            700kb
+                        </td>
+                        <td class="dash-text text-center">
+                            10.07.2022
+                        <td>
+                            <div class="dash-mobile">
+                                <button type="button" class="btn btn-success fileHistoryButon">Error</button>
+                            </div>
+                            <div class="dash-desktop d-flex">
+                                <div class="px-4 dash-desktop"><button type="button"
+                                        class="btn btn-success fileHistoryButon2">Error</button></div>
+                                <div><a class="dash-text dash-desktop text-center dash-data ps-5"><span><i
+                                                class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                                        Delete</a>
+                                </div>
+                            </div>
+
+                        </td>
+
+                    </tr>
+                    <tr class="dash-row  mt-2 mb-3  align-middle">
+                        <th scope="row"><input class="col-2 m-1 form-check-input saved-check" type="checkbox" value=""
+                                id="flexCheckChecked"></th>
+                        <td>
+                            <p class="form-check-label  dash-text text-center" for="flexCheckChecked">
+                                Shawn's Doc.CSV
+                        </td>
+                        <td class="dash-text text-center">
+                            100kb
+                        </td>
+                        <td class="dash-text text-center">
+                            05.06.2022
+                        <td>
+                            <div class="dash-mobile">
+                                <button type="button" class="btn btn-success fileHistoryButon">Success</button>
+                            </div>
+                            <div class="dash-desktop d-flex">
+                                <div class="px-4 dash-desktop"><button type="button"
+                                        class="btn btn-success fileHistoryButon">Success</button></div>
+                                <div><a class="dash-text text-center dash-data dash-desktop ps-5"><span><i
+                                                class="fa-solid fa-trash-can " style="color: red;"></i></span>
+                                        Delete</a>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="text-center dash-text pt-2">
+                <a id="clearHistory" class="text-center dash-text" href="#"><strong>Clear history</strong></a>
+
+            </div>
+        </div>
+
+    </div> -->
+
+    <!---------------------Footer Section---------------------->
+    {% include 'footer.html' %}
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+
+    <!--Custom Javascript for the see more button and Select boxes-->
+    <script src="{% static 'assets/js/select.js' %}"></script>
+
+</body>
+
+</html>

@@ -17,7 +17,7 @@ class LoginForm(AuthenticationForm):
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ["first_name", "last_name", "email", "username", ]
+        fields = ["profile_pic", "first_name", "last_name", "username", "email", "country", "phone"]
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
         # To remove auto-focus in username input
@@ -25,7 +25,11 @@ class CustomUserCreationForm(UserCreationForm):
         # To remove help-text in the form
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
-        
+    
+class UserUpdateForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ["profile_pic", "first_name", "last_name", "username", "email", "country", "phone"]
 
 
 
