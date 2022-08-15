@@ -27,43 +27,46 @@
     <section class="container  mt-5 section-Profile">
         <h3 class="Profile-heading">Personal Information</h3>
         <div class="container Profile  mt-4 mb-5">
-            <div class="row">
-                <div class="col profile-hero">
-                    <div class="profile-img">
-                        <img src="{% static 'assets/img/avatar.svg' %}" alt="profile-img" class="dummy-profile">
-                    </div>
-                    <div class="profile-details mt-5 ">
-                        <h4 class="Profile-name">Shawn Lawson</h4>
-                        <p class="Profile-email">shawnlawson@gmail.com</p>
-                    </div>
-                </div>
-                <div class="col">
-
-                </div>
-            </div>
-            <form>
+            <form method="POST" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <label for="inputEmail4">First Name</label>
-                        <input type="text" class="form-control" placeholder="First name">
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 middle-form">
-                        <label for="inputEmail4">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last name">
-                    </div>
-                </div>
-                <div class="row mt-4 mb-3">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <label for="inputEmail4">Userame</label>
-                        <input type="text" class="form-control" placeholder="First name">
+                    <div class="col profile-hero">
+                        <div class="profile-img">
+                            <img src="{{user.profile_pic.url}}" alt="profile-img" class="dummy-profile">
+                            <input type="file" name="profile_pic" class="hide_file">
+                        </div>
+                        <div class="profile-details mt-5 ">
+                            <h4 class="Profile-name">{{user.first_name}}</h4>
+                            <p class="Profile-email">{{user.email}}</p>
+                        </div>
                     </div>
                     <div class="col">
 
                     </div>
-
                 </div>
+                
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <label for="inputEmail4">First Name</label>
+                            <input type="text" name="first_name" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 middle-form">
+                            <label for="inputEmail4">Last Name</label>
+                            <input type="text" name="last_name" class="form-control" placeholder="Last name">
+                        </div>
+                    </div> 
+                    <div class="row mt-4 mb-3">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <label for="inputEmail4">Username</label>
+                            <input type="text" name="username" class="form-control" placeholder="username">
+                        </div>
+                        <div class="col">
 
-                <button class="btn " type="submit" id="nav-btn"><a href="./PersonalDetails.html"class="text-white  text-decoration-none">Update</a></button> </form>
+                        </div>
+
+                    </div>
+
+                    <button class="btn " type="submit" id="nav-btn"><a href="" class="text-white  text-decoration-none">Update</a></button>
+            </form>
         </div>
 
         <!----------------contact section------------->
@@ -74,20 +77,17 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="example@gmail.com" required>
+                        <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="example@gmail.com" required>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 middle-form">
-                        <label for="inputState">Coutnry</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose Country</option>
-                            <option>...</option>
-                        </select>
+                        <label for="inputState">Country</label>
+                        <input type="text" name="country" class="form-control" placeholder="Nigeria">
                     </div>
                 </div>
                 <div class="row mt- mb-3">
                     <div class="col-sm-12 col-md-6 col-lg-6">
                         <label for="inputEmail4">Phone Number</label>
-                        <input type="tel" class="form-control" id="inputEmail4" placeholder="+243.......">
+                        <input type="tel" name="phone" class="form-control" id="inputEmail4" placeholder="+243.......">
                     </div>
                     <div class="col">
 
@@ -95,7 +95,7 @@
 
                 </div>
 
-                <button class="btn " type="submit" id="nav-btn"><a href="./PersonalDetails.html"class="text-white  text-decoration-none">Update</a></button>
+                <button class="btn " type="submit" id="nav-btn"><a href="" class="text-white  text-decoration-none">Update</a></button>
             </form>
         </div>
 
@@ -108,17 +108,17 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6">
                         <label for="inputPassword4">Current Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="********" required>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="********">
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 middle-form">
                         <label for="inputPassword4">New Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="********" required>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="********">
                     </div>
                 </div>
                 <div class="row mt-4 mb-3">
                     <div class="col-sm-12 col-md-6 col-lg-6">
                         <label for="inputPassword4">Confirm Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="********" required>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="********">
                     </div>
                     <div class="col">
 
@@ -126,7 +126,7 @@
 
                 </div>
 
-                <button class="btn " type="submit" id="nav-btn"><a href="./PersonalDetails.html"class="text-white  text-decoration-none">Update</a></button>
+                <button class="btn " type="submit" id="nav-btn"><a href="" class="text-white  text-decoration-none">Update</a></button>
             </form>
         </div>
     </section>

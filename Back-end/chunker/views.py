@@ -101,8 +101,7 @@ def splitCSV(request):
                 file= File.objects.create(user=request.user, file_name=zip_file_name, zip_file=zip_file)
                 file.save()
                 os.remove(file_path)
-                context = {"file": file}
-                return render(request, "downloadfile.html", context)
+                return redirect("download-save", pk=file.id)
 
             except:
                 messages.error(request, "Please upload a valid csv file")
@@ -178,8 +177,7 @@ def splitJSON(request):
         file= File.objects.create(user=request.user, file_name=zip_file_name, zip_file=zip_file)
         file.save()
         os.remove(file_path)
-        context = {"file": file}
-        return render(request, "downloadfile.html", context)
+        return redirect("download-save", pk=file.id)
 
 
     return render(request, "json.html")
@@ -205,4 +203,11 @@ def dashboard(request):
     user = request.user
     files = user.file_set.all()
     context = {'files': files}
-    return render(request, 'Dashboard.html', context)
+    return render(request, 'Saved_Files.html', context)
+
+
+@login_required(login_url="account_login")
+def downloadFile(request, pk):
+    file = File.objects.get(id=pk)
+    context = {"file": file}
+    return render(request, "downloadfile.html", context) 

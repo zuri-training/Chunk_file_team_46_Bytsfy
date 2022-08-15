@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from allauth.account.views import PasswordChangeView
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
+from .models import User
+from .forms import UserUpdateForm
 
 # Create your views here.
 
@@ -24,6 +26,11 @@ def profilePage(request):
 
 @login_required(login_url="account_login")
 def updateProfile(request):
+    user = request.user
+    if request.method == "POST":
+        profile_pic = request.FILES['profile_pic']
+        
+
     return render(request, "profile.html")
 
 class CustomPasswordChangeView(PasswordChangeView):

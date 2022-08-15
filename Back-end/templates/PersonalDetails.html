@@ -39,12 +39,12 @@
         <div class="row">
             <div class="col profile-hero">
                 <div class="profile-img">
-                    <img src="{% static 'assets/img/avatar.svg' %}" alt="profile-img" class="dummy-profile">
+                    <img src="{{user.profile_pic.url}}" alt="profile-img" class="dummy-profile">
                 </div>
                 <div class="d-flex user-edit mt-5">
                     <div class="">
-                        <h4 class="Profile-name">Shawn Lawson</h4>
-                        <p class="Profile-email">shawnlawson@gmail.com</p>
+                        <h4 class="Profile-name">{{user.first_name}}</h4>
+                        <p class="Profile-email">{{user.email}}</p>
                     </div>
                 </div>
             </div>
@@ -60,17 +60,17 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6 d-flex mt-4">
                     <h5 class="pr-3 name-header">First Name:</h5>
-                    <p claa="name-p">Shawn</p>
+                    <p claa="name-p">{{user.first_name}}</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 d-flex middle-form mt-4">
                     <h5 class="pr-3 name-header">Last Name:</h5>
-                    <p claa="name-p">Lawson</p>
+                    <p claa="name-p">{{user.last_name}}</p>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-sm-12 col-md-6 col-lg-6 d-flex">
                     <h5 class="pr-3 name-header">UserName:</h5>
-                    <p claa="name-p">Shawnson</p>
+                    <p claa="name-p">{{user.username}}</p>
                 </div>
                 <div class="col">
                 </div>
@@ -87,17 +87,17 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6 d-flex d-sm-flex mt-4">
                     <h5 class="pr-3 name-header">Email:</h5>
-                    <p claa="name-p">shawnlawson@workmail.com</p>
+                    <p claa="name-p">{{user.email}}</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 d-flex middle-form mt-4">
                     <h5 class="pr-3 name-header">Country:</h5>
-                    <p claa="name-p">Nigeria</p>
+                    <p class="name-p">{{user.country}}</p>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-sm-12 col-md-6 col-lg-6 d-flex">
                     <h5 class="pr-3 name-header">Contact Phone:</h5>
-                    <p claa="name-p">+234 8532 444 2547</p>
+                    <p claa="name-p">{{user.phone}}</p>
                 </div>
                 <div class="col">
                 </div>
