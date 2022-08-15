@@ -4,3 +4,5 @@ Contact us drop down page for desktop: https://github.com/zuri-training/Chunk_fi
 Contact us page for Mobile: https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Design-Screens/Mobile-View/Contact%20us%20mobile.png
 Contact us drop down page for mobile: https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Design-Screens/Mobile-View/Contact%20us%20mobile(drop%20down).png
 
+User Flow: https://github.com/zuri-training/Chunk_file_team_46_Bytsfy/blob/main/Design-Screens/Desktop-View/User%20Flow.png
+(I and two order designers worked on the User Flow)
