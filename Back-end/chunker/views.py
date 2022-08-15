@@ -102,7 +102,6 @@ def splitCSV(request):
                 file.save()
                 os.remove(file_path)
                 context = {"file": file}
-                # context  = {}
                 return render(request, "downloadfile.html", context)
 
             except:
@@ -110,6 +109,7 @@ def splitCSV(request):
                 return redirect(request.META.get("HTTP_REFERER"))
    
     return render(request, "csv.html")
+
 
 @login_required(login_url="account_login")
 def splitJSON(request):
@@ -182,51 +182,27 @@ def splitJSON(request):
         return render(request, "downloadfile.html", context)
 
 
-    context = {}
-    return render(request, "json.html", context)
+    return render(request, "json.html")
+
 
 @login_required(login_url="account_login")
 def save(request, pk):
     file = File.objects.get(id=pk)
     file.saved_file = file.zip_file
     file.save()
-    return HttpResponse("File saved successsfully")
+    return redirect('dashboard')
+
 
 @login_required(login_url="account_login")
 def delete(request, pk):
     file = File.objects.get(id=pk)
     file.delete()
-    return HttpResponse("File deleted successsfully")
+    return redirect('dashboard')
 
 
-
-""" wont be needing this"""
-
-# @login_required(login_url="account_login")
-# def csvToJson(request):
-#     if request.method == "POST":
-#         csv_file = request.FILES["CSVfile"]
-#         json_file_name = csv_file.name.split(".")[0] + "-json-file.json"
-#         file_name = default_storage.save(csv_file.name, csv_file)
-#         file_path = default_storage.path(file_name)
-#         json_array= []
-        
-#         json_path = f"{settings.MEDIA_ROOT}/{json_file_name}"
-#         with open(file_path, encoding="utf-8") as csv_file_handler:
-#             csv_reader = csv.DictReader(csv_file_handler)
-#             for rows in csv_reader:
-#                 json_array.append(rows)
-#         with open(json_path, 'w', encoding="utf-8") as json_file_handler:
-#             json_file_handler.write(json.dumps(json_array, indent=4))
-#         json_file = json_path.split("/")[-1]
-#         file = File.objects.create(user=request.user, file_name=json_file_name, zip_file=json_file)
-#         file.save()
-#         os.remove(file_path)
-#         context = {"file": file}
-#         return render(request, "csvToJson.html", context)
-#     context = {}
-#     return render(request, "csvToJson.html", context)
-
-
-def jsonToCsv(request):
-    return HttpResponse("Under construction")
+@login_required(login_url="account_login")
+def dashboard(request):
+    user = request.user
+    files = user.file_set.all()
+    context = {'files': files}
+    return render(request, 'Dashboard.html', context)

@@ -12,4 +12,7 @@ class File(models.Model):
 
     def __str__(self):
         return self.file_name
+
+    class Meta:
+        ordering = ['-saved_on']
         

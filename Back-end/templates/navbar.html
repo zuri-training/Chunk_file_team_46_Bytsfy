@@ -48,10 +48,10 @@
                     <div class="nav navbar-nav navbar-right">
                         <div class="dropdown ">
                             <a href="#" class="dropdown-toggle " data-bs-toggle="dropdown">
-                                <span class=" nav-link  navbar-toggler-icon2 mb-3"><img src="{% static 'assets/img/user-profile.svg' %}" alt=""> Shawn L.</span></a>
+                                <span class=" nav-link  navbar-toggler-icon2 mb-3"><img height="40" src="{% static 'assets/img/avatar.svg' %}" alt=""> Shawn L.</span></a>
                             <div class=" row dropdown-menu user_dropdownmenu dropdown1 ">
                                 <div class="m-4"><a href="{% url 'profile-page' %}" class="nav-link2">Profile</a></div>
-                                <div class="m-4"><a href="./Dashboard.html" class="nav-link2">Saved Items</a></div>
+                                <div class="m-4"><a href="{% url 'dashboard' %}" class="nav-link2">Saved Items</a></div>
 
                                 <div class="">
 
