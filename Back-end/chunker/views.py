@@ -86,7 +86,7 @@ def splitCSV(request):
                     if output_csv is not None: # if the out put is csv
                         chunk.to_csv(f"{folder_name}/file{index}.csv".format(index), index=False)
                     else: # else chunk to json
-                        chunk.to_json(f"{folder_name}/file{index}.json".format(index))
+                        chunk.to_json(f"{folder_name}/file{index}.json".format(index), indent=2)
                     index += 1
 
                 # live server
