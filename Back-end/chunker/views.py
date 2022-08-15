@@ -53,6 +53,7 @@ def splitCSV(request):
         if file_path.split(".")[-1] == 'csv': 
             
             file_size = os.path.getsize(file_path)
+            model_file_size = math.ceil(file_size/1024)
 
             try:
                 no_file_row = len(pd.read_csv(file_path)) - 1
@@ -98,7 +99,7 @@ def splitCSV(request):
                 zip_file = f"/{outputfile}.zip"
                 # live server
                 # zip_file = f"/{outputfile.split('/')[-1]}.zip"
-                file= File.objects.create(user=request.user, file_name=zip_file_name, zip_file=zip_file)
+                file= File.objects.create(user=request.user, file_size = model_file_size, file_name=zip_file_name, zip_file=zip_file)
                 file.save()
                 os.remove(file_path)
                 return redirect("download-save", pk=file.id)
