@@ -19,7 +19,8 @@ from django.views.generic import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
 from chunked_files.views import contact
-from accounts.views import homePage, landingPage, profilePage
+from chunker.views import dashboard
+from accounts.views import homePage, landingPage, profilePage, updateProfile
 
 
 urlpatterns = [
@@ -28,22 +29,16 @@ urlpatterns = [
 
     path("accounts/", include("allauth.urls")),
     path("accounts/", include("accounts.urls")),
-    path("chunker/", include("chunker.urls")),
+    path("", include("chunker.urls")),
     
     # social logins
     path("social-auth/", include("social_django.urls", namespace="social")),
-    # path("", TemplateView.as_view(template_name="dashboard.html"), name="dashboard"),
-    # path("contact", TemplateView.as_view(template_name="contact.html"), name="contact"),     #included in chunked_files app
-    # path("upload", TemplateView.as_view(template_name="upload.html"), name="upload"),
-    # path("getStarted", TemplateView.as_view(template_name="getStarted.html"), name="about"),
-    # path("chunk/", include("chunked_files.urls")),
-    path("", include('chunker.urls')),
-    # path("",include('chunked_files.urls')),
-
 
     path("", landingPage, name="landing-page"),
     path("homepage.html", homePage, name="home-page"),
     path("profile.html", profilePage, name="profile-page"),
+    path("profile-update/", updateProfile, name="profile-update"),
+    path('saved-files/', dashboard, name='dashboard'),
     path("FAQ.html", TemplateView.as_view(template_name="FAQ.html"), name="faq-page"),
     
     path("testimonial.html", TemplateView.as_view(template_name="testimonial.html"), name="testimonial-page"),

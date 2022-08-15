@@ -19,11 +19,14 @@ def landingPage(request):
 
 @login_required(login_url="account_login")
 def profilePage(request):
+    return render(request, "PersonalDetails.html")
+
+
+@login_required(login_url="account_login")
+def updateProfile(request):
     return render(request, "profile.html")
 
-
 class CustomPasswordChangeView(PasswordChangeView):
-    # template_name = "account/forgotpassword.html"
     success_url = reverse_lazy("password_change_done")
 
 
