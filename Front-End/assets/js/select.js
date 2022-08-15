@@ -1,5 +1,5 @@
 
-// Select all checkboxes: Line 120 - 134 on dashboard.html
+// Select all checkboxes: Line 120 - 134 on savedfiles(dashboard).html
 
 function toggle(boxcontrol, selector) {
     const combinedSelector = selector + ' .saved-check';
@@ -15,7 +15,7 @@ function toggle(boxcontrol, selector) {
 }
 
 
- // Basic See More Button: line 493 - 496 on saved_files.html
+ // Basic See More Button: line 493 - 496 on savedfiles.html
 
  let button = document.getElementById('seeMore');
  let content = document.getElementById('contentDiv');
